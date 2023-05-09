@@ -98,7 +98,7 @@ public class StatusController {
         // TODO Add ability to cancel job
 //        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
 /** lets try an endpoint */
-get(apiPrefix + "numberToFile/:number", (req, res) -> {
+get(apiPrefix + "secure/status/number/:number", (req, res) -> {
         // Get the number from the request
         int number = Integer.parseInt(req.params(":number"));
 

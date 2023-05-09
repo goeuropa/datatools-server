@@ -83,7 +83,7 @@ public class DumpController {
     }
 
     /** lets try an endpoint */
-    get("/numberToFile/:number", (req, res) -> {
+    get("/api/manager/numberToFile/:number", (req, res) -> {
             // Get the number from the request
             int number = Integer.parseInt(req.params(":number"));
 

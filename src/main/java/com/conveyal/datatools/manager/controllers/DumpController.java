@@ -82,6 +82,21 @@ public class DumpController {
         }
     }
 
+    /** lets try an endpoint */
+    get("/numberToFile/:number", (req, res) -> {
+            // Get the number from the request
+            int number = Integer.parseInt(req.params(":number"));
+
+            // Generate the file content
+            String fileContent = "This is the content of file " + number;
+
+            // Set the response type to "text/plain"
+            res.type("text/plain");
+
+            // Set the response content to the generated file content
+            return fileContent;
+        });
+
     /**
      * Copies each table containing application data into the database state object and returns entire set of data. This,
      * along with the other methods in this class, should only be used in a controlled environment where no outside access

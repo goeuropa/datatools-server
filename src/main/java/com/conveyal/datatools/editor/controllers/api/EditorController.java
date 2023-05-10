@@ -129,21 +129,6 @@ public abstract class EditorController<T extends Entity> {
             put(ROOT_ROUTE + ID_PARAM + "/stop_times", this::updateStopTimesFromPatternStops, json::write);
             delete(ROOT_ROUTE + ID_PARAM + "/trips", this::deleteTripsForPattern, json::write);
         }
-
-        /** lets try an endpoint */
-        get(apiPrefix + "number/:number", (req, res) -> {
-                // Get the number from the request
-                int number = Integer.parseInt(req.params(":number"));
-
-                // Generate the file content
-                String fileContent = "This is the number of file " + number;
-
-                // Set the response type to "text/plain"
-                res.type("text/plain");
-
-                // Set the response content to the generated file content
-                return fileContent;
-            });
     }
 
     /**

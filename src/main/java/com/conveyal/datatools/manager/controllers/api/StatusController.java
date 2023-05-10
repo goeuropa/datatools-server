@@ -97,19 +97,6 @@ public class StatusController {
         get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
         // TODO Add ability to cancel job
 //        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
-/** lets try an endpoint */
-get(apiPrefix + "secure/status/number/:number", (req, res) -> {
-        // Get the number from the request
-        int number = Integer.parseInt(req.params(":number"));
 
-        // Generate the file content
-        String fileContent = "This is the content of file " + number;
-
-        // Set the response type to "text/plain"
-        res.type("text/plain");
-
-        // Set the response content to the generated file content
-        return fileContent;
-    });
     }
 }

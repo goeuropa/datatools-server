@@ -389,7 +389,6 @@
             <groupId>org.geotools</groupId>
             <artifactId>gt-shapefile</artifactId>
             <version>${geotools.version}</version>
-                          <file>./gt-shapefile-2.6.5.jar</file>
         </dependency>
         <!-- gt-metadata and gt-api contains some dependencies required by gt-shapefile -->
       <dependency>

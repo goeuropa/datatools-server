@@ -202,27 +202,6 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-        <repository>
-        <id>maven2-repository.dev.java.net</id>
-        <name>Java.net repository</name>
-        <url>http://download.java.net/maven/2</url>
-    </repository>
-    <repository>
-      <id>osgeo-alt</id>
-      <url>https://repo.osgeo.org/repository/release/</url>
- </repository>
- <repository>
-       <id>geomajas</id>
-       <name>Geomajas Maven Repository</name>
-       <url>http://maven.geomajas.org/(http://maven.geomajas.org/)</url>
- </repository>
- <repository>      
-  <id>geotools</id>
-  <name>Geotools repository</name>
-  <!--<url>http://download.osgeo.org/webdav/geotools/</url>-->
-  <url>https://repo.osgeo.org/repository/geotools-releases/</url>
-</repository>
-
     </repositories>
 
     <dependencies>

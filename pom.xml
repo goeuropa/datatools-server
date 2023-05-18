@@ -86,10 +86,10 @@
               <goal>install-file</goal>
             </goals>
             <configuration>
-              <file>./gt-shapefile-2.6.5.jar</file>
+              <file>gt-shapefile-2.6.5.jar</file>
               <groupId>org.geotools</groupId>
               <artifactId>gt-shapefile</artifactId>
-              <version>17.5</version> <!-- Set the appropriate version -->
+              <version>2.6.5</version> <!-- Set the appropriate version -->
               <packaging>jar</packaging>
             </configuration>
           </execution>
@@ -385,14 +385,14 @@
         </dependency>
 
         <!-- Used for handling shapefiles -->
-<!--        <dependency>
+        <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-shapefile</artifactId>
             <version>${geotools.version}</version>
                           <file>./gt-shapefile-2.6.5.jar</file>
-        </dependency>-->
+        </dependency>
         <!-- gt-metadata and gt-api contains some dependencies required by gt-shapefile -->
-  <!--      <dependency>
+      <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-metadata</artifactId>
             <version>${geotools.version}</version>
@@ -401,15 +401,14 @@
             <groupId>org.geotools</groupId>
             <artifactId>gt-api</artifactId>
             <version>${geotools.version}</version>
-        </dependency>-->
+        </dependency>
         <!-- gt-epsg-hsql includes coordinate reference libraries that were removed from gtfs-lib in
              https://github.com/conveyal/gtfs-lib/pull/290 -->
-    <!--    <dependency>
+    <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-epsg-hsql</artifactId>
             <version>${geotools.version}</version>
         </dependency>
--->
         <!-- Error reporting -->
         <dependency>
             <groupId>com.bugsnag</groupId>

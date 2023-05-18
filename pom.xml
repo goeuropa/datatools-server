@@ -74,10 +74,10 @@
           </execution>
         </executions>
       </plugin>
-        <plugin>
+<!--        <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-install-plugin</artifactId>
-        <version>3.0.0-M1</version> <!-- Use the appropriate version -->
+        <version>3.0.0-M1</version>
         <executions>
           <execution>
             <id>install-jar</id>
@@ -89,12 +89,12 @@
               <file>gt-shapefile-2.6.5.jar</file>
               <groupId>org.geotools</groupId>
               <artifactId>gt-shapefile</artifactId>
-              <version>2.6.5</version> <!-- Set the appropriate version -->
+              <version>2.6.5</version> 
               <packaging>jar</packaging>
             </configuration>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -216,13 +216,13 @@
             </snapshots>
         </repository>
         <!--  Repository for geotools (as of April 2020)  -->
-        <repository>
+        <!--<repository>
             <id>osgeo</id>
             <name>OSGeo Release Repository</name>
             <url>https://repo.osgeo.org/repository/release/</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
-        </repository>
+        </repository>-->
         <repository>
             <id>sonatype</id>
             <name>sonatype snapshots</name>
@@ -390,11 +390,11 @@
         </dependency>
 
         <!-- Used for handling shapefiles -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-shapefile</artifactId>
             <version>${geotools.version}</version>
-        </dependency>
+        </dependency>-->
         <!-- gt-metadata and gt-api contains some dependencies required by gt-shapefile -->
       <dependency>
             <groupId>org.geotools</groupId>

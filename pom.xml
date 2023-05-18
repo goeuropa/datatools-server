@@ -60,6 +60,41 @@
             </resource>
         </resources>
         <plugins>
+              <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version> <!-- Use the appropriate version -->
+        <executions>
+          <execution>
+            <id>package-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.0.0-M1</version> <!-- Use the appropriate version -->
+        <executions>
+          <execution>
+            <id>install-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <file>./gt-shapefile-2.6.5.jar</file>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-shapefile</artifactId>
+              <version>17.5</version> <!-- Set the appropriate version -->
+              <packaging>jar</packaging>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>

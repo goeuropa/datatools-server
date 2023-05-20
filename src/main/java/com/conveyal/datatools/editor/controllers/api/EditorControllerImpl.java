@@ -8,6 +8,5 @@ import javax.sql.DataSource;
 public class EditorControllerImpl extends EditorController {
     public EditorControllerImpl(String apiPrefix, Table table, DataSource dataSource){
         super(apiPrefix, table, dataSource);
-
     }
 }

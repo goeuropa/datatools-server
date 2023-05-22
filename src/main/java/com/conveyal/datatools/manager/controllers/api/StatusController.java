@@ -144,38 +144,38 @@ public class StatusController {
 
         File pdfFile = new File("output2.pdf");
         if (pdfFile != null && pdfFile.exists()) {
-            try {
-                // Set the response headers
+       try {
+           // Set the response headers for downloading the file
+           response.header("Content-Disposition", "attachment; filename=output3.pdf");
+           response.type("application/pdf");
 
+           // Open an input stream to read the PDF file
+           FileInputStream fileInputStream = new FileInputStream(pdfFile);
 
-                // Open an input stream to read the PDF file
-                FileInputStream fileInputStream = new FileInputStream(pdfFile);
+           // Read the PDF file data and store it in a byte array
+           ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+           byte[] buffer = new byte[4096];
+           int bytesRead;
+           while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+               byteArrayOutputStream.write(buffer, 0, bytesRead);
+           }
 
-                // Get the response's output stream
-                OutputStream outputStream = response.raw().getOutputStream();
+           // Close the input stream
+           fileInputStream.close();
 
-                // Read and write the PDF file data to the response
-                byte[] buffer = new byte[4096];
-                int bytesRead;
-                while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-                    outputStream.write(buffer, 0, bytesRead);
-                }
+           // Set the response body as the byte array
+           response.body(byteArrayOutputStream.toByteArray());
+       } catch (IOException e) {
+           e.printStackTrace();
+           // Handle any errors that occur during file reading
+           response.status(500);
+       }
+   } else {
+       // Handle the case when the PDF file is not generated or not found
+       response.status(404);
+   }
 
-                // Close the input and output streams
-                fileInputStream.close();
-                outputStream.flush();
-                outputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-                // Handle any errors that occur during file reading/writing
-            }
-        } else {
-            // Handle the case when the PDF file is not generated or not found
-            response.status(404);
-        }
-        response.header("Content-Disposition", "attachment; filename=output2.pdf");
-        response.type("application/pdf");
-        return response.raw();
+   return response;
     });
   }
 }

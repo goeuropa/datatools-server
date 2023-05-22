@@ -149,29 +149,28 @@ public class StatusController {
         if (pdfFile != null && pdfFile.exists()) {
        try {
            // Set the response headers for downloading the file
-           response.header("Content-Disposition", "attachment; filename=output3.pdf");
+           response.header("Content-Disposition", "attachment; filename=rozklad0518.pdf");
            response.type("application/pdf");
 
-           // Open an input stream to read the PDF file
-           FileInputStream fileInputStream = new FileInputStream(pdfFile);
+           // Get the response's output stream
+            OutputStream outputStream = response.raw().getOutputStream();
 
-           // Read the PDF file data and store it in a byte array
-           ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-           byte[] buffer = new byte[4096];
-           int bytesRead;
-           while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-               byteArrayOutputStream.write(buffer, 0, bytesRead);
-           }
+            // Open an input stream to read the PDF file
+            FileInputStream fileInputStream = new FileInputStream(pdfFile);
+            // Read and write the PDF file data to the response
+              byte[] buffer = new byte[4096];
+              int bytesRead;
+              while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+                  outputStream.write(buffer, 0, bytesRead);
+              }
 
-           // Close the input stream
-           fileInputStream.close();
+              // Close the input stream
+              fileInputStream.close();
 
-           // Convert the byte array to a Base64-encoded string
-            byte[] pdfBytes = byteArrayOutputStream.toByteArray();
-            String base64String = Base64.getEncoder().encodeToString(pdfBytes);
-
-            // Set the response body as the Base64-encoded string
-            response.body(base64String);
+              // Flush and close the output stream
+              outputStream.flush();
+              outputStream.close();
+            
        } catch (IOException e) {
            e.printStackTrace();
            // Handle any errors that occur during file reading

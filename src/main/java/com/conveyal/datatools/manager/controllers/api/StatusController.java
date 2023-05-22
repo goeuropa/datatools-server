@@ -106,6 +106,7 @@ public class StatusController {
       get(apiPrefix + "secure/status/number/:number", (request, response) -> {
         // Extract the number parameter from the request
         String number = request.params(":number");
+        System.out.println("Request received. Number: " + number);
 
         // TODO: Replace the following code with your own custom Java logic to generate the PDF file
         //File pdfFile = generatePDFFile(number);
@@ -148,40 +149,30 @@ public class StatusController {
         File pdfFile = new File("output2.pdf");
         if (pdfFile != null && pdfFile.exists()) {
        try {
-           // Set the response headers for downloading the file
-           response.header("Content-Disposition", "attachment; filename=rozklad0518.pdf");
-           response.type("application/pdf");
+         // Read the PDF file content into a byte array
+         byte[] pdfBytes = IOUtils.toByteArray(new FileInputStream(pdfFile));
 
-           // Get the response's output stream
-            OutputStream outputStream = response.raw().getOutputStream();
+         // Convert the PDF byte array to a Base64-encoded string
+         String base64String = Base64.getEncoder().encodeToString(pdfBytes);
 
-            // Open an input stream to read the PDF file
-            FileInputStream fileInputStream = new FileInputStream(pdfFile);
-            // Read and write the PDF file data to the response
-              byte[] buffer = new byte[4096];
-              int bytesRead;
-              while ((bytesRead = fileInputStream.read(buffer)) != -1) {
-                  outputStream.write(buffer, 0, bytesRead);
-              }
+         // Create a JSON object to hold the response data
+         JsonObject jsonResponse = new JsonObject();
+         jsonResponse.addProperty("pdfData", base64String);
 
-              // Close the input stream
-              fileInputStream.close();
+         // Set the response headers and body
+         response.type("application/json");
+         response.body(jsonResponse.toString());
+     } catch (IOException e) {
+         e.printStackTrace();
+         // Handle any errors that occur during file reading
+         response.status(500);
+     }
+ } else {
+     // Handle the case when the PDF file is not generated or not found
+     response.status(404);
+ }
 
-              // Flush and close the output stream
-              outputStream.flush();
-              outputStream.close();
-            
-       } catch (IOException e) {
-           e.printStackTrace();
-           // Handle any errors that occur during file reading
-           response.status(500);
-       }
-   } else {
-       // Handle the case when the PDF file is not generated or not found
-       response.status(404);
-   }
-
-   return response;
+ return response;
     });
   }
 }

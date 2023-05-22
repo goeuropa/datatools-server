@@ -146,8 +146,7 @@ public class StatusController {
         if (pdfFile != null && pdfFile.exists()) {
             try {
                 // Set the response headers
-                response.header("Content-Disposition", "attachment; filename=output2.pdf");
-                response.type("application/pdf");
+
 
                 // Open an input stream to read the PDF file
                 FileInputStream fileInputStream = new FileInputStream(pdfFile);
@@ -174,6 +173,7 @@ public class StatusController {
             // Handle the case when the PDF file is not generated or not found
             response.status(404);
         }
+        response.header("Content-Disposition", "attachment; filename=output2.pdf");
         response.type("application/pdf");
         return response.raw();
     });

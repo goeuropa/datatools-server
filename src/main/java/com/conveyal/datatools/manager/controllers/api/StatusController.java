@@ -90,7 +90,17 @@ public class StatusController {
         // Get a copy of all existing jobs before we purge the completed ones.
         return JobUtils.getJobsByUserId(userId, true);
     }
-    private void returnPDFFile(Request request, Response response) {
+    public static void register (String apiPrefix) {
+
+        get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
+        // These endpoints return all jobs for the current user, all application jobs, or a specific job
+        get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
+        // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
+        get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
+        get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
+        // TODO Add ability to cancel job
+//        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
+      get(apiPrefix + "secure/status/number/:number", (request, response) -> {
         // Extract the number parameter from the request
         String number = request.params(":number");
 
@@ -132,6 +142,7 @@ public class StatusController {
         p.przystanki[13] = "28 Czerwca 1956 r. ";
         pdf.generujPrzystanek(p,"output2.pdf");
 
+        File pdfFile = new File("output2.pdf");
         if (pdfFile != null && pdfFile.exists()) {
             try {
                 // Set the response headers
@@ -139,7 +150,7 @@ public class StatusController {
                 response.type("application/pdf");
 
                 // Open an input stream to read the PDF file
-                FileInputStream fileInputStream = new FileInputStream(new File("output2.pdf"));
+                FileInputStream fileInputStream = new FileInputStream(pdfFile);
 
                 // Get the response's output stream
                 OutputStream outputStream = response.raw().getOutputStream();
@@ -163,17 +174,7 @@ public class StatusController {
             // Handle the case when the PDF file is not generated or not found
             response.status(404);
         }
-    }
-    public static void register (String apiPrefix) {
-
-        get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
-        // These endpoints return all jobs for the current user, all application jobs, or a specific job
-        get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
-        // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
-        get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
-        get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
-        // TODO Add ability to cancel job
-//        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
-      get(apiPrefix + "secure/status/number/:number", this::returnPDFFile, "application/pdf");
-    }
+        return response.raw();
+    });
+  }
 }

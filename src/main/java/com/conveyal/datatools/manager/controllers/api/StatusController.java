@@ -139,7 +139,7 @@ public class StatusController {
                 response.type("application/pdf");
 
                 // Open an input stream to read the PDF file
-                FileInputStream fileInputStream = new FileInputStream(pdfFile);
+                FileInputStream fileInputStream = new FileInputStream(new File("output2.pdf"));
 
                 // Get the response's output stream
                 OutputStream outputStream = response.raw().getOutputStream();

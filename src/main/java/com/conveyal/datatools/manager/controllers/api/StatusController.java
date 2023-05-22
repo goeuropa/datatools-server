@@ -27,6 +27,7 @@ import java.io.OutputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
 import org.apache.commons.io.IOUtils;
+import org.json.JSONObject;
 /**
  * Created by landon on 6/13/16.
  */
@@ -146,33 +147,37 @@ public class StatusController {
         p.przystanki[13] = "28 Czerwca 1956 r. ";
         pdf.generujPrzystanek(p,"output2.pdf");
 
-        File pdfFile = new File("output2.pdf");
-        if (pdfFile != null && pdfFile.exists()) {
-       try {
-         // Read the PDF file content into a byte array
-         byte[] pdfBytes = IOUtils.toByteArray(new FileInputStream(pdfFile));
+        // Extract the number parameter from the request
 
-         // Convert the PDF byte array to a Base64-encoded string
-         String base64String = Base64.getEncoder().encodeToString(pdfBytes);
+      // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+      //File pdfFile = generatePDFFile(number);
+      File pdfFile = new File("output2.pdf");
+      if (pdfFile != null && pdfFile.exists()) {
+          try {
+              // Read the PDF file content into a byte array
+              byte[] pdfBytes = IOUtils.toByteArray(new FileInputStream(pdfFile));
 
-         // Create a JSON object to hold the response data
-         JsonObject jsonResponse = new JsonObject();
-         jsonResponse.addProperty("pdfData", base64String);
+              // Convert the PDF byte array to a Base64-encoded string
+              String base64String = Base64.getEncoder().encodeToString(pdfBytes);
 
-         // Set the response headers and body
-         response.type("application/json");
-         response.body(jsonResponse.toString());
-     } catch (IOException e) {
-         e.printStackTrace();
-         // Handle any errors that occur during file reading
-         response.status(500);
-     }
- } else {
-     // Handle the case when the PDF file is not generated or not found
-     response.status(404);
- }
+              // Create a JSON object to hold the response data
+              JSONObject jsonResponse = new JSONObject();
+              jsonResponse.put("pdfData", base64String);
 
- return response;
+              // Set the response headers and body
+              response.type("application/json");
+              response.body(jsonResponse.toString());
+          } catch (IOException e) {
+              e.printStackTrace();
+              // Handle any errors that occur during file reading
+              response.status(500);
+          }
+      } else {
+          // Handle the case when the PDF file is not generated or not found
+          response.status(404);
+      }
+
+      return response;
     });
   }
 }

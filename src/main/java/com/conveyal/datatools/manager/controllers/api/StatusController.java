@@ -174,6 +174,7 @@ public class StatusController {
             // Handle the case when the PDF file is not generated or not found
             response.status(404);
         }
+        response.type("application/pdf");
         return response.raw();
     });
   }

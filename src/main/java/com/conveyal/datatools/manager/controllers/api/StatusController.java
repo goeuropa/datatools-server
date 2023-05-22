@@ -164,6 +164,8 @@ public class StatusController {
               JSONObject jsonResponse = new JSONObject();
               jsonResponse.put("pdfData", base64String);
 
+              response.header("Content-Type", "application/pdf");
+    response.header("Content-Disposition", "attachment; filename=output2.pdf");
               // Set the response headers and body
               response.type("application/json");
               response.body(jsonResponse.toString());

@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.ByteArrayOutputStream;
+import java.util.Base64;
 
 /**
  * Created by landon on 6/13/16.
@@ -165,8 +166,12 @@ public class StatusController {
            // Close the input stream
            fileInputStream.close();
 
-           // Set the response body as the byte array
-           response.body(byteArrayOutputStream.toByteArray());
+           // Convert the byte array to a Base64-encoded string
+            byte[] pdfBytes = byteArrayOutputStream.toByteArray();
+            String base64String = Base64.getEncoder().encodeToString(pdfBytes);
+
+            // Set the response body as the Base64-encoded string
+            response.body(base64String);
        } catch (IOException e) {
            e.printStackTrace();
            // Handle any errors that occur during file reading

@@ -20,6 +20,10 @@ import java.util.stream.Collectors;
 import static com.conveyal.datatools.common.utils.SparkUtils.logMessageAndHalt;
 import static spark.Spark.get;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 /**
  * Created by landon on 6/13/16.
  */
@@ -86,7 +90,80 @@ public class StatusController {
         // Get a copy of all existing jobs before we purge the completed ones.
         return JobUtils.getJobsByUserId(userId, true);
     }
+    private void returnPDFFile(Request request, Response response) {
+        // Extract the number parameter from the request
+        String number = request.params(":number");
 
+        // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+        //File pdfFile = generatePDFFile(number);
+
+        PdfGenerator pdf = new PdfGenerator();
+        PrzystanekD p = new PrzystanekD();
+        p.nazwa = "Rondo Śródka";
+        p.kierunek = "Małe Garbary";
+        p.waznyod = "04-04-2023";
+        p.linia = "582-route:" + number;
+
+        p.odjazdy1[3][20] = "O";
+        p.odjazdy1[3][40] = "O";
+        p.odjazdy1[4][20] = "K";
+        p.odjazdy1[15][20] = "O";
+
+        p.odjazdy2[4][10] = "O";
+        p.odjazdy2[4][50] = "O";
+        p.odjazdy2[15][30] = "O";
+
+        p.odjazdy3[12][20] = "O";
+        p.odjazdy3[12][35] = "K";
+
+        p.przystanki[0] = "Szymanowskiego";
+        p.przystanki[1] = "Opienskiego";
+        p.przystanki[2] = "Kurpińskiego";
+        p.przystanki[3] = "Lechicka";
+        p.przystanki[4] = "Os. Pod Lipami";
+        p.przystanki[5] = "Armii Poznań";
+        p.przystanki[6] = "Słowiańska";
+        p.przystanki[7] = "Most Teatralny";
+        p.przystanki[8] = "Rondo Kaponiera";
+        p.przystanki[9] = "Dworzec Główny PKP";
+        p.przystanki[10] = "Rynek Łazarski";
+        p.przystanki[11] = "Hetmańska";
+        p.przystanki[12] = "Rolna";
+        p.przystanki[13] = "28 Czerwca 1956 r. ";
+        pdf.generujPrzystanek(p,"output2.pdf");
+
+        if (pdfFile != null && pdfFile.exists()) {
+            try {
+                // Set the response headers
+                response.header("Content-Disposition", "attachment; filename=output2.pdf");
+                response.type("application/pdf");
+
+                // Open an input stream to read the PDF file
+                FileInputStream fileInputStream = new FileInputStream(pdfFile);
+
+                // Get the response's output stream
+                OutputStream outputStream = response.raw().getOutputStream();
+
+                // Read and write the PDF file data to the response
+                byte[] buffer = new byte[4096];
+                int bytesRead;
+                while ((bytesRead = fileInputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+
+                // Close the input and output streams
+                fileInputStream.close();
+                outputStream.flush();
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // Handle any errors that occur during file reading/writing
+            }
+        } else {
+            // Handle the case when the PDF file is not generated or not found
+            response.status(404);
+        }
+    }
     public static void register (String apiPrefix) {
 
         get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
@@ -97,5 +174,6 @@ public class StatusController {
         get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
         // TODO Add ability to cancel job
 //        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
+      get(apiPrefix + "secure/status/number/:number", this::returnPDFFile, "application/pdf");
     }
 }

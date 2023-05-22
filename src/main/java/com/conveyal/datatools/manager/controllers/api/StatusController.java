@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
-
+import org.apache.commons.io.IOUtils;
 /**
  * Created by landon on 6/13/16.
  */

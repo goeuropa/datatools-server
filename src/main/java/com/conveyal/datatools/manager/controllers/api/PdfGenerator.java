@@ -45,7 +45,7 @@ public class PdfGenerator {
     p.przystanki[8] = "Słupia Wielka";
     p.przystanki[9] = "Pętkowo";
     p.przystanki[10] = "Niedziałkowskiego Działki";
-    p.przystanki[11] = "Środa Wlkp Niedziałkowskiego Biedronka";
+    p.przystanki[11] = "Środa Wlkp Nied. Biedronka";
     p.przystanki[12] = "Środa Wlkp PKS";
     return p;
     //}

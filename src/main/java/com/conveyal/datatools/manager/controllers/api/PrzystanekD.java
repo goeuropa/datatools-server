@@ -5,8 +5,8 @@ public class PrzystanekD {
   public PrzystanekD(){
     uwagi = new String[3];
     uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
-    uwagi[1] = "S - kurs w dni nauki szkolnej";
-    uwagi[2] = "D - kurs do Dębiec Wieś";
+    uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+    //uwagi[2] = "D - kurs do Dębiec Wieś";
   }
   String nazwa;
   String kierunek;
@@ -36,7 +36,7 @@ public class PrzystanekD {
       return new Integer(j).toString()+"x";
     }
     if ( kod == "SD"){
-      return new Integer(j).toString()+"S,D";
+      return new Integer(j).toString()+"e";
     }
     return "E";
   }

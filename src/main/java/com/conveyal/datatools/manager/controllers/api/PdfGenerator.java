@@ -20,12 +20,74 @@ public class PdfGenerator {
 
   public PrzystanekD generujKombus(String number){
     PrzystanekD p = new PrzystanekD();
-    //if ( number.equals("3") == true ){//582
+    if ( number.equals("2") == true ){//582
+    p.nazwa = "Kórnik Szkoła";
+    p.kierunek = "Kórnik Rynek końcowy";
+
+    p.linia = "580";
+    }
+    if ( number.equals("3") == true ){//582
     p.nazwa = "Kórnik Szkoła";
     p.kierunek = "Środa Wlkp PKS";
-    p.waznyod = "16-05-2023";
-    p.linia = "582";
 
+    p.linia = "582";
+    }
+
+    if ( number.equals("4") == true ){//582
+    p.nazwa = "Kórnik Szkoła";
+    p.kierunek = "Kórnik Dworzec PKP";
+
+    p.linia = "590";
+    }
+    if ( number.equals("5") == true ){//582
+    p.nazwa = "Kórnik Szkoła";
+    p.kierunek = "Kromolice Pętla";
+
+    p.linia = "591";
+    }
+    if ( number.equals("6") == true ){//582
+    p.nazwa = "Robakowo Gimnazjum";
+    p.kierunek = "Kórnik Rynek";
+
+    p.linia = "592";
+    }
+    if ( number.equals("7") == true ){//582
+    p.nazwa = "Borówiec";
+    p.kierunek = "Kamionki";
+
+    p.linia = "593";
+    }
+    if ( number.equals("8") == true ){//582
+    p.nazwa = "Koninko";
+    p.kierunek = "Szczodrzykowo";
+
+    p.linia = "594";
+    }
+    if ( number.equals("9") == true ){//582
+    p.nazwa = "Radzewo - Rynek";
+    p.kierunek = "Rynek - Radzewo";
+
+    p.linia = "595";
+    }
+    if ( number.equals("10") == true ){//582
+    p.nazwa = "Kórnik";
+    p.kierunek = "Rynek Czołowo";
+
+    p.linia = "596";
+    }
+    if ( number.equals("11") == true ){//582
+    p.nazwa = "Bnin Osiedle";
+    p.kierunek = "Jaryszki Składowa";
+
+    p.linia = "597";
+    }
+    if ( number.equals("12") == true ){//582
+    p.nazwa = "Kórnik Plac Niepodległości";
+    p.kierunek = "Szczytniki Pętla";
+
+    p.linia = "599";
+    }
+  p.waznyod = "16-05-2023";
     p.odjazdy1[13][11] = "SD";
     p.odjazdy1[13][57] = "x";
     p.odjazdy1[15][37] = "x";

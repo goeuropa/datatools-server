@@ -20,14 +20,17 @@ class PrzystanekD {
     odjazdy1[3][40] = "O";
     odjazdy1[4][20] = "K";
 
-    
+
   }
   public String showMinute(String kod, int j){
     if ( kod == "O"){
       return new Integer(j).toString();
     }
-    if ( kod == "K"){
+    if ( kod == "x"){
       return new Integer(j).toString()+"x";
+    }
+    if ( kod == "SD"){
+      return new Integer(j).toString()+"S,D";
     }
     return "E";
   }

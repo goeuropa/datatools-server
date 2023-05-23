@@ -117,38 +117,7 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          PrzystanekD p = new PrzystanekD();
-          p.nazwa = "Rondo Śródka";
-          p.kierunek = "Małe Garbary";
-          p.waznyod = "04-04-2023";
-          p.linia = "582-route:" + number;
-
-          p.odjazdy1[3][20] = "O";
-          p.odjazdy1[3][40] = "O";
-          p.odjazdy1[4][20] = "K";
-          p.odjazdy1[15][20] = "O";
-
-          p.odjazdy2[4][10] = "O";
-          p.odjazdy2[4][50] = "O";
-          p.odjazdy2[15][30] = "O";
-
-          p.odjazdy3[12][20] = "O";
-          p.odjazdy3[12][35] = "K";
-
-          p.przystanki[0] = "Szymanowskiego";
-          p.przystanki[1] = "Opienskiego";
-          p.przystanki[2] = "Kurpińskiego";
-          p.przystanki[3] = "Lechicka";
-          p.przystanki[4] = "Os. Pod Lipami";
-          p.przystanki[5] = "Armii Poznań";
-          p.przystanki[6] = "Słowiańska";
-          p.przystanki[7] = "Most Teatralny";
-          p.przystanki[8] = "Rondo Kaponiera";
-          p.przystanki[9] = "Dworzec Główny PKP";
-          p.przystanki[10] = "Rynek Łazarski";
-          p.przystanki[11] = "Hetmańska";
-          p.przystanki[12] = "Rolna";
-          p.przystanki[13] = "28 Czerwca 1956 r. ";
+          PrzystanekD = pdf.generujKombus(number);
           pdf.generujPrzystanek(p, "output2.pdf");
 
           // Extract the number parameter from the request

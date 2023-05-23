@@ -18,6 +18,38 @@ import java.io.FileOutputStream;
 import javax.imageio.ImageIO;
 public class PdfGenerator {
 
+  public PrzystanekD generujKombus(String number){
+    PrzystanekD p = new PrzystanekD();
+    if ( number.equals("3") == true ){//582
+    p.nazwa = "Kórnik Szkoła";
+    p.kierunek = "Środa Wlkp PKS";
+    p.waznyod = "16-05-2023";
+    p.linia = "582";
+
+    p.odjazdy1[13][11] = "SD";
+    p.odjazdy1[13][57] = "x";
+    p.odjazdy1[15][37] = "x";
+/*
+    p.odjazdy2[4][10] = "O";
+    p.odjazdy3[12][35] = "K";
+*/
+
+    p.przystanki[0] = "Kórnik - Szkoła";
+    p.przystanki[1] = "Kórnik - Pl. Niepodległości";
+    p.przystanki[2] = "Trzebisławki Wieś";
+    p.przystanki[3] = "Trzebisławki";
+    p.przystanki[4] = "Dębiec Wieś";
+    p.przystanki[5] = "Dębiec";
+    p.przystanki[6] = "Koszuty";
+    p.przystanki[7] = "Słupia Wielka/Szkoła";
+    p.przystanki[8] = "Słupia Wielka";
+    p.przystanki[9] = "Pętkowo;
+    p.przystanki[10] = "Niedziałkowskiego Działki";
+    p.przystanki[11] = "Środa Wlkp Niedziałkowskiego Biedronka";
+    p.przystanki[12] = "Środa Wlkp PKS";
+    return p;
+    }
+  }
   public void generujPrzystanek(PrzystanekD przystanek, String outputFilename){
     System.out.println("Generuje: " + przystanek);
     System.out.println("Do pliku: " + outputFilename);

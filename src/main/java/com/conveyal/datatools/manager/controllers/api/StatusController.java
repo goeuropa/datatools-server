@@ -20,6 +20,9 @@ import java.util.stream.Collectors;
 import static com.conveyal.datatools.common.utils.SparkUtils.logMessageAndHalt;
 import static spark.Spark.get;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -94,92 +97,92 @@ public class StatusController {
         // Get a copy of all existing jobs before we purge the completed ones.
         return JobUtils.getJobsByUserId(userId, true);
     }
-    public static void register (String apiPrefix) {
 
-        get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
-        // These endpoints return all jobs for the current user, all application jobs, or a specific job
-        get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
-        // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
-        get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
-        get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
-        // TODO Add ability to cancel job
-//        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
+  public static void register(String apiPrefix) {
+      get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
+      // These endpoints return all jobs for the current user, all application jobs, or a specific job
+      get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
+      // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
+      get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
+      get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
+      // TODO Add ability to cancel job
+      // delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
+
       get(apiPrefix + "secure/status/number/:number", (request, response) -> {
-        // Extract the number parameter from the request
-        String number = request.params(":number");
-        System.out.println("Request received. Number: " + number);
+          // Extract the number parameter from the request
+          String number = request.params(":number");
+          System.out.println("Request received. Number: " + number);
 
-        // TODO: Replace the following code with your own custom Java logic to generate the PDF file
-        //File pdfFile = generatePDFFile(number);
+          // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+          // File pdfFile = generatePDFFile(number);
 
-        PdfGenerator pdf = new PdfGenerator();
-        PrzystanekD p = new PrzystanekD();
-        p.nazwa = "Rondo Śródka";
-        p.kierunek = "Małe Garbary";
-        p.waznyod = "04-04-2023";
-        p.linia = "582-route:" + number;
+          PdfGenerator pdf = new PdfGenerator();
+          PrzystanekD p = new PrzystanekD();
+          p.nazwa = "Rondo Śródka";
+          p.kierunek = "Małe Garbary";
+          p.waznyod = "04-04-2023";
+          p.linia = "582-route:" + number;
 
-        p.odjazdy1[3][20] = "O";
-        p.odjazdy1[3][40] = "O";
-        p.odjazdy1[4][20] = "K";
-        p.odjazdy1[15][20] = "O";
+          p.odjazdy1[3][20] = "O";
+          p.odjazdy1[3][40] = "O";
+          p.odjazdy1[4][20] = "K";
+          p.odjazdy1[15][20] = "O";
 
-        p.odjazdy2[4][10] = "O";
-        p.odjazdy2[4][50] = "O";
-        p.odjazdy2[15][30] = "O";
+          p.odjazdy2[4][10] = "O";
+          p.odjazdy2[4][50] = "O";
+          p.odjazdy2[15][30] = "O";
 
-        p.odjazdy3[12][20] = "O";
-        p.odjazdy3[12][35] = "K";
+          p.odjazdy3[12][20] = "O";
+          p.odjazdy3[12][35] = "K";
 
-        p.przystanki[0] = "Szymanowskiego";
-        p.przystanki[1] = "Opienskiego";
-        p.przystanki[2] = "Kurpińskiego";
-        p.przystanki[3] = "Lechicka";
-        p.przystanki[4] = "Os. Pod Lipami";
-        p.przystanki[5] = "Armii Poznań";
-        p.przystanki[6] = "Słowiańska";
-        p.przystanki[7] = "Most Teatralny";
-        p.przystanki[8] = "Rondo Kaponiera";
-        p.przystanki[9] = "Dworzec Główny PKP";
-        p.przystanki[10] = "Rynek Łazarski";
-        p.przystanki[11] = "Hetmańska";
-        p.przystanki[12] = "Rolna";
-        p.przystanki[13] = "28 Czerwca 1956 r. ";
-        pdf.generujPrzystanek(p,"output2.pdf");
+          p.przystanki[0] = "Szymanowskiego";
+          p.przystanki[1] = "Opienskiego";
+          p.przystanki[2] = "Kurpińskiego";
+          p.przystanki[3] = "Lechicka";
+          p.przystanki[4] = "Os. Pod Lipami";
+          p.przystanki[5] = "Armii Poznań";
+          p.przystanki[6] = "Słowiańska";
+          p.przystanki[7] = "Most Teatralny";
+          p.przystanki[8] = "Rondo Kaponiera";
+          p.przystanki[9] = "Dworzec Główny PKP";
+          p.przystanki[10] = "Rynek Łazarski";
+          p.przystanki[11] = "Hetmańska";
+          p.przystanki[12] = "Rolna";
+          p.przystanki[13] = "28 Czerwca 1956 r. ";
+          pdf.generujPrzystanek(p, "output2.pdf");
 
-        // Extract the number parameter from the request
+          // Extract the number parameter from the request
 
-      // TODO: Replace the following code with your own custom Java logic to generate the PDF file
-      //File pdfFile = generatePDFFile(number);
-      File pdfFile = new File("output2.pdf");
-      if (pdfFile != null && pdfFile.exists()) {
-          try {
-              // Read the PDF file content into a byte array
-              byte[] pdfBytes = IOUtils.toByteArray(new FileInputStream(pdfFile));
+          // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+          // File pdfFile = generatePDFFile(number);
+          File pdfFile = new File("output2.pdf");
+          if (pdfFile != null && pdfFile.exists()) {
 
-              // Convert the PDF byte array to a Base64-encoded string
-              String base64String = Base64.getEncoder().encodeToString(pdfBytes);
+              // Read the PDF file into a byte array
+              Path pdfPath = Paths.get("output2.pdf");
+              byte[] pdfData;
+              try {
+                  pdfData = Files.readAllBytes(pdfPath);
+              } catch (IOException e) {
+                  // Handle file reading error
+                  return "Error reading PDF file.";
+              }
 
-              // Create a JSON object to hold the response data
+              // Encode the PDF data as Base64
+              String base64Pdf = Base64.getEncoder().encodeToString(pdfData);
+
+              // Create a JSON object and add the PDF data as a property
               JSONObject jsonResponse = new JSONObject();
-              jsonResponse.put("pdfData", base64String);
+              jsonResponse.put("pdfData", base64Pdf);
 
-              response.header("Content-Type", "application/pdf");
-    response.header("Content-Disposition", "attachment; filename=output2.pdf");
-              // Set the response headers and body
+              // Set the response content type
               response.type("application/json");
-              response.body(jsonResponse.toString());
-          } catch (IOException e) {
-              e.printStackTrace();
-              // Handle any errors that occur during file reading
-              response.status(500);
-          }
-      } else {
-          // Handle the case when the PDF file is not generated or not found
-          response.status(404);
-      }
 
-      return response;
-    });
+              // Return the JSON response
+              return jsonResponse.toString();
+          }
+
+          return null;
+      });
+    }
   }
-}

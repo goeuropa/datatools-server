@@ -169,9 +169,10 @@ public class PdfGenerator {
 
     int odstepMinute = 50;
     int odstepMinutes = 40;
+    int odstepLong = 80;
     //start wspolrzedne
     int scale = 1;
-
+//TODO; odjazdy2,3 long last
 
     for ( int i = 3 ; i <= 23 ; i++ )
       {
@@ -183,11 +184,20 @@ public class PdfGenerator {
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
               int z = 0;
               int count = 0;
+              boolean lastLong = false;
+
               while ( z < 60 ){
 
                 if ( przystanek.odjazdy1[i][z] != null )
                   {
-                    cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy1[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
+                    if ( lastLong == true )
+                      cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy1[i][z],z), sx+odstepMinute+(count*odstepMinutes)+odstepLong, sy-(i-3)*kursor, 0);//
+                    else
+                      cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy1[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
+                    if ( przystanek.showMinute(przystanek.odjazdy1[i][z],z) == "S,D" )
+                      lastLong = true;
+                    else
+                      lastLong = false;
                     count++;
                   }
                 z++;

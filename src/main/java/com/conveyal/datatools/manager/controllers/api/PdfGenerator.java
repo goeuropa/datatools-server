@@ -20,7 +20,7 @@ public class PdfGenerator {
 
   public PrzystanekD generujKombus(String number){
     PrzystanekD p = new PrzystanekD();
-    if ( number.equals("3") == true ){//582
+    //if ( number.equals("3") == true ){//582
     p.nazwa = "Kórnik Szkoła";
     p.kierunek = "Środa Wlkp PKS";
     p.waznyod = "16-05-2023";
@@ -43,12 +43,12 @@ public class PdfGenerator {
     p.przystanki[6] = "Koszuty";
     p.przystanki[7] = "Słupia Wielka/Szkoła";
     p.przystanki[8] = "Słupia Wielka";
-    p.przystanki[9] = "Pętkowo;
+    p.przystanki[9] = "Pętkowo";
     p.przystanki[10] = "Niedziałkowskiego Działki";
     p.przystanki[11] = "Środa Wlkp Niedziałkowskiego Biedronka";
     p.przystanki[12] = "Środa Wlkp PKS";
     return p;
-    }
+    //}
   }
   public void generujPrzystanek(PrzystanekD przystanek, String outputFilename){
     System.out.println("Generuje: " + przystanek);
@@ -90,6 +90,7 @@ public class PdfGenerator {
         this.odjazdy2(cb,przystanek);
         this.odjazdy3(cb,przystanek);
         this.przystanki(cb,przystanek);
+        this.uwagi(cb,przystanek);
 
         document.close();
     } catch (Exception e) {
@@ -304,5 +305,24 @@ public class PdfGenerator {
     } catch (Exception e) {
       e.printStackTrace();
   }
+}
+public void uwagi(PdfContentByte cb, PrzystanekD przystanek){
+  try {
+  int sx = 140;
+  int sy = 140;
+  int kursor = 26;
+
+  int odstepMinute = 50;
+  int odstepPrzystanki = 30;
+  //start wspolrzedne
+  int scale = 1;
+
+  for ( int i = 0 ; i < przystanek.uwagi.length ; i++ )
+    {
+            cb.showTextAligned(Element.ALIGN_LEFT, przystanek.uwagi[i], sx, sy-(i)*odstepPrzystanki, 0);//
+    }
+  } catch (Exception e) {
+    e.printStackTrace();
+}
 }
 }

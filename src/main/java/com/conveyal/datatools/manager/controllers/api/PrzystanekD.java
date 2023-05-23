@@ -1,7 +1,13 @@
 package com.conveyal.datatools.manager.controllers.api;
 
 import java.util.HashMap;
-class PrzystanekD {
+public class PrzystanekD {
+  public PrzystanekD(){
+    uwagi = new String[3];
+    uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+    uwagi[1] = "S - kurs w dni nauki szkolnej";
+    uwagi[2] = "D - kurs do Dębiec Wieś";
+  }
   String nazwa;
   String kierunek;
   String waznyod;
@@ -10,7 +16,7 @@ class PrzystanekD {
   String[][] odjazdy2 = new String[24][60];
   String[][] odjazdy3 = new String[24][60];
   String[] przystanki = new String[20];
-
+  public String[] uwagi;
   public String toString(){
     return "Przystanek: " + this.nazwa;
   }

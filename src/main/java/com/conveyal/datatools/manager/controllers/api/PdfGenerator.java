@@ -201,7 +201,7 @@ public class PdfGenerator {
     for ( int i = 3 ; i <= 23 ; i++ )
       {
         for ( int j = 0 ; j < 60 ; j++ )
-          if ( przystanek.odjazdy1[i][j] != null )
+          if ( przystanek.odjazdy2[i][j] != null )
             {
               System.out.println(i+","+j);
               cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
@@ -210,9 +210,9 @@ public class PdfGenerator {
               int count = 0;
               while ( z < 60 ){
 
-                if ( przystanek.odjazdy1[i][z] != null )
+                if ( przystanek.odjazdy2[i][z] != null )
                   {
-                    cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy1[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
+                    cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy2[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
                     count++;
                   }
                 z++;
@@ -243,7 +243,7 @@ public class PdfGenerator {
     for ( int i = 3 ; i <= 23 ; i++ )
       {
         for ( int j = 0 ; j < 60 ; j++ )
-          if ( przystanek.odjazdy1[i][j] != null )
+          if ( przystanek.odjazdy3[i][j] != null )
             {
               System.out.println(i+","+j);
               cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
@@ -254,7 +254,7 @@ public class PdfGenerator {
 
                 if ( przystanek.odjazdy1[i][z] != null )
                   {
-                    cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy1[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
+                    cb.showTextAligned(Element.ALIGN_LEFT, przystanek.showMinute(przystanek.odjazdy3[i][z],z), sx+odstepMinute+(count*odstepMinutes), sy-(i-3)*kursor, 0);//
                     count++;
                   }
                 z++;
@@ -281,7 +281,7 @@ public class PdfGenerator {
     //start wspolrzedne
     int scale = 1;
 
-    for ( int i = 0 ; i < 20 ; i++ )
+    for ( int i = 0 ; i < 19 ; i++ )
       {
               cb.showTextAligned(Element.ALIGN_LEFT, przystanek.przystanki[i], sx, sy-(i)*odstepPrzystanki, 0);//
       }

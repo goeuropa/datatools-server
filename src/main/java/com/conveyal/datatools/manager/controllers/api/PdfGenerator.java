@@ -72,7 +72,7 @@ public class PdfGenerator {
   }
   public static void main(String[] args) {
         PdfGenerator pdf = new PdfGenerator();
-        PrzystanekD p = new PrzystanekD();
+        PrzystanekD p = new PrzystanekD("2");
         p.nazwa = "Rondo Śródka";
         p.kierunek = "Małe Garbary";
         p.waznyod = "04-04-2023";

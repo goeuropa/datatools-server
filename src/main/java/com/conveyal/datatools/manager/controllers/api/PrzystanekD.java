@@ -144,7 +144,7 @@ public class PrzystanekD {
     return "Przystanek: " + this.nazwa;
   }
   public void main(String[] args){
-    PrzystanekD p = new PrzystanekD();
+    PrzystanekD p = new PrzystanekD("3");
     odjazdy1[3][20] = "O";
     odjazdy1[3][40] = "O";
     odjazdy1[4][20] = "K";

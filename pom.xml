@@ -47,7 +47,7 @@
         <awsjavasdk.version>1.11.625</awsjavasdk.version>
     </properties>
     <build>
-        <finalName>my-app</finalName>
+        <!--<finalName>my-app</finalName>-->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

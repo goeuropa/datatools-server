@@ -2,6 +2,10 @@ package com.conveyal.datatools.manager.controllers.api;
 
 import java.util.HashMap;
 public class PrzystanekD {
+  /*  public PrzystanekD(String number, String databaseUrl){
+      GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+
+    }*/
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";
     if ( number.equals("3") == true ){//582

@@ -32,7 +32,7 @@ import java.util.Base64;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 
-import com.conveyal.gtfs;
+//import com.conveyal.gtfs;
 /**
  * Created by landon on 6/13/16.
  */
@@ -122,7 +122,7 @@ public class StatusController {
           //PrzystanekD p = pdf.generujKombus(number);
 
           PrzystanekD p = new PrzystanekD();
-          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
           pdf.generujPrzystanek(p, "output2.pdf");
 

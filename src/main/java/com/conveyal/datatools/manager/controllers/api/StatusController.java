@@ -121,8 +121,9 @@ public class StatusController {
           PdfGenerator pdf = new PdfGenerator();
           //PrzystanekD p = pdf.generujKombus(number);
 
+          String databaseUrl = "";
           PrzystanekD p = new PrzystanekD();
-          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
           pdf.generujPrzystanek(p, "output2.pdf");
 

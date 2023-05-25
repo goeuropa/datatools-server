@@ -2,8 +2,9 @@ package com.conveyal.datatools.manager.controllers.api;
 
 import java.util.HashMap;
 public class PrzystanekD {
+  public PrzystanekD(){
+  }
   /*  public PrzystanekD(String number, String databaseUrl){
-      GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
     }*/
   public PrzystanekD(String number){

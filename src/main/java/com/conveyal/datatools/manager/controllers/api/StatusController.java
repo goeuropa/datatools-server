@@ -31,6 +31,8 @@ import java.io.ByteArrayOutputStream;
 import java.util.Base64;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
+
+import com.conveyal.gtfs;
 /**
  * Created by landon on 6/13/16.
  */
@@ -118,8 +120,12 @@ public class StatusController {
 
           PdfGenerator pdf = new PdfGenerator();
           //PrzystanekD p = pdf.generujKombus(number);
-          PrzystanekD p = pdf.generujKombus(number);//, "127.0.0.1:");
+
+          PrzystanekD p = new PrzystanekD();
+          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+
           pdf.generujPrzystanek(p, "output2.pdf");
+
 
           // Extract the number parameter from the request
 

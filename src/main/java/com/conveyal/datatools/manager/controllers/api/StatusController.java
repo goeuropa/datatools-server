@@ -117,7 +117,8 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          PrzystanekD p = pdf.generujKombus(number);
+          //PrzystanekD p = pdf.generujKombus(number);
+          PrzystanekD p = pdf.generujKombus(number, "127.0.0.1:");
           pdf.generujPrzystanek(p, "output2.pdf");
 
           // Extract the number parameter from the request

@@ -30,6 +30,7 @@ public class GraphQLMain {
      */
     public static void main (String[] args) {
         String databaseUrl = args[0];
+            System.out.println("Database URL: " + databaseUrl); // Print the database URL
         String apiPrefix = "/";
         if (args.length > 1) {
             apiPrefix = args[1];
@@ -42,4 +43,3 @@ public class GraphQLMain {
     }
 
 }
-

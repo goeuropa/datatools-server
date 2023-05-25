@@ -32,6 +32,9 @@ import java.util.Base64;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 import com.conveyal.gtfs.GraphQLController;
+import com.conveyal.gtfs.GraphQLMain;
+import com.conveyal.gtfs.GTFS;
+
 //import com.conveyal.gtfs;
 /**
  * Created by landon on 6/13/16.
@@ -121,9 +124,9 @@ public class StatusController {
           PdfGenerator pdf = new PdfGenerator();
           //PrzystanekD p = pdf.generujKombus(number);
 
-          String databaseUrl = "";
+          String databaseUrl = "jdbc:postgresql://localhost/catalogue";
           PrzystanekD p = new PrzystanekD();
-          //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
           pdf.generujPrzystanek(p, "output2.pdf");
 

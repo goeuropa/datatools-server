@@ -47,7 +47,7 @@
         <awsjavasdk.version>1.11.625</awsjavasdk.version>
     </properties>
     <build>
-        <finalName>dt</finalName>
+        <!--<finalName>dt</finalName>-->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -91,7 +91,8 @@
                         <phase>package</phase>
                         <goals><goal>shade</goal></goals>
                         <configuration>
-                            <finalName>dt-${git.commit.id.describe}</finalName>
+                            <!--<finalName>dt-${git.commit.id.describe}</finalName>-->
+                            <finalName>dt</finalName>
                             <transformers>
                                 <!-- files overwrite each other and geotools does not function without this.
                                          http://docs.geotools.org/latest/userguide/faq.html#how-do-i-create-an-executable-jar-for-my-geotools-app -->

@@ -122,10 +122,10 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          //PrzystanekD p = pdf.generujKombus(number);
+          PrzystanekD p = pdf.generujKombus(number);
 
           String databaseUrl = "jdbc:postgresql://localhost/catalogue";
-          PrzystanekD p = new PrzystanekD();
+          //PrzystanekD p = new PrzystanekD();
           //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
           pdf.generujPrzystanek(p, "output2.pdf");

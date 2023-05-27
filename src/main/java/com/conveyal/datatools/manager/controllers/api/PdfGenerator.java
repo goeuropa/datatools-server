@@ -64,6 +64,7 @@ public class PdfGenerator {
         this.odjazdy3(cb,przystanek);
         this.przystanki(cb,przystanek);
         this.uwagi(cb,przystanek);
+        cb.endText();
 
         document.close();
     } catch (Exception e) {
@@ -128,7 +129,6 @@ public class PdfGenerator {
 
     cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 100);
     cb.showTextAligned(Element.ALIGN_LEFT, przystanek.linia, 105, 850, 0);
-    cb.endText();
   }
   catch ( Exception ex){
     System.out.println(ex);

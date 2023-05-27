@@ -110,23 +110,23 @@ public class PdfGenerator {
     }
   public void header(PdfContentByte cb, PrzystanekD przystanek){
     try {
-    cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 18);
+    cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 18);
   /*  for ( int i = 0 ; i < 1400 ; i+=50 )
       for ( int j = 0 ; j < 989 ; j+=50 )
         cb.showTextAligned(Element.ALIGN_CENTER, String.format("%02d:%02d", i, j), i, j, 0);
         */
     cb.showTextAligned(Element.ALIGN_LEFT, "Przystanek: ", 335, 920, 0);
-    cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 24);
+    cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 24);
     cb.showTextAligned(Element.ALIGN_LEFT, przystanek.nazwa, 335, 885, 0);
 
-    cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 18);
+    cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 18);
     cb.showTextAligned(Element.ALIGN_LEFT, "Kierunek: ", 335, 855, 0);
     cb.showTextAligned(Element.ALIGN_LEFT, przystanek.kierunek, 420, 855, 0);
 
     cb.showTextAligned(Element.ALIGN_LEFT, "Ważny od: ", 580, 920, 0);
     cb.showTextAligned(Element.ALIGN_LEFT, przystanek.waznyod, 680, 920, 0);
 
-    cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 100);
+    cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 100);
     cb.showTextAligned(Element.ALIGN_LEFT, przystanek.linia, 105, 850, 0);
     cb.endText();
   }
@@ -153,7 +153,7 @@ public class PdfGenerator {
           if ( przystanek.odjazdy1[i][j] != null )
             {
               System.out.println(i+","+j);
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
               int z = 0;
               int count = 0;
@@ -177,7 +177,7 @@ public class PdfGenerator {
               }
             }
             else{
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
             }
 
@@ -204,7 +204,7 @@ public class PdfGenerator {
           if ( przystanek.odjazdy2[i][j] != null )
             {
               System.out.println(i+","+j);
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
               int z = 0;
               int count = 0;
@@ -219,7 +219,7 @@ public class PdfGenerator {
               }
             }
             else{
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
             }
 
@@ -246,7 +246,7 @@ public class PdfGenerator {
           if ( przystanek.odjazdy3[i][j] != null )
             {
               System.out.println(i+","+j);
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
               int z = 0;
               int count = 0;
@@ -261,7 +261,7 @@ public class PdfGenerator {
               }
             }
             else{
-              cb.setFontAndSize(BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
               cb.showTextAligned(Element.ALIGN_CENTER, new Integer(i).toString(), sx, sy-(i-3)*kursor, 0);//godziny 3,4,5,6,7 .. 23
             }
 

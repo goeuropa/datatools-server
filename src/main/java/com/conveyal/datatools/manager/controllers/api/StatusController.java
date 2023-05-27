@@ -126,7 +126,7 @@ public class StatusController {
 
           String databaseUrl = "jdbc:postgresql://localhost/catalogue";
           PrzystanekD p = new PrzystanekD();
-          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 
           pdf.generujPrzystanek(p, "output2.pdf");
 

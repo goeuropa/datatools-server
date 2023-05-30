@@ -20,6 +20,22 @@ import java.util.stream.Collectors;
 import static com.conveyal.datatools.common.utils.SparkUtils.logMessageAndHalt;
 import static spark.Spark.get;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.Base64;
+import org.apache.commons.io.IOUtils;
+import org.json.JSONObject;
+import com.conveyal.gtfs.GraphQLController;
+import com.conveyal.gtfs.GraphQLMain;
+import com.conveyal.gtfs.GTFS;
+
+//import com.conveyal.gtfs;
 /**
  * Created by landon on 6/13/16.
  */
@@ -87,15 +103,68 @@ public class StatusController {
         return JobUtils.getJobsByUserId(userId, true);
     }
 
-    public static void register (String apiPrefix) {
+  public static void register(String apiPrefix) {
+      get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
+      // These endpoints return all jobs for the current user, all application jobs, or a specific job
+      get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
+      // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
+      get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
+      get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
+      // TODO Add ability to cancel job
+      // delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
 
-        get(apiPrefix + "secure/status/requests", StatusController::getAllRequestsRoute, json::write);
-        // These endpoints return all jobs for the current user, all application jobs, or a specific job
-        get(apiPrefix + "secure/status/jobs", StatusController::getUserJobsRoute, json::write);
-        // FIXME Change endpoint for all jobs (to avoid overlap with jobId param)?
-        get(apiPrefix + "secure/status/jobs/all", StatusController::getAllJobsRoute, json::write);
-        get(apiPrefix + "secure/status/jobs/:jobId", StatusController::getOneJobRoute, json::write);
-        // TODO Add ability to cancel job
-//        delete(apiPrefix + "secure/status/jobs/:jobId", StatusController::cancelJob, json::write);
+      get(apiPrefix + "secure/status/number/:number", (request, response) -> {
+          // Extract the number parameter from the request
+          String number = request.params(":number");
+          System.out.println("Request received. Number: " + number);
+
+          // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+          // File pdfFile = generatePDFFile(number);
+
+          PdfGenerator pdf = new PdfGenerator();
+          PrzystanekD p = pdf.generujKombus(number);
+
+          /*String databaseUrl = "jdbc:postgresql://localhost/catalogue";
+          PrzystanekD p = new PrzystanekD();
+          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          System.out.println("GraphQL query null");
+          GraphQLController.getGraphQL(null,null);
+          */
+          pdf.generujPrzystanek(p, "output2.pdf");
+
+
+          // Extract the number parameter from the request
+
+          // TODO: Replace the following code with your own custom Java logic to generate the PDF file
+          // File pdfFile = generatePDFFile(number);
+          File pdfFile = new File("output2.pdf");
+          if (pdfFile != null && pdfFile.exists()) {
+
+              // Read the PDF file into a byte array
+              Path pdfPath = Paths.get("output2.pdf");
+              byte[] pdfData;
+              try {
+                  pdfData = Files.readAllBytes(pdfPath);
+              } catch (IOException e) {
+                  // Handle file reading error
+                  return "Error reading PDF file.";
+              }
+
+              // Encode the PDF data as Base64
+              String base64Pdf = Base64.getEncoder().encodeToString(pdfData);
+
+              // Create a JSON object and add the PDF data as a property
+              JSONObject jsonResponse = new JSONObject();
+              jsonResponse.put("pdfData", base64Pdf);
+
+              // Set the response content type
+              response.type("application/json");
+
+              // Return the JSON response
+              return jsonResponse.toString();
+          }
+
+          return null;
+      });
     }
-}
+  }

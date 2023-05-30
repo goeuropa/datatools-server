@@ -4,6 +4,7 @@ import com.amazonaws.services.ec2.model.Filter;
 import com.conveyal.datatools.common.utils.aws.CheckedAWSException;
 import com.conveyal.datatools.common.utils.aws.EC2Utils;
 import com.conveyal.datatools.manager.DataManager;
+import static com.conveyal.datatools.manager.DataManager.getConfigPropertyAsText;
 import com.conveyal.datatools.manager.jobs.DeployJob;
 import com.conveyal.datatools.manager.persistence.Persistence;
 import com.conveyal.datatools.manager.utils.StringUtils;

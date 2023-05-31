@@ -62,6 +62,7 @@ variables.put("routeId", "your_route_id_here");
         ExecutionResult result = GTFSGraphQL.getGraphQl().execute(executionInput);
         long endTime = System.currentTimeMillis();
         LOG.info("Query took {} msec", endTime - startTime);
+        System.out.println("after query..");
         System.out.println(result.toSpecification());
     }
     /**

@@ -31,16 +31,27 @@ public class GraphQLController {
     /**
      * A Spark Controller that responds to a GraphQL query in HTTP GET query parameters.
      */
-    public static Map<String, Object> getGraphQL (Request request, Response response) {
-        JsonNode varsJson = null;
-        try {
-            varsJson = mapper.readTree(request.queryParams("variables"));
-        } catch (IOException e) {
-            LOG.warn("Error processing variables", e);
-            logMessageAndHalt(request, 400, "Malformed JSON");
-        }
-        String queryJson = request.queryParams("query");
-        return doQuery(varsJson, queryJson, response);
+    public static void getGraphQL () {
+        long startTime = System.currentTimeMillis();
+        String query = "query GetTripPatterns($tripPatternId: ID!, $routeId: ID!) { "
+        + "  tripPattern(id: $tripPatternId, routeId: $routeId) { "
+        + "    id "
+        + "    name "
+        + "    ...otherFields "
+        + "  } "
+        + "} ";
+
+        Map<String, Object> variables = new HashMap<>();
+variables.put("tripPatternId", "your_trip_pattern_id_here");
+variables.put("routeId", "your_route_id_here");
+        ExecutionInput executionInput = ExecutionInput.newExecutionInput()
+                .query(query)
+                .variables(variables)
+                .build();
+        ExecutionResult result = GTFSGraphQL.getGraphQl().execute(executionInput);
+        long endTime = System.currentTimeMillis();
+        LOG.info("Query took {} msec", endTime - startTime);
+        System.out.println(result.toSpecification());
     }
 
     /**

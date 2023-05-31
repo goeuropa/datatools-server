@@ -31,6 +31,17 @@ public class GraphQLController {
     /**
      * A Spark Controller that responds to a GraphQL query in HTTP GET query parameters.
      */
+    public static Map<String, Object> getGraphQL (Request request, Response response) {
+        JsonNode varsJson = null;
+        try {
+            varsJson = mapper.readTree(request.queryParams("variables"));
+        } catch (IOException e) {
+            LOG.warn("Error processing variables", e);
+            logMessageAndHalt(request, 400, "Malformed JSON");
+        }
+        String queryJson = request.queryParams("query");
+        return doQuery(varsJson, queryJson, response);
+    }
     public static void getGraphQL () {
         long startTime = System.currentTimeMillis();
         String query = "query GetTripPatterns($tripPatternId: ID!, $routeId: ID!) { "
@@ -53,7 +64,6 @@ variables.put("routeId", "your_route_id_here");
         LOG.info("Query took {} msec", endTime - startTime);
         System.out.println(result.toSpecification());
     }
-
     /**
      * A Spark Controller that responds to a GraphQL query in an HTTP POST body.
      */

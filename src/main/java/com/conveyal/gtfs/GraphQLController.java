@@ -32,6 +32,9 @@ public class GraphQLController {
      * A Spark Controller that responds to a GraphQL query in HTTP GET query parameters.
      */
     public static Map<String, Object> getGraphQL (Request request, Response response) {
+
+      //and other method too
+      this.getGraphQL();
         JsonNode varsJson = null;
         try {
             varsJson = mapper.readTree(request.queryParams("variables"));

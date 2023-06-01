@@ -124,8 +124,8 @@ public class StatusController {
           PdfGenerator pdf = new PdfGenerator();
           //PrzystanekD p = pdf.generujKombus(number);
 
-          String databaseUrl = "jdbc:postgresql://postgres/dmtest";//jdbc:postgresql://localhost/catalogue
-          PrzystanekD p = new PrzystanekD();
+          String databaseUrl = "jdbc:postgresql://localhost/catalogue";//
+          //PrzystanekD p = new PrzystanekD();
           GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
           System.out.println("GraphQL query null");
           GraphQLController.getGraphQL();

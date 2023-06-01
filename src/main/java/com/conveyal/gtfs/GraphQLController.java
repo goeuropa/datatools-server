@@ -48,7 +48,6 @@ public class GraphQLController {
 
         Map<String, Object> variables = new HashMap<>();
 variables.put("id", "7");
-variables.put("namespace", "eflw_mvxfumemrobuxwnuklzdin");
         ExecutionInput executionInput = ExecutionInput.newExecutionInput()
                 .query(query)
                 .variables(variables)

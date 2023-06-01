@@ -49,6 +49,12 @@ public class GraphQLController {
         Map<String, Object> variables = new HashMap<>();
 variables.put("id", "7");
 variables.put("namespace", "eflw_mvxfumemrobuxwnuklzdin");
+
+{data={feed=null}, errors=[{message=Exception while fetching data (/feed) : org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections., locations=[{line=3, column=9}], path=[feed]}]}
+datatools-server     | result:..
+datatools-server     | ExecutionResultImpl{data={feed=null}, errors=[ExceptionWhileDataFetching{path=[feed]exception=java.lang.RuntimeException: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.locations=[SourceLocation{line=3, column=9}]}], dataPresent=true, extensions=null}
+
+
         ExecutionInput executionInput = ExecutionInput.newExecutionInput()
                 .query(query)
                 .variables(variables)

@@ -44,17 +44,11 @@ public class GraphQLController {
     }
     public static void getGraphQL () {
         long startTime = System.currentTimeMillis();
-        String query = "query GetTripPatterns($tripPatternId: ID!, $routeId: ID!) { "
-        + "  tripPattern(id: $tripPatternId, routeId: $routeId) { "
-        + "    id "
-        + "    name "
-        + "    ...otherFields "
-        + "  } "
-        + "} ";
+        String query = "\n      query entityQuery($namespace: String, $id: Int) {\n        feed(namespace: $namespace) {\n          feed_id\n          feed_version\n          filename\n          routes (limit: -1, id: $id) {\n            id\n            \n        status\npublicly_visible\nroute_id\nroute_short_name\nroute_long_name\nagency_id\nroute_desc\nroute_type\nroute_sort_order\ncontinuous_pickup\ncontinuous_drop_off\nroute_url\nroute_color\nroute_text_color\nwheelchair_accessible\nroute_branding_url\n        tripPatterns: patterns (limit: -1) {\n          id\n          shape_id\n          pattern_id\n          route_id\n          direction_id\n          use_frequency\n          name\n          pattern_stops (limit: -1) {\n    id\n    stop_id\n    default_travel_time\n    default_dwell_time\n    stop_sequence\n    shape_dist_traveled\n    pickup_type\n    drop_off_type\n    timepoint\n    continuous_pickup\n    continuous_drop_off\n    stop_headsign\n  }\n          shape_points: shape (limit: -1) {\n    shape_pt_lon\n    shape_pt_lat\n    shape_pt_sequence\n    point_type\n    shape_dist_traveled\n  }\n        }\n      \n          }\n        }\n      }\n    ";
 
         Map<String, Object> variables = new HashMap<>();
-variables.put("tripPatternId", "your_trip_pattern_id_here");
-variables.put("routeId", "your_route_id_here");
+variables.put("id", "7");
+variables.put("namespace", "eflw_mvxfumemrobuxwnuklzdin");
         ExecutionInput executionInput = ExecutionInput.newExecutionInput()
                 .query(query)
                 .variables(variables)
@@ -64,6 +58,9 @@ variables.put("routeId", "your_route_id_here");
         LOG.info("Query took {} msec", endTime - startTime);
         System.out.println("after query..");
         System.out.println(result.toSpecification());
+
+        System.out.println("result:..");
+        System.out.println(result);
     }
     /**
      * A Spark Controller that responds to a GraphQL query in an HTTP POST body.

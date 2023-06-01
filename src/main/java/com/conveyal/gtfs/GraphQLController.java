@@ -34,7 +34,7 @@ public class GraphQLController {
     public static Map<String, Object> getGraphQL (Request request, Response response) {
 
       //and other method too
-      this.getGraphQL();
+      getGraphQL();
         JsonNode varsJson = null;
         try {
             varsJson = mapper.readTree(request.queryParams("variables"));

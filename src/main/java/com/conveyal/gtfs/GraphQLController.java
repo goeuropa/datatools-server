@@ -123,21 +123,26 @@ PrzystanekD p = new PrzystanekD();
 System.out.println("Generating output3.pdf ( i dont know where it lies ), result.getData(): ");
 System.out.println(result.getData().toString());
 String jsonString = result.getData().toString();
-String pattern = "\\{id=7, route_id=\\d+, route_short_name=(\\d+), route_long_name=([^|]+)";
+
+        String pattern = "id=7,.*?route_short_name=([^,]+),.*?route_long_name=([^|]+)";
         Pattern regex = Pattern.compile(pattern);
         Matcher matcher = regex.matcher(jsonString);
 
         if (matcher.find()) {
-            String routeShortName = matcher.group(1);
-            String routeLongName = matcher.group(2);
-            System.out.println("Route Short Name: " + routeShortName);
-            System.out.println("Route Long Name: " + routeLongName);
-            p.kierunek = routeLongName;
-            p.nazwa = routeShortName;
-            p.linia = routeShortName;
-        } else {
-            System.out.println("Route not found.");
-        }
+                    //String routeId = matcher.group(1);
+                    String routeShortName = matcher.group(1);
+                    String routeLongName = matcher.group(2);
+                    //System.out.println("Route ID: " + routeId);
+                    System.out.println("Route Short Name: " + routeShortName);
+                    System.out.println("Route Long Name: " + routeLongName);
+                    System.out.println("Route Short Name: " + routeShortName);
+                    System.out.println("Route Long Name: " + routeLongName);
+                    p.kierunek = routeLongName;
+                    p.nazwa = routeShortName;
+                    p.linia = routeShortName;
+                } else {
+                    System.out.println("Route not found.");
+                }
 
 //GraphQLController.getGraphQL();
 

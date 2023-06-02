@@ -21,6 +21,9 @@ import static spark.Spark.get;
 import static spark.Spark.post;
 import com.conveyal.datatools.manager.controllers.api.PrzystanekD;
 import com.conveyal.datatools.manager.controllers.api.PdfGenerator;
+
+import com.google.gson.*;
+
 /**
  * This Spark Controller contains methods to provide HTTP responses to GraphQL queries, including a query for the
  * GraphQL schema.
@@ -69,8 +72,6 @@ datatools-server     | ExecutionResultImpl{data={feed=null}, errors=[ExceptionWh
         System.out.println("after query..");
         System.out.println(result.toSpecification());
 
-        System.out.println("result:..");
-        System.out.println(result);
         return result.toSpecification();
     }
     /**
@@ -119,6 +120,30 @@ PrzystanekD p = new PrzystanekD();
 //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 System.out.println("Generating output3.pdf ( i dont know where it lies ), result.toSpecification(): ");
 System.out.println(result.toSpecification());
+String jsonString = result.toSpecification().toString();
+Gson gson = new Gson();
+JsonObject jsonObject = gson.fromJson(jsonString, JsonObject.class);
+JsonObject dataObject = jsonObject.getAsJsonObject("data");
+JsonObject routesObject = dataObject.getAsJsonObject("routes");
+
+JsonArray routesArray = routesObject.getAsJsonArray("routes");
+
+String routeLongName = "";
+String routeShortName = "";
+
+for (JsonElement element : routesArray) {
+JsonObject routeObject = element.getAsJsonObject();
+int id = routeObject.get("id").getAsInt();
+
+if (id == 7) {
+routeLongName = routeObject.get("route_long_name").getAsString();
+routeShortName = routeObject.get("route_short_name").getAsString();
+break; // Exit the loop once the desired route is found
+}
+}
+p.kierunek = routeLongName;
+p.nazwa = routeShortName;
+p.linia = routeShortName;
 //GraphQLController.getGraphQL();
 
 pdf.generujPrzystanek(p, "output3.pdf");

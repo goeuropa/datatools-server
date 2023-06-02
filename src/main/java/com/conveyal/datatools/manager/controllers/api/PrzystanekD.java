@@ -328,10 +328,10 @@ public class PrzystanekD {
     }
     //uwagi[2] = "D - kurs do Dębiec Wieś";
   }
-  String nazwa;
-  String kierunek;
+  public String nazwa;
+  public String kierunek;
   String waznyod;
-  String linia;
+  public String linia;
   String[][] odjazdy1 = new String[24][60];
   String[][] odjazdy2 = new String[24][60];
   String[][] odjazdy3 = new String[24][60];

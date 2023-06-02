@@ -121,27 +121,18 @@ public class StatusController {
           // TODO: Replace the following code with your own custom Java logic to generate the PDF file
           // File pdfFile = generatePDFFile(number);
 
-          PdfGenerator pdf = new PdfGenerator();
-          //PrzystanekD p = pdf.generujKombus(number);
 
-          String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
-          PrzystanekD p = new PrzystanekD();
-          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
-          System.out.println("GraphQL query null");
-          GraphQLController.getGraphQL();
-
-          pdf.generujPrzystanek(p, "output2.pdf");
 
 
           // Extract the number parameter from the request
 
           // TODO: Replace the following code with your own custom Java logic to generate the PDF file
           // File pdfFile = generatePDFFile(number);
-          File pdfFile = new File("output2.pdf");
+          File pdfFile = new File("output3.pdf");
           if (pdfFile != null && pdfFile.exists()) {
 
               // Read the PDF file into a byte array
-              Path pdfPath = Paths.get("output2.pdf");
+              Path pdfPath = Paths.get("output3.pdf");
               byte[] pdfData;
               try {
                   pdfData = Files.readAllBytes(pdfPath);

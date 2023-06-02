@@ -45,7 +45,7 @@ public class GraphQLController {
         String queryJson = request.queryParams("query");
         return doQuery(varsJson, queryJson, response);
     }
-    public static void getGraphQL () {
+    public static Map<String, Object> getGraphQL2 (Request request, Response response)  {
         long startTime = System.currentTimeMillis();
         String query = "\n      query entityQuery($namespace: String, $id: Int) {\n        feed(namespace: $namespace) {\n          feed_id\n          feed_version\n          filename\n          routes (limit: -1, id: $id) {\n            id\n            \n        status\npublicly_visible\nroute_id\nroute_short_name\nroute_long_name\nagency_id\nroute_desc\nroute_type\nroute_sort_order\ncontinuous_pickup\ncontinuous_drop_off\nroute_url\nroute_color\nroute_text_color\nwheelchair_accessible\nroute_branding_url\n        tripPatterns: patterns (limit: -1) {\n          id\n          shape_id\n          pattern_id\n          route_id\n          direction_id\n          use_frequency\n          name\n          pattern_stops (limit: -1) {\n    id\n    stop_id\n    default_travel_time\n    default_dwell_time\n    stop_sequence\n    shape_dist_traveled\n    pickup_type\n    drop_off_type\n    timepoint\n    continuous_pickup\n    continuous_drop_off\n    stop_headsign\n  }\n          shape_points: shape (limit: -1) {\n    shape_pt_lon\n    shape_pt_lat\n    shape_pt_sequence\n    point_type\n    shape_dist_traveled\n  }\n        }\n      \n          }\n        }\n      }\n    ";
 
@@ -70,6 +70,7 @@ datatools-server     | ExecutionResultImpl{data={feed=null}, errors=[ExceptionWh
 
         System.out.println("result:..");
         System.out.println(result);
+        return result.toSpecification();
     }
     /**
      * A Spark Controller that responds to a GraphQL query in an HTTP POST body.
@@ -107,6 +108,21 @@ datatools-server     | ExecutionResultImpl{data={feed=null}, errors=[ExceptionWh
         ExecutionResult result = GTFSGraphQL.getGraphQl().execute(executionInput);
         long endTime = System.currentTimeMillis();
         LOG.info("Query took {} msec", endTime - startTime);
+
+//hook
+PdfGenerator pdf = new PdfGenerator();
+//PrzystanekD p = pdf.generujKombus(number);
+
+//  String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
+PrzystanekD p = new PrzystanekD();
+//GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+System.out.println("Generating output3.pdf ( i dont know where it lies ), result.toSpecification(): ");
+System.out.println(result.toSpecification());
+//GraphQLController.getGraphQL();
+
+pdf.generujPrzystanek(p, "output3.pdf");
+//endhook
+
         return result.toSpecification();
     }
 
@@ -128,6 +144,7 @@ datatools-server     | ExecutionResultImpl{data={feed=null}, errors=[ExceptionWh
             throw new RuntimeException("Cannot initialize GraphQL endpoints. Data source must not be null.");
         }
         GTFSGraphQL.initialize(dataSource);
+        get(apiPrefix + "graphql2", GraphQLController::getGraphQL2, mapper::writeValueAsString);
         get(apiPrefix + "graphql", GraphQLController::getGraphQL, mapper::writeValueAsString);
         post(apiPrefix + "graphql", GraphQLController::postGraphQL, mapper::writeValueAsString);
         get(apiPrefix + "graphql/schema", GraphQLController::getSchema, mapper::writeValueAsString);

@@ -118,9 +118,9 @@ PdfGenerator pdf = new PdfGenerator();
 //  String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
 PrzystanekD p = new PrzystanekD();
 //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
-System.out.println("Generating output3.pdf ( i dont know where it lies ), result.toSpecification(): ");
-System.out.println(result.toSpecification());
-String jsonString = result.toSpecification().toString();
+System.out.println("Generating output3.pdf ( i dont know where it lies ), result.getData(): ");
+System.out.println(result.getData().toString());
+String jsonString = result.getData();
 Gson gson = new Gson();
 JsonObject jsonObject = gson.fromJson(jsonString, JsonObject.class);
 JsonObject dataObject = jsonObject.getAsJsonObject("data");

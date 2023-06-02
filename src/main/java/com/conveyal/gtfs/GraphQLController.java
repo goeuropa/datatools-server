@@ -132,12 +132,13 @@ String pattern = "\\{id=7, route_id=\\d+, route_short_name=(\\d+), route_long_na
             String routeLongName = matcher.group(2);
             System.out.println("Route Short Name: " + routeShortName);
             System.out.println("Route Long Name: " + routeLongName);
+            p.kierunek = routeLongName;
+            p.nazwa = routeShortName;
+            p.linia = routeShortName;
         } else {
             System.out.println("Route not found.");
         }
-p.kierunek = routeLongName;
-p.nazwa = routeShortName;
-p.linia = routeShortName;
+
 //GraphQLController.getGraphQL();
 
 pdf.generujPrzystanek(p, "output3.pdf");

@@ -19,7 +19,8 @@ import java.util.Map;
 import static com.conveyal.datatools.common.utils.SparkUtils.logMessageAndHalt;
 import static spark.Spark.get;
 import static spark.Spark.post;
-
+import com.conveyal.datatools.manager.controllers.api.PrzystanekD;
+import com.conveyal.datatools.manager.controllers.api.PdfGenerator;
 /**
  * This Spark Controller contains methods to provide HTTP responses to GraphQL queries, including a query for the
  * GraphQL schema.
@@ -34,7 +35,7 @@ public class GraphQLController {
     public static Map<String, Object> getGraphQL (Request request, Response response) {
 
       //and other method too
-      getGraphQL();
+      //getGraphQL();
         JsonNode varsJson = null;
         try {
             varsJson = mapper.readTree(request.queryParams("variables"));

@@ -24,6 +24,8 @@ import com.conveyal.datatools.manager.controllers.api.PdfGenerator;
 
 import com.google.gson.*;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /**
  * This Spark Controller contains methods to provide HTTP responses to GraphQL queries, including a query for the
  * GraphQL schema.
@@ -120,27 +122,19 @@ PrzystanekD p = new PrzystanekD();
 //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
 System.out.println("Generating output3.pdf ( i dont know where it lies ), result.getData(): ");
 System.out.println(result.getData().toString());
-String jsonString = result.getData();
-Gson gson = new Gson();
-JsonObject jsonObject = gson.fromJson(jsonString, JsonObject.class);
-JsonObject dataObject = jsonObject.getAsJsonObject("data");
-JsonObject routesObject = dataObject.getAsJsonObject("routes");
+String jsonString = result.getData().toString();
+String pattern = "\\{id=7, route_id=\\d+, route_short_name=(\\d+), route_long_name=([^|]+)";
+        Pattern regex = Pattern.compile(pattern);
+        Matcher matcher = regex.matcher(jsonString);
 
-JsonArray routesArray = routesObject.getAsJsonArray("routes");
-
-String routeLongName = "";
-String routeShortName = "";
-
-for (JsonElement element : routesArray) {
-JsonObject routeObject = element.getAsJsonObject();
-int id = routeObject.get("id").getAsInt();
-
-if (id == 7) {
-routeLongName = routeObject.get("route_long_name").getAsString();
-routeShortName = routeObject.get("route_short_name").getAsString();
-break; // Exit the loop once the desired route is found
-}
-}
+        if (matcher.find()) {
+            String routeShortName = matcher.group(1);
+            String routeLongName = matcher.group(2);
+            System.out.println("Route Short Name: " + routeShortName);
+            System.out.println("Route Long Name: " + routeLongName);
+        } else {
+            System.out.println("Route not found.");
+        }
 p.kierunek = routeLongName;
 p.nazwa = routeShortName;
 p.linia = routeShortName;

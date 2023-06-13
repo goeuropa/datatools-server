@@ -79,6 +79,7 @@ public class Auth0Connection {
         // Validate the JWT and cast into the user profile, which will be attached as an attribute on the request object
         // for downstream controllers to check permissions.
         try {
+            System.out.println("token: " + token);
             Map<String, Object> jwt = verifier.verify(token);
             remapTokenValues(jwt);
             Auth0UserProfile profile = MAPPER.convertValue(jwt, Auth0UserProfile.class);

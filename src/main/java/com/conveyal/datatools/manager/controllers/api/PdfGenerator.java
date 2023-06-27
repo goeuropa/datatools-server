@@ -36,9 +36,12 @@ public class PdfGenerator {
     int wysokosc = 989;
     String inputImageFileName = "grafika.png";
 
+    //przystanek x3
+    int x = 3;
     try {
         // tworzymy dokument PDF
-        Document document = new Document(new Rectangle(1400, 989));
+        Document document = new Document(new Rectangle(1400, 989*x));
+
         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(outputFilename));
         document.open();
         PdfContentByte cb = writer.getDirectContent();
@@ -46,26 +49,29 @@ public class PdfGenerator {
         // ładujemy plik z grafiką
         File file = new File(inputImageFileName);
         Image image = Image.getInstance(file.getAbsolutePath());
+        for ( int z = 1 ; z <= x ; z++ )
+        {
 
-        cb.saveState();
-        cb.addImage(image, szerokosc, 0, 0, wysokosc, 0, 0);
-        cb.restoreState();
-        // nanosimy godzinę i minutę na wybranej pozycji
-        cb.beginText();
+          cb.saveState();
+          cb.addImage(image, szerokosc, 0, 0, wysokosc*z, 0, 0);
+          cb.restoreState();
+          // nanosimy godzinę i minutę na wybranej pozycji
+          cb.beginText();
 
 
-        //end of header
+          //end of header
 
 
-        //odjazdy1
-        this.header(cb,przystanek);
-        this.odjazdy1(cb,przystanek);
-        this.odjazdy2(cb,przystanek);
-        this.odjazdy3(cb,przystanek);
-        this.przystanki(cb,przystanek);
-        this.uwagi(cb,przystanek);
-        cb.endText();
+          //odjazdy1
+          this.header(cb,przystanek);
+          this.odjazdy1(cb,przystanek);
+          this.odjazdy2(cb,przystanek);
+          this.odjazdy3(cb,przystanek);
+          this.przystanki(cb,przystanek);
+          this.uwagi(cb,przystanek);
+          cb.endText();
 
+        }
         document.close();
     } catch (Exception e) {
         e.printStackTrace();

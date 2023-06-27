@@ -37,10 +37,10 @@ public class PdfGenerator {
     String inputImageFileName = "grafika.png";
 
     //przystanek x3
-    int x = 3;
+    int xi = 3;
     try {
         // tworzymy dokument PDF
-        Document document = new Document(new Rectangle(1400, 989*x));
+        Document document = new Document(new Rectangle(1400, 989*xi));
 
         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(outputFilename));
         document.open();
@@ -49,7 +49,7 @@ public class PdfGenerator {
         // ładujemy plik z grafiką
         File file = new File(inputImageFileName);
         Image image = Image.getInstance(file.getAbsolutePath());
-        for ( int z = 1 ; z <= x ; z++ )
+        for ( int z = 1 ; z <= xi ; z++ )
         {
 
           cb.saveState();

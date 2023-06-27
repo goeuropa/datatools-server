@@ -35,6 +35,13 @@ import com.conveyal.gtfs.GraphQLController;
 import com.conveyal.gtfs.GraphQLMain;
 import com.conveyal.gtfs.GTFS;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.pdf.PdfCopy;
+import com.itextpdf.text.pdf.PdfImportedPage;
+import com.itextpdf.text.pdf.PdfReader;
+
+import java.io.FileOutputStream;
+
 //import com.conveyal.gtfs;
 /**
  * Created by landon on 6/13/16.
@@ -130,8 +137,39 @@ public class StatusController {
           //System.out.println("GraphQL query null");
           //GraphQLController.getGraphQL();
 
-          pdf.generujPrzystanek(p, "output2.pdf");
+          pdf.generujPrzystanek(p, "output3.pdf");
+          pdf.generujPrzystanek(p, "output4.pdf");
 
+          //merge start
+
+          try {
+            // Create the merged document
+            Document mergedDocument = new Document();
+            PdfCopy copy = new PdfCopy(mergedDocument, new FileOutputStream("output2.pdf"));
+            mergedDocument.open();
+
+            // Merge the first document
+            PdfReader reader1 = new PdfReader("output3.pdf");
+            PdfImportedPage page1 = copy.getImportedPage(reader1, 1);
+            copy.addPage(page1);
+
+            // Merge the second document
+            PdfReader reader2 = new PdfReader("output4.pdf");
+            PdfImportedPage page2 = copy.getImportedPage(reader2, 1);
+            copy.addPage(page2);
+
+            // Close the merged document
+            mergedDocument.close();
+
+            // Close the input documents
+            reader1.close();
+            reader2.close();
+
+            System.out.println("Documents merged successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+          //merge end
 
           // Extract the number parameter from the request
 

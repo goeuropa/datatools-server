@@ -1,4 +1,4 @@
-package com.conveyal.datatools.manager.controllers.api;
+tpackage com.conveyal.datatools.manager.controllers.api;
 
 import com.conveyal.datatools.common.status.MonitorableJob;
 import com.conveyal.datatools.common.utils.RequestSummary;
@@ -122,14 +122,14 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          PrzystanekD p = pdf.generujKombus(number);
+          PrzystanekD p = pdf.generujKombus(number);//TODO; generate all 
 
-          /*String databaseUrl = "jdbc:postgresql://localhost/catalogue";
-          PrzystanekD p = new PrzystanekD();
-          GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
-          System.out.println("GraphQL query null");
-          GraphQLController.getGraphQL(null,null);
-          */
+        //  String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
+          //PrzystanekD p = new PrzystanekD();
+          //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
+          //System.out.println("GraphQL query null");
+          //GraphQLController.getGraphQL();
+
           pdf.generujPrzystanek(p, "output2.pdf");
 
 

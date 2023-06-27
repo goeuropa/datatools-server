@@ -1,4 +1,4 @@
-tpackage com.conveyal.datatools.manager.controllers.api;
+package com.conveyal.datatools.manager.controllers.api;
 
 import com.conveyal.datatools.common.status.MonitorableJob;
 import com.conveyal.datatools.common.utils.RequestSummary;
@@ -122,7 +122,7 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          PrzystanekD p = pdf.generujKombus(number);//TODO; generate all 
+          PrzystanekD p = pdf.generujKombus(number);//TODO; generate all
 
         //  String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
           //PrzystanekD p = new PrzystanekD();

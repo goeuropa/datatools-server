@@ -7,6 +7,72 @@ public class PrzystanekD {
   /*  public PrzystanekD(String number, String databaseUrl){
 
     }*/
+    public PrzystanekD[] generujRozklad(String number){
+
+      if ( number.equals("3") == true ){//582
+//TODO this itp all rozklad for 3
+      PrzystanekD[] przystanki = new PrzystanekD[2];
+      przystanki[0].waznyod = "16-05-2023";
+      przystanki[0].nazwa = "Kórnik Szkoła";
+      przystanki[0].kierunek = "Środa Wlkp PKS";
+
+      przystanki[0].linia = "582";
+      przystanki[0].odjazdy1[13][11] = "SD";
+      przystanki[0].odjazdy1[13][57] = "x";
+      przystanki[0].odjazdy1[15][37] = "x";
+
+      przystanki[0].uwagi = new String[3];
+      przystanki[0].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+      przystanki[0].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+      przystanki[0].przystanki[0] = "Kórnik - Szkoła";
+      przystanki[0].przystanki[1] = "Kórnik - Pl. Niepodległości";
+      przystanki[0].przystanki[2] = "Trzebisławki Wieś";
+      przystanki[0].przystanki[3] = "Trzebisławki";
+      przystanki[0].przystanki[4] = "Dębiec Wieś";
+      przystanki[0].przystanki[5] = "Dębiec";
+      przystanki[0].przystanki[6] = "Koszuty";
+      przystanki[0].przystanki[7] = "Słupia Wielka/Szkoła";
+      przystanki[0].przystanki[8] = "Słupia Wielka";
+      przystanki[0].przystanki[9] = "Pętkowo";
+      przystanki[0].przystanki[10] = "Niedziałkowskiego Działki";
+      przystanki[0].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+      przystanki[0].przystanki[12] = "Środa Wlkp PKS";
+
+//2
+
+przystanki[1].waznyod = "16-05-2023";
+przystanki[1].nazwa = "Środa Wlkp PKS";
+przystanki[1].kierunek = "Kórnik Rynek końcowy";
+
+przystanki[1].linia = "582";
+przystanki[1].odjazdy1[6][18] = "x";
+przystanki[1].odjazdy1[7][18] = "x";
+przystanki[1].odjazdy1[14][45] = "x";
+przystanki[1].odjazdy1[16][20] = "x";
+
+przystanki[1].uwagi = new String[3];
+przystanki[1].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[1].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+      przystanki[1].przystanki[0] = "Środa Wlkp PKS";
+      przystanki[1].przystanki[1] = "Środa Wlkp Nied. Biedronka";
+      przystanki[1].przystanki[2] = "Niedziałkowskiego Działki";
+      przystanki[1].przystanki[3] = "Pętkowo";
+      przystanki[1].przystanki[4] = "Słupia Wielka";
+      przystanki[1].przystanki[5] = "Słupia Wielka/Szkoła";
+      przystanki[1].przystanki[6] = "Koszuty";
+      przystanki[1].przystanki[7] = "Dębiec";
+      przystanki[1].przystanki[8] = "Dębiec Wieś";
+      przystanki[1].przystanki[9] = "Trzebisławki";
+      przystanki[1].przystanki[10] = "Trzebisławki Wieś";
+      przystanki[1].przystanki[11] = "Kórnik - Pl. Niepodległości";
+      przystanki[1].przystanki[12] = "Kórnik - Szkoła";
+
+      }
+
+      return przystanki;
+    }
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";
     if ( number.equals("3") == true ){//582

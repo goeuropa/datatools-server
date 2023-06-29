@@ -18,10 +18,9 @@ import java.io.FileOutputStream;
 import javax.imageio.ImageIO;
 public class PdfGenerator {
 
-  public PrzystanekD generujKombus(String number){
-    PrzystanekD p = new PrzystanekD(number);
-    return p;
-    //}
+  public PrzystanekD[] generujKombus(String number){
+    PrzystanekD p = new PrzystanekD();
+    return p.generujRozklad(number);
   }
   public void generujPrzystanek(PrzystanekD przystanek, String outputFilename){
     System.out.println("Generuje: " + przystanek);

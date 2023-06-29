@@ -129,57 +129,47 @@ public class StatusController {
           // File pdfFile = generatePDFFile(number);
 
           PdfGenerator pdf = new PdfGenerator();
-          PrzystanekD p = pdf.generujKombus(number);//TODO; generate all
+          PrzystanekD[] p = pdf.generujKombus(number);//TODO; generate all
 
         //  String databaseUrl = "jdbc:postgresql://postgres/dmtest";//
           //PrzystanekD p = new PrzystanekD();
           //GraphQLController.initialize(GTFS.createDataSource(databaseUrl, null, null), apiPrefix);
           //System.out.println("GraphQL query null");
           //GraphQLController.getGraphQL();
-
-          pdf.generujPrzystanek(p, "output3.pdf");
-          pdf.generujPrzystanek(p, "output4.pdf");
-
-          //merge start
-
           try {
             // Create the merged document
             Document mergedDocument = new Document();
-            PdfCopy copy = new PdfCopy(mergedDocument, new FileOutputStream("output2.pdf"));
+            PdfCopy copy = new PdfCopy(mergedDocument, new FileOutputStream("output.pdf"));
             mergedDocument.open();
+            PdfReader reader1;
+            PdfImportedPage page1;
+          for ( int k = 0 ; k < p.length ; k++ ){
+          pdf.generujPrzystanek(p[k], "output"+k+".pdf");
 
-            // Merge the first document
-            PdfReader reader1 = new PdfReader("output3.pdf");
-            PdfImportedPage page1 = copy.getImportedPage(reader1, 1);
-            copy.addPage(page1);
+          reader1 = new PdfReader("output"+k+".pdf");
+          page1 = copy.getImportedPage(reader1, 1);
+          copy.addPage(page1);
+          reader1.close();
 
-            // Merge the second document
-            PdfReader reader2 = new PdfReader("output4.pdf");
-            PdfImportedPage page2 = copy.getImportedPage(reader2, 1);
-            copy.addPage(page2);
+          }
+          //merge start
+          mergedDocument.close();
+          System.out.println("Documents merged successfully!");
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
 
-            // Close the merged document
-            mergedDocument.close();
-
-            // Close the input documents
-            reader1.close();
-            reader2.close();
-
-            System.out.println("Documents merged successfully!");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
           //merge end
 
           // Extract the number parameter from the request
 
           // TODO: Replace the following code with your own custom Java logic to generate the PDF file
           // File pdfFile = generatePDFFile(number);
-          File pdfFile = new File("output2.pdf");
+          File pdfFile = new File("output.pdf");
           if (pdfFile != null && pdfFile.exists()) {
 
               // Read the PDF file into a byte array
-              Path pdfPath = Paths.get("output2.pdf");
+              Path pdfPath = Paths.get("output.pdf");
               byte[] pdfData;
               try {
                   pdfData = Files.readAllBytes(pdfPath);

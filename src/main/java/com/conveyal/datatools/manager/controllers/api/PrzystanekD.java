@@ -8,10 +8,10 @@ public class PrzystanekD {
 
     }*/
     public PrzystanekD[] generujRozklad(String number){
-
+      PrzystanekD[] przystanki = null;
       if ( number.equals("3") == true ){//582
 //TODO this itp all rozklad for 3
-      PrzystanekD[] przystanki = new PrzystanekD[2];
+      przystanki = new PrzystanekD[2];
       przystanki[0].waznyod = "16-05-2023";
       przystanki[0].nazwa = "Kórnik Szkoła";
       przystanki[0].kierunek = "Środa Wlkp PKS";

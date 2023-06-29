@@ -12,6 +12,7 @@ public class PrzystanekD {
       if ( number.equals("3") == true ){//582
 //TODO this itp all rozklad for 3
       przystanki = new PrzystanekD[2];
+      przystanki[0] = new PrzystanekD();
       przystanki[0].waznyod = "16-05-2023";
       przystanki[0].nazwa = "Kórnik Szkoła";
       przystanki[0].kierunek = "Środa Wlkp PKS";
@@ -40,7 +41,7 @@ public class PrzystanekD {
       przystanki[0].przystanki[12] = "Środa Wlkp PKS";
 
 //2
-
+przystanki[1] = new PrzystanekD();
 przystanki[1].waznyod = "16-05-2023";
 przystanki[1].nazwa = "Środa Wlkp PKS";
 przystanki[1].kierunek = "Kórnik Rynek końcowy";

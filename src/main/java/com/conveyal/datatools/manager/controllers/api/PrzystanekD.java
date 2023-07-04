@@ -11,14 +11,13 @@ public class PrzystanekD {
       PrzystanekD[] przystanki = null;
       if ( number.equals("3") == true ){//582
 //TODO this itp all rozklad for 3
-      przystanki = new PrzystanekD[2];
+      przystanki = new PrzystanekD[13];
       przystanki[0] = new PrzystanekD();
       przystanki[0].waznyod = "16-05-2023";
       przystanki[0].nazwa = "Kórnik Szkoła";
       przystanki[0].kierunek = "Środa Wlkp PKS";
 
       przystanki[0].linia = "582";
-      przystanki[0].odjazdy1[13][11] = "SD";
       przystanki[0].odjazdy1[13][57] = "x";
       przystanki[0].odjazdy1[15][37] = "x";
 
@@ -43,20 +42,18 @@ public class PrzystanekD {
 //2
 przystanki[1] = new PrzystanekD();
 przystanki[1].waznyod = "16-05-2023";
-przystanki[1].nazwa = "Środa Wlkp PKS";
-przystanki[1].kierunek = "Kórnik Rynek końcowy";
+przystanki[1].nazwa = "Kórnik - Pl. Niepodległości";
+przystanki[1].kierunek = "Środa Wlkp PKS";
 
 przystanki[1].linia = "582";
-przystanki[1].odjazdy1[6][18] = "x";
-przystanki[1].odjazdy1[7][18] = "x";
-przystanki[1].odjazdy1[14][45] = "x";
-przystanki[1].odjazdy1[16][20] = "x";
+przystanki[1].odjazdy1[14][00] = "x";
+przystanki[1].odjazdy1[15][40] = "x";
 
 przystanki[1].uwagi = new String[3];
 przystanki[1].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
 przystanki[1].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
 
-      przystanki[1].przystanki[0] = "Środa Wlkp PKS";
+  /*    przystanki[1].przystanki[0] = "Środa Wlkp PKS";
       przystanki[1].przystanki[1] = "Środa Wlkp Nied. Biedronka";
       przystanki[1].przystanki[2] = "Niedziałkowskiego Działki";
       przystanki[1].przystanki[3] = "Pętkowo";
@@ -69,6 +66,156 @@ przystanki[1].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś"
       przystanki[1].przystanki[10] = "Trzebisławki Wieś";
       przystanki[1].przystanki[11] = "Kórnik - Pl. Niepodległości";
       przystanki[1].przystanki[12] = "Kórnik - Szkoła";
+*/
+przystanki[1].przystanki[0] = "Kórnik - Szkoła";
+przystanki[1].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[1].przystanki[2] = "Trzebisławki Wieś";
+przystanki[1].przystanki[3] = "Trzebisławki";
+przystanki[1].przystanki[4] = "Dębiec Wieś";
+przystanki[1].przystanki[5] = "Dębiec";
+przystanki[1].przystanki[6] = "Koszuty";
+przystanki[1].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[1].przystanki[8] = "Słupia Wielka";
+przystanki[1].przystanki[9] = "Pętkowo";
+przystanki[1].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[1].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[1].przystanki[12] = "Środa Wlkp PKS";
+
+przystanki[2] = new PrzystanekD();
+przystanki[2].waznyod = "16-05-2023";
+przystanki[2].nazwa = "Trzebisławki Wieś";
+przystanki[2].kierunek = "Środa Wlkp PKS";
+
+przystanki[2].linia = "582";
+przystanki[2].odjazdy1[14][07] = "x";
+przystanki[2].odjazdy1[15][47] = "x";
+
+przystanki[2].uwagi = new String[3];
+przystanki[2].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[2].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+przystanki[2].przystanki[0] = "Kórnik - Szkoła";
+przystanki[2].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[2].przystanki[2] = "Trzebisławki Wieś";
+przystanki[2].przystanki[3] = "Trzebisławki";
+przystanki[2].przystanki[4] = "Dębiec Wieś";
+przystanki[2].przystanki[5] = "Dębiec";
+przystanki[2].przystanki[6] = "Koszuty";
+przystanki[2].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[2].przystanki[8] = "Słupia Wielka";
+przystanki[2].przystanki[9] = "Pętkowo";
+przystanki[2].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[2].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[2].przystanki[12] = "Środa Wlkp PKS";
+
+przystanki[3] = new PrzystanekD();
+przystanki[3].waznyod = "16-05-2023";
+przystanki[3].nazwa = "Trzebisławki";
+przystanki[3].kierunek = "Środa Wlkp PKS";
+
+przystanki[3].linia = "582";
+przystanki[3].odjazdy1[14][10] = "x";
+przystanki[3].odjazdy1[15][50] = "x";
+
+przystanki[3].uwagi = new String[3];
+przystanki[3].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[3].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+przystanki[3].przystanki[0] = "Kórnik - Szkoła";
+przystanki[3].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[3].przystanki[2] = "Trzebisławki Wieś";
+przystanki[3].przystanki[3] = "Trzebisławki";
+przystanki[3].przystanki[4] = "Dębiec Wieś";
+przystanki[3].przystanki[5] = "Dębiec";
+przystanki[3].przystanki[6] = "Koszuty";
+przystanki[3].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[3].przystanki[8] = "Słupia Wielka";
+przystanki[3].przystanki[9] = "Pętkowo";
+przystanki[3].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[3].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[3].przystanki[12] = "Środa Wlkp PKS";
+
+przystanki[4] = new PrzystanekD();
+przystanki[4].waznyod = "16-05-2023";
+przystanki[4].nazwa = "Dębiec Wieś";
+przystanki[4].kierunek = "Środa Wlkp PKS";
+
+przystanki[4].linia = "582";
+przystanki[4].odjazdy1[14][14] = "x";
+przystanki[4].odjazdy1[15][54] = "x";
+
+przystanki[4].uwagi = new String[3];
+przystanki[4].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[4].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+przystanki[4].przystanki[0] = "Kórnik - Szkoła";
+przystanki[4].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[4].przystanki[2] = "Trzebisławki Wieś";
+przystanki[4].przystanki[3] = "Trzebisławki";
+przystanki[4].przystanki[4] = "Dębiec Wieś";
+przystanki[4].przystanki[5] = "Dębiec";
+przystanki[4].przystanki[6] = "Koszuty";
+przystanki[4].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[4].przystanki[8] = "Słupia Wielka";
+przystanki[4].przystanki[9] = "Pętkowo";
+przystanki[4].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[4].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[4].przystanki[12] = "Środa Wlkp PKS";
+
+przystanki[5] = new PrzystanekD();
+przystanki[5].waznyod = "16-05-2023";
+przystanki[5].nazwa = "Dębiec";
+przystanki[5].kierunek = "Środa Wlkp PKS";
+
+przystanki[5].linia = "582";
+przystanki[5].odjazdy1[14][17] = "x";
+przystanki[5].odjazdy1[15][57] = "x";
+
+przystanki[5].uwagi = new String[3];
+przystanki[5].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[5].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+przystanki[5].przystanki[0] = "Kórnik - Szkoła";
+przystanki[5].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[5].przystanki[2] = "Trzebisławki Wieś";
+przystanki[5].przystanki[3] = "Trzebisławki";
+przystanki[5].przystanki[4] = "Dębiec Wieś";
+przystanki[5].przystanki[5] = "Dębiec";
+przystanki[5].przystanki[6] = "Koszuty";
+przystanki[5].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[5].przystanki[8] = "Słupia Wielka";
+przystanki[5].przystanki[9] = "Pętkowo";
+przystanki[5].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[5].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[5].przystanki[12] = "Środa Wlkp PKS";
+
+przystanki[6] = new PrzystanekD();
+przystanki[6].waznyod = "16-05-2023";
+przystanki[6].nazwa = "Koszuty";
+przystanki[6].kierunek = "Środa Wlkp PKS";
+
+przystanki[6].linia = "582";
+przystanki[6].odjazdy1[14][20] = "x";
+przystanki[6].odjazdy1[16][00] = "x";
+
+przystanki[6].uwagi = new String[3];
+przystanki[6].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+przystanki[6].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+przystanki[6].przystanki[0] = "Kórnik - Szkoła";
+przystanki[6].przystanki[1] = "Kórnik - Pl. Niepodległości";
+przystanki[6].przystanki[2] = "Trzebisławki Wieś";
+przystanki[6].przystanki[3] = "Trzebisławki";
+przystanki[6].przystanki[4] = "Dębiec Wieś";
+przystanki[6].przystanki[5] = "Dębiec";
+przystanki[6].przystanki[6] = "Koszuty";
+przystanki[6].przystanki[7] = "Słupia Wielka/Szkoła";
+przystanki[6].przystanki[8] = "Słupia Wielka";
+przystanki[6].przystanki[9] = "Pętkowo";
+przystanki[6].przystanki[10] = "Niedziałkowskiego Działki";
+przystanki[6].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+przystanki[6].przystanki[12] = "Środa Wlkp PKS";
+
 
       }
 

@@ -115,7 +115,225 @@ przystanki[11].odjazdy1[16][13] = "x";
 przystanki[12].nazwa = "Środa Wlkp PKS";
 przystanki[12].odjazdy1[14][35] = "x";
 przystanki[12].odjazdy1[16][15] = "x";
+
       }
+      if ( number.equals("2") == true ){//582
+//TODO this itp all rozklad for 3
+      n = 22;
+      przystanki = new PrzystanekD[n];
+      for ( int k = 0 ; k < n ; k++ ){
+        przystanki[k] = new PrzystanekD();
+        przystanki[k].waznyod = "16-05-2023";
+        przystanki[k].kierunek = "Kórnik - Pl.Niepodległości";
+
+        przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
+        przystanki[k].przystanki[1] = "Kórnik - Prowent";
+        przystanki[k].przystanki[2] = "Kórnik - Bnin A.Krajowej";
+        przystanki[k].przystanki[3] = "Bnin - Biernacka";
+        przystanki[k].przystanki[4] = "Biernatki - Biernatki";
+        przystanki[k].przystanki[5] = "Biernatki - Laskowa";
+        przystanki[k].przystanki[6] = "Biernatki - Ośrodek";
+        przystanki[k].przystanki[7] = "Biernatki - Folwark";
+        przystanki[k].przystanki[8] = "Prusinowo - Wieś";
+        przystanki[k].przystanki[9] = "Prusinowo - Prusinowo";
+        przystanki[k].przystanki[10] = "Jeziory Wielkie - Jeziory Wielkie";
+        przystanki[k].przystanki[11] = "Jeziory Wielkie- Wieś";
+        przystanki[k].przystanki[12] = "Błażejewko - Błażejewko Pętla";
+        przystanki[k].przystanki[13] = "Błażejewko - Błażejewko";
+        przystanki[k].przystanki[14] = "Błażejewko - Wieś";
+        przystanki[k].przystanki[15] = "Błażejewko - Las";
+        przystanki[k].przystanki[16] = "Kórnik - Dom Dziecka";
+        przystanki[k].przystanki[17] = "Kórnik - Błażejewska";
+        przystanki[k].przystanki[18] = "Kórnik - Bnin Rynek";
+        przystanki[k].przystanki[19] = "Kórnik - Bnin A.Krajowej";
+        przystanki[k].przystanki[20] = "Kórnik - Prowent";
+        przystanki[k].przystanki[21] = "Kórnik - Pl.Niepodległości";
+
+        przystanki[k].linia = "580";
+
+
+        przystanki[k].uwagi = new String[0];
+
+      }
+
+      przystanki[0].nazwa = "Kórnik - Pl. Niepodległości"";
+      przystanki[0].odjazdy1[7][21] = "O";
+      przystanki[0].odjazdy1[8][25] = "O";
+      przystanki[0].odjazdy1[9][00] = "O";
+      przystanki[0].odjazdy1[10][45] = "O";
+      przystanki[0].odjazdy1[12][57] = "O";
+      przystanki[0].odjazdy1[13][45] = "O";
+
+      przystanki[1].nazwa = "Kórnik - Prowent";
+      przystanki[1].odjazdy1[7][23] = "O";
+      przystanki[1].odjazdy1[8][27] = "O";
+      przystanki[1].odjazdy1[9][02] = "O";
+      przystanki[1].odjazdy1[10][47] = "O";
+      przystanki[1].odjazdy1[12][59] = "O";
+      przystanki[1].odjazdy1[13][47] = "O";
+
+      przystanki[2].nazwa = "Kórnik - Bnin A.Krajowej";
+      przystanki[2].odjazdy1[7][24] = "O";
+      przystanki[2].odjazdy1[8][28] = "O";
+      przystanki[2].odjazdy1[9][03] = "O";
+      przystanki[2].odjazdy1[10][48] = "O";
+      przystanki[2].odjazdy1[13][00] = "O";
+      przystanki[2].odjazdy1[13][48] = "O";
+
+      przystanki[3].nazwa = "Bnin - Biernacka";
+      przystanki[3].odjazdy1[7][25] = "O";
+      przystanki[3].odjazdy1[8][29] = "O";
+      przystanki[3].odjazdy1[9][04] = "O";
+      przystanki[3].odjazdy1[10][49] = "O";
+      przystanki[3].odjazdy1[13][01] = "O";
+      przystanki[3].odjazdy1[13][49] = "O";
+
+      przystanki[4].nazwa = "Biernatki - Biernatki";
+      przystanki[4].odjazdy1[7][26] = "O";
+      przystanki[4].odjazdy1[8][30] = "O";
+      przystanki[4].odjazdy1[9][05] = "O";
+      przystanki[4].odjazdy1[10][50] = "O";
+      przystanki[4].odjazdy1[13][02] = "O";
+      przystanki[4].odjazdy1[13][50] = "O";
+
+      przystanki[5].nazwa = "Biernatki - Laskowa";
+      przystanki[5].odjazdy1[7][27] = "O";
+      przystanki[5].odjazdy1[8][31] = "O";
+      przystanki[5].odjazdy1[9][06] = "O";
+      przystanki[5].odjazdy1[10][51] = "O";
+      przystanki[5].odjazdy1[13][03] = "O";
+      przystanki[5].odjazdy1[13][51] = "O";
+
+      przystanki[6].nazwa = "Biernatki - Ośrodek";
+      przystanki[6].odjazdy1[7][28] = "O";
+      przystanki[6].odjazdy1[8][32] = "O";
+      przystanki[6].odjazdy1[9][07] = "O";
+      przystanki[6].odjazdy1[10][52] = "O";
+      przystanki[6].odjazdy1[13][04] = "O";
+      przystanki[6].odjazdy1[13][52] = "O";
+
+      przystanki[7].nazwa = "Biernatki - Folwark";
+      przystanki[7].odjazdy1[7][29] = "O";
+      przystanki[7].odjazdy1[8][33] = "O";
+      przystanki[7].odjazdy1[9][08] = "O";
+      przystanki[7].odjazdy1[10][53] = "O";
+      przystanki[7].odjazdy1[13][05] = "O";
+      przystanki[7].odjazdy1[13][53] = "O";
+
+      przystanki[8].nazwa = "Prusinowo - Wieś";
+      przystanki[8].odjazdy1[7][31] = "O";
+      przystanki[8].odjazdy1[8][35] = "O";
+      przystanki[8].odjazdy1[9][10] = "O";
+      przystanki[8].odjazdy1[10][55] = "O";
+      przystanki[8].odjazdy1[13][07] = "O";
+      przystanki[8].odjazdy1[13][55] = "O";
+
+      przystanki[9].nazwa = "Prusinowo - Prusinowo";
+      przystanki[9].odjazdy1[7][32] = "O";
+      przystanki[9].odjazdy1[8][36] = "O";
+      przystanki[9].odjazdy1[9][11] = "O";
+      przystanki[9].odjazdy1[10][56] = "O";
+      przystanki[9].odjazdy1[13][08] = "O";
+      przystanki[9].odjazdy1[13][56] = "O";
+
+//
+      przystanki[10].nazwa = "Jeziory Wielkie - Jeziory Wielkie";
+      przystanki[10].odjazdy1[7][34] = "O";
+      przystanki[10].odjazdy1[8][38] = "O";
+      przystanki[10].odjazdy1[9][13] = "O";
+      przystanki[10].odjazdy1[10][58] = "O";
+      przystanki[10].odjazdy1[13][10] = "O";
+      przystanki[10].odjazdy1[13][58] = "O";
+
+      przystanki[11].nazwa = "Jeziory Wielkie- Wieś";
+      przystanki[11].odjazdy1[7][35] = "O";
+      przystanki[11].odjazdy1[8][39] = "O";
+      przystanki[11].odjazdy1[9][14] = "O";
+      przystanki[11].odjazdy1[10][59] = "O";
+      przystanki[11].odjazdy1[13][11] = "O";
+      przystanki[11].odjazdy1[13][59] = "O";
+
+      przystanki[12].nazwa = "Błażejewko - Błażejewko Pętla";
+      przystanki[12].odjazdy1[7][38] = "O";
+      przystanki[12].odjazdy1[8][42] = "O";
+      przystanki[12].odjazdy1[9][17] = "O";
+      przystanki[12].odjazdy1[11][2] = "O";
+      przystanki[12].odjazdy1[13][14] = "O";
+      przystanki[12].odjazdy1[14][2] = "O";
+
+      przystanki[13].nazwa = "Błażejewko - Błażejewko";
+      przystanki[13].odjazdy1[7][39] = "O";
+      przystanki[13].odjazdy1[8][43] = "O";
+      przystanki[13].odjazdy1[9][18] = "O";
+      przystanki[13].odjazdy1[11][3] = "O";
+      przystanki[13].odjazdy1[13][15] = "O";
+      przystanki[13].odjazdy1[14][3] = "O";
+
+      przystanki[14].nazwa = "Błażejewko - Wieś";
+      przystanki[14].odjazdy1[7][40] = "O";
+      przystanki[14].odjazdy1[8][44] = "O";
+      przystanki[14].odjazdy1[9][19] = "O";
+      przystanki[14].odjazdy1[11][4] = "O";
+      przystanki[14].odjazdy1[13][16] = "O";
+      przystanki[14].odjazdy1[14][4] = "O";
+
+      przystanki[15].nazwa = "Błażejewko - Las";
+      przystanki[15].odjazdy1[7][41] = "O";
+      przystanki[15].odjazdy1[8][45] = "O";
+      przystanki[15].odjazdy1[9][20] = "O";
+      przystanki[15].odjazdy1[11][5] = "O";
+      przystanki[15].odjazdy1[13][17] = "O";
+      przystanki[15].odjazdy1[14][5] = "O";
+
+      przystanki[16].nazwa = "Kórnik - Dom Dziecka";
+      przystanki[16].odjazdy1[7][42] = "O";
+      przystanki[16].odjazdy1[8][46] = "O";
+      przystanki[16].odjazdy1[9][21] = "O";
+      przystanki[16].odjazdy1[11][6] = "O";
+      przystanki[16].odjazdy1[13][18] = "O";
+      przystanki[16].odjazdy1[14][6] = "O";
+
+      przystanki[17].nazwa = "Kórnik - Błażejewska";
+      przystanki[17].odjazdy1[7][44] = "O";
+      przystanki[17].odjazdy1[8][48] = "O";
+      przystanki[17].odjazdy1[9][23] = "O";
+      przystanki[17].odjazdy1[11][8] = "O";
+      przystanki[17].odjazdy1[13][20] = "O";
+      przystanki[17].odjazdy1[14][8] = "O";
+
+      przystanki[18].nazwa = "Kórnik - Bnin Rynek";
+      przystanki[18].odjazdy1[7][46] = "O";
+      przystanki[18].odjazdy1[8][50] = "O";
+      przystanki[18].odjazdy1[9][25] = "O";
+      przystanki[18].odjazdy1[11][10] = "O";
+      przystanki[18].odjazdy1[13][22] = "O";
+      przystanki[18].odjazdy1[14][10] = "O";
+
+      przystanki[19].nazwa = "Kórnik - Bnin A.Krajowej";
+      przystanki[19].odjazdy1[7][48] = "O";
+      przystanki[19].odjazdy1[8][52] = "O";
+      przystanki[19].odjazdy1[9][27] = "O";
+      przystanki[19].odjazdy1[11][12] = "O";
+      przystanki[19].odjazdy1[13][24] = "O";
+      przystanki[19].odjazdy1[14][12] = "O";
+
+      przystanki[20].nazwa = "Kórnik - Prowent";
+      przystanki[20].odjazdy1[7][49] = "O";
+      przystanki[20].odjazdy1[8][53] = "O";
+      przystanki[20].odjazdy1[9][28] = "O";
+      przystanki[20].odjazdy1[11][13] = "O";
+      przystanki[20].odjazdy1[13][25] = "O";
+      przystanki[20].odjazdy1[14][13] = "O";
+
+      przystanki[21].nazwa = "Kórnik - Pl.Niepodległości";
+      przystanki[21].odjazdy1[7][51] = "O";
+      przystanki[21].odjazdy1[8][55] = "O";
+      przystanki[21].odjazdy1[9][30] = "O";
+      przystanki[21].odjazdy1[11][15] = "O";
+      przystanki[21].odjazdy1[13][27] = "O";
+      przystanki[21].odjazdy1[14][15] = "O";
+
+    }
 
       return przystanki;
     }

@@ -335,6 +335,102 @@ przystanki[12].odjazdy1[16][15] = "x";
 
     }
 
+    if ( number.equals("4") == true ){//582
+//TODO this itp all rozklad for 3
+    n = 9;
+    przystanki = new PrzystanekD[n];
+    for ( int k = 0 ; k < n ; k++ ){
+      przystanki[k] = new PrzystanekD();
+      przystanki[k].waznyod = "16-05-2023";
+      przystanki[k].kierunek = "Szczodrzykowo - Dworzec PKP";
+
+      przystanki[k].linia = "590";
+
+      przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
+      przystanki[k].przystanki[1] = "Kórnik - Reja";
+      przystanki[k].przystanki[2] = "Dźiećmierowo - TFP";
+      przystanki[k].przystanki[3] = "Dźiećmierowo - Polna";
+      przystanki[k].przystanki[4] = "Dźiećmierowo - Słoneczna";
+      przystanki[k].przystanki[5] = "Dźiećmierowo - Leśna";
+      przystanki[k].przystanki[6] = "Szczodrzykowo - Kolejowa";
+      przystanki[k].przystanki[7] = "Szczodrzykowo - Dworzec PKP";
+
+
+      przystanki[k].uwagi = new String[5];
+      przystanki[k].uwagi[0] = "D - kurs wydłużony do Dachowa";
+      przystanki[k].uwagi[1] = "P - kurs do Szczodrzykowo Poznańska";
+      przystanki[k].uwagi[2] = "t - kurs do SP Szczydrzykowo";
+      przystanki[k].uwagi[3] = "X - bez wjazdu do Kórnik Szkoła";
+      przystanki[k].uwagi[4] = "R - kurs do Kórnik Plac Niepodległości";
+
+
+    }
+    przystanki[0].nazwa = "Kórnik - Pl. Niepodległości";
+    przystanki[0].odjazdy1[20][44] = "O";
+    przystanki[0].odjazdy1[21][10] = "O";
+    przystanki[0].odjazdy2[16][48] = "O";
+    przystanki[0].odjazdy2[19][46] = "O";
+    przystanki[0].odjazdy3[16][48] = "O";
+    przystanki[0].odjazdy3[19][46] = "O";
+
+    przystanki[1].nazwa = "Kórnik - Reja";
+    przystanki[1].odjazdy1[20][46] = "O";
+    przystanki[1].odjazdy1[21][12] = "O";
+    przystanki[1].odjazdy2[16][50] = "O";
+    przystanki[1].odjazdy2[19][48] = "O";
+    przystanki[1].odjazdy3[16][50] = "O";
+    przystanki[1].odjazdy3[19][48] = "O";
+
+    przystanki[2].nazwa = "Dźiećmierowo - TFP";
+    przystanki[2].odjazdy1[20][49] = "O";
+    przystanki[2].odjazdy1[21][15] = "O";
+    przystanki[2].odjazdy2[16][53] = "O";
+    przystanki[2].odjazdy2[19][51] = "O";
+    przystanki[2].odjazdy3[16][53] = "O";
+    przystanki[2].odjazdy3[19][51] = "O";
+
+    przystanki[3].nazwa = "Dźiećmierowo - Polna";
+    przystanki[3].odjazdy1[20][51] = "O";
+    przystanki[3].odjazdy1[21][17] = "O";
+    przystanki[3].odjazdy2[16][55] = "O";
+    przystanki[3].odjazdy2[19][53] = "O";
+    przystanki[3].odjazdy3[16][55] = "O";
+    przystanki[3].odjazdy3[19][53] = "O";
+
+    przystanki[4].nazwa = "Dźiećmierowo - Słoneczna";
+    przystanki[4].odjazdy1[20][52] = "O";
+    przystanki[4].odjazdy1[21][18] = "O";
+    przystanki[4].odjazdy2[16][56] = "O";
+    przystanki[4].odjazdy2[19][54] = "O";
+    przystanki[4].odjazdy3[16][56] = "O";
+    przystanki[4].odjazdy3[19][54] = "O";
+
+    przystanki[5].nazwa = "Dźiećmierowo - Leśna";
+    przystanki[5].odjazdy1[20][53] = "O";
+    przystanki[5].odjazdy1[21][19] = "O";
+    przystanki[5].odjazdy2[16][57] = "O";
+    przystanki[5].odjazdy2[19][55] = "O";
+    przystanki[5].odjazdy3[16][57] = "O";
+    przystanki[5].odjazdy3[19][55] = "O";
+
+    przystanki[6].nazwa = "Szczodrzykowo - Kolejowa";
+    przystanki[6].odjazdy1[20][55] = "O";
+    przystanki[6].odjazdy1[21][21] = "O";
+    przystanki[6].odjazdy2[16][59] = "O";
+    przystanki[6].odjazdy2[19][57] = "O";
+    przystanki[6].odjazdy3[16][59] = "O";
+    przystanki[6].odjazdy3[19][57] = "O";
+
+    przystanki[7].nazwa = "Szczodrzykowo - Dworzec PKP";
+    przystanki[7].odjazdy1[20][56] = "O";
+    przystanki[7].odjazdy1[21][22] = "O";
+    przystanki[7].odjazdy2[17][00] = "O";
+    przystanki[7].odjazdy2[19][58] = "O";
+    przystanki[7].odjazdy3[17][00] = "O";
+    przystanki[7].odjazdy3[19][58] = "O";
+
+  }
+
       return przystanki;
     }
   public PrzystanekD(String number){

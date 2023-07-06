@@ -1,4 +1,4 @@
-przystanki[k].przystanki[przystanki[k].przystanki[package com.conveyal.datatools.manager.controllers.api;
+przystanki[przystanki[k].przystanki[przystanki[k].przystanki[package com.conveyal.datatools.manager.controllers.api;
 
 import java.util.HashMap;
 public class PrzystanekD {
@@ -790,6 +790,173 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[22].nazwa = "Kamionki Szkoła";
         przystanki[22].odjazdy1[7][3] = "O";
         przystanki[22].odjazdy1[11][28] = "O";
+        }
+
+        if ( number.equals("9") == true ){
+          n = 37;
+          przystanki = new PrzystanekD[n];
+          for ( int k = 0 ; k < n ; k++ ){
+            przystanki[k] = new PrzystanekD();
+            przystanki[k].waznyod = "16-05-2023";
+            przystanki[k].kierunek = "Kórnik Plac Niepodległości"
+
+            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[1] = "Kórnik - Prowent";
+            przystanki[k].przystanki[2] = "Kórnik Bnin A. Krajowej";
+            przystanki[k].przystanki[3] = "Kórnik - Bnin Rynek";
+            przystanki[k].przystanki[4] = "Kórnik Bnin Konarska";
+            przystanki[k].przystanki[5] = "Konarskie Wieś";
+            przystanki[k].przystanki[6] = "Konarskie Świetlica";
+            przystanki[k].przystanki[7] = "Konarskie Pętla";
+            przystanki[k].przystanki[8] = "Konarskie Skrzyżowanie";
+            przystanki[k].przystanki[9] = "Radzewo Strażnica";
+            przystanki[k].przystanki[10] = "Radzewo SP";
+            przystanki[k].przystanki[11] = "Trzykolne Młyny Radzewska";
+            przystanki[k].przystanki[12] = "Trzyklne Młyny Rogalińska";
+            przystanki[k].przystanki[13] = "Czmoniec Rumiankowa";
+            przystanki[k].przystanki[14] = "Czmoniec Miętowa";
+            przystanki[k].przystanki[15] = "Czmoniec Piwoniowa";
+            przystanki[k].przystanki[16] = "Czmoniec Stokrotkowa";
+            przystanki[k].przystanki[17] = "Czmoniec Marzymięta";
+            przystanki[k].przystanki[18] = "Czmoń Leśna";
+            przystanki[k].przystanki[19] = "Czmoń Strażacka";
+            przystanki[k].przystanki[20] = "Czmoń Lipowa";
+            przystanki[k].przystanki[21] = "Czmoń Os Radosne";
+            przystanki[k].przystanki[22] = "Radzewo Pomorska";
+            przystanki[k].przystanki[23] = "Radzewo Strażnica";
+            przystanki[k].przystanki[24] = "Radzewo SP";
+            przystanki[k].przystanki[25] = "Dworzyska";
+            przystanki[k].przystanki[26] = "Radzewo SP";
+            przystanki[k].przystanki[27] = "Radzewo Strażnica";
+            przystanki[k].przystanki[28] = "Konarskie Skrzyżowanie";
+            przystanki[k].przystanki[29] = "Konarskie Wieś";
+            przystanki[k].przystanki[30] = "Konarskie Świetlica";
+            przystanki[k].przystanki[31] = "Konarskie Pętla";
+            przystanki[k].przystanki[32] = "Czołowo Kórnicka";
+            przystanki[k].przystanki[33] = "Kórnik - Bnin Rynek";
+            przystanki[k].przystanki[34] = "Kórnik Bnin A.Krajowej";
+            przystanki[k].przystanki[35] = "Kórnik Prowent";
+            przystanki[k].przystanki[36] = "Kórnik - Pl. Niepodległ";
+
+            przystanki[k].linia = "595";
+
+
+            przystanki[k].uwagi = null;
+
+          }
+
+        przystanki[0].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[0].odjazdy1[7][15] = "O";
+        przystanki[0].odjazdy1[9][0] = "O";
+        przystanki[1].nazwa = "Kórnik - Prowent";
+        przystanki[0].odjazdy1[7][17] = "O";
+        przystanki[0].odjazdy1[9][2] = "O";
+        przystanki[2].nazwa = "Kórnik Bnin A. Krajowej";
+        przystanki[0].odjazdy1[7][19] = "O";
+        przystanki[0].odjazdy1[9][4] = "O";
+        przystanki[3].nazwa = "Kórnik - Bnin Rynek";
+        przystanki[0].odjazdy1[7][22] = "O";
+        przystanki[0].odjazdy1[9][7] = "O";
+        przystanki[4].nazwa = "Kórnik Bnin Konarska";
+        przystanki[0].odjazdy1[7][24] = "O";
+        przystanki[0].odjazdy1[9][9] = "O";
+        przystanki[5].nazwa = "Konarskie Wieś";
+        przystanki[0].odjazdy1[7][29] = "O";
+        przystanki[0].odjazdy1[9][14] = "O";
+        przystanki[6].nazwa = "Konarskie Świetlica";
+        przystanki[0].odjazdy1[7][30] = "O";
+        przystanki[0].odjazdy1[9][15] = "O";
+        przystanki[7].nazwa = "Konarskie Pętla";
+        przystanki[0].odjazdy1[7][31] = "O";
+        przystanki[0].odjazdy1[9][16] = "O";
+        przystanki[8].nazwa = "Konarskie Skrzyżowanie";
+        przystanki[0].odjazdy1[7][33] = "O";
+        przystanki[0].odjazdy1[9][18] = "O";
+        przystanki[9].nazwa = "Radzewo Strażnica";
+        przystanki[0].odjazdy1[7][36] = "O";
+        przystanki[0].odjazdy1[9][21] = "O";
+        przystanki[10].nazwa = "Radzewo SP";
+        przystanki[0].odjazdy1[7][37] = "O";
+        przystanki[0].odjazdy1[9][22] = "O";
+        przystanki[11].nazwa = "Trzykolne Młyny Radzewska";
+        przystanki[0].odjazdy1[7][42] = "O";
+        przystanki[0].odjazdy1[9][27] = "O";
+        przystanki[12].nazwa = "Trzyklne Młyny Rogalińska";
+        przystanki[0].odjazdy1[7][44] = "O";
+        przystanki[0].odjazdy1[9][29] = "O";
+        przystanki[13].nazwa = "Czmoniec Rumiankowa";
+        przystanki[0].odjazdy1[7][47] = "O";
+        przystanki[0].odjazdy1[9][32] = "O";
+        przystanki[14].nazwa = "Czmoniec Miętowa";
+        przystanki[0].odjazdy1[7][50] = "O";
+        przystanki[0].odjazdy1[9][35] = "O";
+        przystanki[15].nazwa = "Czmoniec Piwoniowa";
+        przystanki[0].odjazdy1[7][51] = "O";
+        przystanki[0].odjazdy1[9][36] = "O";
+        przystanki[16].nazwa = "Czmoniec Stokrotkowa";
+        przystanki[0].odjazdy1[7][52] = "O";
+        przystanki[0].odjazdy1[9][37] = "O";
+        przystanki[17].nazwa = "Czmoniec Marzymięta";
+        przystanki[0].odjazdy1[7][53] = "O";
+        przystanki[0].odjazdy1[9][38] = "O";
+        przystanki[18].nazwa = "Czmoń Leśna";
+        przystanki[0].odjazdy1[7][55] = "O";
+        przystanki[0].odjazdy1[9][40] = "O";
+        przystanki[19].nazwa = "Czmoń Strażacka";
+        przystanki[0].odjazdy1[7][57] = "O";
+        przystanki[0].odjazdy1[9][42] = "O";
+        przystanki[20].nazwa = "Czmoń Lipowa";
+        przystanki[0].odjazdy1[8][1] = "O";
+        przystanki[0].odjazdy1[9][46] = "O";
+        przystanki[21].nazwa = "Czmoń Os Radosne";
+        przystanki[0].odjazdy1[8][2] = "O";
+        przystanki[0].odjazdy1[9][47] = "O";
+        przystanki[22].nazwa = "Radzewo Pomorska";
+        przystanki[0].odjazdy1[8][4] = "O";
+        przystanki[0].odjazdy1[9][49] = "O";
+        przystanki[23].nazwa = "Radzewo Strażnica";
+        przystanki[0].odjazdy1[8][6] = "O";
+        przystanki[0].odjazdy1[9][51] = "O";
+        przystanki[24].nazwa = "Radzewo SP";
+        przystanki[0].odjazdy1[8][7] = "O";
+        przystanki[0].odjazdy1[9][52] = "O";
+        przystanki[25].nazwa = "Dworzyska";
+        przystanki[0].odjazdy1[8][11] = "O";
+        przystanki[0].odjazdy1[9][56] = "O";
+        przystanki[26].nazwa = "Radzewo SP";
+        przystanki[0].odjazdy1[8][15] = "O";
+        przystanki[0].odjazdy1[10][0] = "O";
+        przystanki[27].nazwa = "Radzewo Strażnica";
+        przystanki[0].odjazdy1[8][16] = "O";
+        przystanki[0].odjazdy1[10][1] = "O";
+        przystanki[28].nazwa = "Konarskie Skrzyżowanie";
+        przystanki[0].odjazdy1[8][20] = "O";
+        przystanki[0].odjazdy1[10][5] = "O";
+        przystanki[29].nazwa = "Konarskie Wieś";
+        przystanki[0].odjazdy1[8][21] = "O";
+        przystanki[0].odjazdy1[10][6] = "O";
+        przystanki[30].nazwa = "Konarskie Świetlica";
+        przystanki[0].odjazdy1[8][22] = "O";
+        przystanki[0].odjazdy1[10][7] = "O";
+        przystanki[31].nazwa = "Konarskie Pętla";
+        przystanki[0].odjazdy1[8][23] = "O";
+        przystanki[0].odjazdy1[10][8] = "O";
+        przystanki[32].nazwa = "Czołowo Kórnicka";
+        przystanki[0].odjazdy1[8][24] = "O";
+        przystanki[0].odjazdy1[10][9] = "O";
+        przystanki[33].nazwa = "Kórnik - Bnin Rynek";
+        przystanki[0].odjazdy1[8][30] = "O";
+        przystanki[0].odjazdy1[10][15] = "O";
+        przystanki[34].nazwa = "Kórnik Bnin A.Krajowej";
+        przystanki[0].odjazdy1[8][31] = "O";
+        przystanki[0].odjazdy1[10][16] = "O";
+        przystanki[35].nazwa = "Kórnik Prowent";
+        przystanki[0].odjazdy1[8][33] = "O";
+        przystanki[0].odjazdy1[10][18] = "O";
+        przystanki[36].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[0].odjazdy1[8][35] = "O";
+        przystanki[0].odjazdy1[10][20] = "O";
+
         }
       return przystanki;
     }

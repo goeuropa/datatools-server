@@ -1119,7 +1119,7 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[10].odjazdy1[9][33] = "O";
         przystanki[10].odjazdy1[11][20] = "O";
         }
-      return przystanki;
+      return przystanki; 
     }
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";

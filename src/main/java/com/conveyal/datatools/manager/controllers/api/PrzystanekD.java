@@ -2563,7 +2563,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
     if ( kod == "s"){
       return new Integer(j).toString()+"s";
     }
-
+ 
     return "E";
   }
 }

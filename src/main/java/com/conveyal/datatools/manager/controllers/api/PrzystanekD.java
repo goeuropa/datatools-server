@@ -9,6 +9,7 @@ public class PrzystanekD {
     }*/
     public PrzystanekD[] generujRozklad(String number){
       PrzystanekD[] przystanki = null;
+      PrzystanekD[] przystanki2 = null;
       int n;
       if ( number.equals("3") == true ){//582
 //TODO this itp all rozklad for 3
@@ -55,21 +56,6 @@ public class PrzystanekD {
       przystanki[2].odjazdy1[15][47] = "x";
 
 
-  /*    przystanki[1].przystanki[0] = "Środa Wlkp PKS";
-      przystanki[1].przystanki[1] = "Środa Wlkp Nied. Biedronka";
-      przystanki[1].przystanki[2] = "Niedziałkowskiego Działki";
-      przystanki[1].przystanki[3] = "Pętkowo";
-      przystanki[1].przystanki[4] = "Słupia Wielka";
-      przystanki[1].przystanki[5] = "Słupia Wielka/Szkoła";
-      przystanki[1].przystanki[6] = "Koszuty";
-      przystanki[1].przystanki[7] = "Dębiec";
-      przystanki[1].przystanki[8] = "Dębiec Wieś";
-      przystanki[1].przystanki[9] = "Trzebisławki";
-      przystanki[1].przystanki[10] = "Trzebisławki Wieś";
-      przystanki[1].przystanki[11] = "Kórnik - Pl. Niepodległości";
-      przystanki[1].przystanki[12] = "Kórnik - Szkoła";
-*/
-
 przystanki[3].nazwa = "Trzebisławki";
 przystanki[3].odjazdy1[14][10] = "x";
 przystanki[3].odjazdy1[15][50] = "x";
@@ -115,6 +101,95 @@ przystanki[11].odjazdy1[16][13] = "x";
 przystanki[12].nazwa = "Środa Wlkp PKS";
 przystanki[12].odjazdy1[14][35] = "x";
 przystanki[12].odjazdy1[16][15] = "x";
+
+//
+przystanki2 = new PrzystanekD[n];
+for ( int k = 0 ; k < n ; k++ ){
+  przystanki2[k] = new PrzystanekD();
+  przystanki2[k].waznyod = "16-05-2023";
+  przystanki2[k].kierunek = "Środa Wlkp PKS";
+
+  przystanki2[k].przystanki[0] = "Kórnik - Szkoła";
+  przystanki2[k].przystanki[1] = "Kórnik - Pl. Niepodległości";
+  przystanki2[k].przystanki[2] = "Trzebisławki Wieś";
+  przystanki2[k].przystanki[3] = "Trzebisławki";
+  przystanki2[k].przystanki[4] = "Dębiec Wieś";
+  przystanki2[k].przystanki[5] = "Dębiec";
+  przystanki2[k].przystanki[6] = "Koszuty";
+  przystanki2[k].przystanki[7] = "Słupia Wielka/Szkoła";
+  przystanki2[k].przystanki[8] = "Słupia Wielka";
+  przystanki2[k].przystanki[9] = "Pętkowo";
+  przystanki2[k].przystanki[10] = "Niedziałkowskiego Działki";
+  przystanki2[k].przystanki[11] = "Środa Wlkp Nied. Biedronka";
+  przystanki2[k].przystanki[12] = "Środa Wlkp PKS";
+
+  przystanki2[k].linia = "582";
+
+
+  przystanki2[k].uwagi = new String[3];
+  przystanki2[k].uwagi[0] = "x - nie kursuje od 1 lipca do 31 sierpnia";
+  przystanki2[k].uwagi[1] = "e - kurs w dni nauki szkolnej i kurs do Dębiec Wieś";
+
+}
+
+przystanki2[0].nazwa = "Kórnik Szkoła";
+przystanki2[0].odjazdy1[13][57] = "x";
+przystanki2[0].odjazdy1[15][37] = "x";
+
+przystanki2[1].nazwa = "Kórnik - Pl. Niepodległości";
+przystanki2[1].odjazdy1[14][00] = "x";
+przystanki2[1].odjazdy1[15][40] = "x";
+
+przystanki2[2].nazwa = "Trzebisławki Wieś";
+przystanki2[2].odjazdy1[14][07] = "x";
+przystanki2[2].odjazdy1[15][47] = "x";
+
+
+przystanki2[3].nazwa = "Trzebisławki";
+przystanki2[3].odjazdy1[14][10] = "x";
+przystanki2[3].odjazdy1[15][50] = "x";
+
+przystanki2[4].nazwa = "Dębiec Wieś";
+przystanki2[4].odjazdy1[14][14] = "x";
+przystanki2[4].odjazdy1[15][54] = "x";
+
+przystanki2[5].nazwa = "Dębiec";
+przystanki2[5].odjazdy1[14][17] = "x";
+przystanki2[5].odjazdy1[15][57] = "x";
+
+przystanki2[6].nazwa = "Koszuty";
+przystanki2[6].odjazdy1[14][20] = "x";
+przystanki2[6].odjazdy1[16][00] = "x";
+
+
+przystanki2[7].nazwa = "Słupia Wielka/Szkoła";
+przystanki2[7].odjazdy1[14][21] = "x";
+przystanki2[7].odjazdy1[16][01] = "x";
+
+
+przystanki2[8].nazwa = "Słupia Wielka";
+przystanki2[8].odjazdy1[14][23] = "x";
+przystanki2[8].odjazdy1[16][03] = "x";
+
+
+przystanki2[9].nazwa = "Pętkowo";
+przystanki2[9].odjazdy1[14][26] = "x";
+przystanki2[9].odjazdy1[16][06] = "x";
+
+
+przystanki2[10].nazwa = "Niedziałkowskiego Działki";
+przystanki2[10].odjazdy1[14][31] = "x";
+przystanki2[10].odjazdy1[16][11] = "x";
+
+
+przystanki2[11].nazwa = "Środa Wlkp Niedziałkowskiego Biedronka";
+przystanki2[11].odjazdy1[14][33] = "x";
+przystanki2[11].odjazdy1[16][13] = "x";
+
+
+przystanki2[12].nazwa = "Środa Wlkp PKS";
+przystanki2[12].odjazdy1[14][35] = "x";
+przystanki2[12].odjazdy1[16][15] = "x";
 
       }
       if ( number.equals("2") == true ){//582
@@ -333,6 +408,220 @@ przystanki[12].odjazdy1[16][15] = "x";
       przystanki[21].odjazdy1[13][27] = "O";
       przystanki[21].odjazdy1[14][15] = "O";
 
+//
+      przystanki2 = new PrzystanekD[n];
+      for ( int k = 0 ; k < n ; k++ ){
+        przystanki2[k] = new PrzystanekD();
+        przystanki2[k].waznyod = "16-05-2023";
+        przystanki2[k].kierunek = "Kórnik - Pl.Niepodległości";
+
+        przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
+        przystanki2[k].przystanki[1] = "Kórnik - Prowent";
+        przystanki2[k].przystanki[2] = "Kórnik - Bnin A.Krajowej";
+        przystanki2[k].przystanki[3] = "Bnin - Biernacka";
+        przystanki2[k].przystanki[4] = "Biernatki - Biernatki";
+        przystanki2[k].przystanki[5] = "Biernatki - Laskowa";
+        przystanki2[k].przystanki[6] = "Biernatki - Ośrodek";
+        przystanki2[k].przystanki[7] = "Biernatki - Folwark";
+        przystanki2[k].przystanki[8] = "Prusinowo - Wieś";
+        przystanki2[k].przystanki[9] = "Prusinowo - Prusinowo";
+        przystanki2[k].przystanki[10] = "Jeziory Wielkie - Jeziory Wielkie";
+        przystanki2[k].przystanki[11] = "Jeziory Wielkie- Wieś";
+        przystanki2[k].przystanki[12] = "Błażejewko - Błażejewko Pętla";
+        przystanki2[k].przystanki[13] = "Błażejewko - Błażejewko";
+        przystanki2[k].przystanki[14] = "Błażejewko - Wieś";
+        przystanki2[k].przystanki[15] = "Błażejewko - Las";
+        przystanki2[k].przystanki[16] = "Kórnik - Dom Dziecka";
+        przystanki2[k].przystanki[17] = "Kórnik - Błażejewska";
+        przystanki2[k].przystanki[18] = "Kórnik - Bnin Rynek";
+        przystanki2[k].przystanki[19] = "Kórnik - Bnin A.Krajowej";
+        przystanki2[k].przystanki[20] = "Kórnik - Prowent";
+        przystanki2[k].przystanki[21] = "Kórnik - Pl.Niepodległości";
+
+        przystanki2[k].linia = "580";
+
+
+        przystanki2[k].uwagi = new String[0];
+
+      }
+
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości"";
+      przystanki2[0].odjazdy1[7][21] = "O";
+      przystanki2[0].odjazdy1[8][25] = "O";
+      przystanki2[0].odjazdy1[9][00] = "O";
+      przystanki2[0].odjazdy1[10][45] = "O";
+      przystanki2[0].odjazdy1[12][57] = "O";
+      przystanki2[0].odjazdy1[13][45] = "O";
+
+      przystanki2[1].nazwa = "Kórnik - Prowent";
+      przystanki2[1].odjazdy1[7][23] = "O";
+      przystanki2[1].odjazdy1[8][27] = "O";
+      przystanki2[1].odjazdy1[9][02] = "O";
+      przystanki2[1].odjazdy1[10][47] = "O";
+      przystanki2[1].odjazdy1[12][59] = "O";
+      przystanki2[1].odjazdy1[13][47] = "O";
+
+      przystanki2[2].nazwa = "Kórnik - Bnin A.Krajowej";
+      przystanki2[2].odjazdy1[7][24] = "O";
+      przystanki2[2].odjazdy1[8][28] = "O";
+      przystanki2[2].odjazdy1[9][03] = "O";
+      przystanki2[2].odjazdy1[10][48] = "O";
+      przystanki2[2].odjazdy1[13][00] = "O";
+      przystanki2[2].odjazdy1[13][48] = "O";
+
+      przystanki2[3].nazwa = "Bnin - Biernacka";
+      przystanki2[3].odjazdy1[7][25] = "O";
+      przystanki2[3].odjazdy1[8][29] = "O";
+      przystanki2[3].odjazdy1[9][04] = "O";
+      przystanki2[3].odjazdy1[10][49] = "O";
+      przystanki2[3].odjazdy1[13][01] = "O";
+      przystanki2[3].odjazdy1[13][49] = "O";
+
+      przystanki2[4].nazwa = "Biernatki - Biernatki";
+      przystanki2[4].odjazdy1[7][26] = "O";
+      przystanki2[4].odjazdy1[8][30] = "O";
+      przystanki2[4].odjazdy1[9][05] = "O";
+      przystanki2[4].odjazdy1[10][50] = "O";
+      przystanki2[4].odjazdy1[13][02] = "O";
+      przystanki2[4].odjazdy1[13][50] = "O";
+
+      przystanki2[5].nazwa = "Biernatki - Laskowa";
+      przystanki2[5].odjazdy1[7][27] = "O";
+      przystanki2[5].odjazdy1[8][31] = "O";
+      przystanki2[5].odjazdy1[9][06] = "O";
+      przystanki2[5].odjazdy1[10][51] = "O";
+      przystanki2[5].odjazdy1[13][03] = "O";
+      przystanki2[5].odjazdy1[13][51] = "O";
+
+      przystanki2[6].nazwa = "Biernatki - Ośrodek";
+      przystanki2[6].odjazdy1[7][28] = "O";
+      przystanki2[6].odjazdy1[8][32] = "O";
+      przystanki2[6].odjazdy1[9][07] = "O";
+      przystanki2[6].odjazdy1[10][52] = "O";
+      przystanki2[6].odjazdy1[13][04] = "O";
+      przystanki2[6].odjazdy1[13][52] = "O";
+
+      przystanki2[7].nazwa = "Biernatki - Folwark";
+      przystanki2[7].odjazdy1[7][29] = "O";
+      przystanki2[7].odjazdy1[8][33] = "O";
+      przystanki2[7].odjazdy1[9][08] = "O";
+      przystanki2[7].odjazdy1[10][53] = "O";
+      przystanki2[7].odjazdy1[13][05] = "O";
+      przystanki2[7].odjazdy1[13][53] = "O";
+
+      przystanki2[8].nazwa = "Prusinowo - Wieś";
+      przystanki2[8].odjazdy1[7][31] = "O";
+      przystanki2[8].odjazdy1[8][35] = "O";
+      przystanki2[8].odjazdy1[9][10] = "O";
+      przystanki2[8].odjazdy1[10][55] = "O";
+      przystanki2[8].odjazdy1[13][07] = "O";
+      przystanki2[8].odjazdy1[13][55] = "O";
+
+      przystanki2[9].nazwa = "Prusinowo - Prusinowo";
+      przystanki2[9].odjazdy1[7][32] = "O";
+      przystanki2[9].odjazdy1[8][36] = "O";
+      przystanki2[9].odjazdy1[9][11] = "O";
+      przystanki2[9].odjazdy1[10][56] = "O";
+      przystanki2[9].odjazdy1[13][08] = "O";
+      przystanki2[9].odjazdy1[13][56] = "O";
+
+    //
+      przystanki2[10].nazwa = "Jeziory Wielkie - Jeziory Wielkie";
+      przystanki2[10].odjazdy1[7][34] = "O";
+      przystanki2[10].odjazdy1[8][38] = "O";
+      przystanki2[10].odjazdy1[9][13] = "O";
+      przystanki2[10].odjazdy1[10][58] = "O";
+      przystanki2[10].odjazdy1[13][10] = "O";
+      przystanki2[10].odjazdy1[13][58] = "O";
+
+      przystanki2[11].nazwa = "Jeziory Wielkie- Wieś";
+      przystanki2[11].odjazdy1[7][35] = "O";
+      przystanki2[11].odjazdy1[8][39] = "O";
+      przystanki2[11].odjazdy1[9][14] = "O";
+      przystanki2[11].odjazdy1[10][59] = "O";
+      przystanki2[11].odjazdy1[13][11] = "O";
+      przystanki2[11].odjazdy1[13][59] = "O";
+
+      przystanki2[12].nazwa = "Błażejewko - Błażejewko Pętla";
+      przystanki2[12].odjazdy1[7][38] = "O";
+      przystanki2[12].odjazdy1[8][42] = "O";
+      przystanki2[12].odjazdy1[9][17] = "O";
+      przystanki2[12].odjazdy1[11][2] = "O";
+      przystanki2[12].odjazdy1[13][14] = "O";
+      przystanki2[12].odjazdy1[14][2] = "O";
+
+      przystanki2[13].nazwa = "Błażejewko - Błażejewko";
+      przystanki2[13].odjazdy1[7][39] = "O";
+      przystanki2[13].odjazdy1[8][43] = "O";
+      przystanki2[13].odjazdy1[9][18] = "O";
+      przystanki2[13].odjazdy1[11][3] = "O";
+      przystanki2[13].odjazdy1[13][15] = "O";
+      przystanki2[13].odjazdy1[14][3] = "O";
+
+      przystanki2[14].nazwa = "Błażejewko - Wieś";
+      przystanki2[14].odjazdy1[7][40] = "O";
+      przystanki2[14].odjazdy1[8][44] = "O";
+      przystanki2[14].odjazdy1[9][19] = "O";
+      przystanki2[14].odjazdy1[11][4] = "O";
+      przystanki2[14].odjazdy1[13][16] = "O";
+      przystanki2[14].odjazdy1[14][4] = "O";
+
+      przystanki2[15].nazwa = "Błażejewko - Las";
+      przystanki2[15].odjazdy1[7][41] = "O";
+      przystanki2[15].odjazdy1[8][45] = "O";
+      przystanki2[15].odjazdy1[9][20] = "O";
+      przystanki2[15].odjazdy1[11][5] = "O";
+      przystanki2[15].odjazdy1[13][17] = "O";
+      przystanki2[15].odjazdy1[14][5] = "O";
+
+      przystanki2[16].nazwa = "Kórnik - Dom Dziecka";
+      przystanki2[16].odjazdy1[7][42] = "O";
+      przystanki2[16].odjazdy1[8][46] = "O";
+      przystanki2[16].odjazdy1[9][21] = "O";
+      przystanki2[16].odjazdy1[11][6] = "O";
+      przystanki2[16].odjazdy1[13][18] = "O";
+      przystanki2[16].odjazdy1[14][6] = "O";
+
+      przystanki2[17].nazwa = "Kórnik - Błażejewska";
+      przystanki2[17].odjazdy1[7][44] = "O";
+      przystanki2[17].odjazdy1[8][48] = "O";
+      przystanki2[17].odjazdy1[9][23] = "O";
+      przystanki2[17].odjazdy1[11][8] = "O";
+      przystanki2[17].odjazdy1[13][20] = "O";
+      przystanki2[17].odjazdy1[14][8] = "O";
+
+      przystanki2[18].nazwa = "Kórnik - Bnin Rynek";
+      przystanki2[18].odjazdy1[7][46] = "O";
+      przystanki2[18].odjazdy1[8][50] = "O";
+      przystanki2[18].odjazdy1[9][25] = "O";
+      przystanki2[18].odjazdy1[11][10] = "O";
+      przystanki2[18].odjazdy1[13][22] = "O";
+      przystanki2[18].odjazdy1[14][10] = "O";
+
+      przystanki2[19].nazwa = "Kórnik - Bnin A.Krajowej";
+      przystanki2[19].odjazdy1[7][48] = "O";
+      przystanki2[19].odjazdy1[8][52] = "O";
+      przystanki2[19].odjazdy1[9][27] = "O";
+      przystanki2[19].odjazdy1[11][12] = "O";
+      przystanki2[19].odjazdy1[13][24] = "O";
+      przystanki2[19].odjazdy1[14][12] = "O";
+
+      przystanki2[20].nazwa = "Kórnik - Prowent";
+      przystanki2[20].odjazdy1[7][49] = "O";
+      przystanki2[20].odjazdy1[8][53] = "O";
+      przystanki2[20].odjazdy1[9][28] = "O";
+      przystanki2[20].odjazdy1[11][13] = "O";
+      przystanki2[20].odjazdy1[13][25] = "O";
+      przystanki2[20].odjazdy1[14][13] = "O";
+
+      przystanki2[21].nazwa = "Kórnik - Pl.Niepodległości";
+      przystanki2[21].odjazdy1[7][51] = "O";
+      przystanki2[21].odjazdy1[8][55] = "O";
+      przystanki2[21].odjazdy1[9][30] = "O";
+      przystanki2[21].odjazdy1[11][15] = "O";
+      przystanki2[21].odjazdy1[13][27] = "O";
+      przystanki2[21].odjazdy1[14][15] = "O";
+
     }
 
     if ( number.equals("4") == true ){//582
@@ -429,6 +718,98 @@ przystanki[12].odjazdy1[16][15] = "x";
     przystanki[7].odjazdy3[17][00] = "O";
     przystanki[7].odjazdy3[19][58] = "O";
 
+    n = 9;
+    przystanki2 = new PrzystanekD[n];
+    for ( int k = 0 ; k < n ; k++ ){
+      przystanki2[k] = new PrzystanekD();
+      przystanki2[k].waznyod = "16-05-2023";
+      przystanki2[k].kierunek = "Szczodrzykowo - Dworzec PKP";
+
+      przystanki2[k].linia = "590";
+
+      przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
+      przystanki2[k].przystanki[1] = "Kórnik - Reja";
+      przystanki2[k].przystanki[2] = "Dźiećmierowo - TFP";
+      przystanki2[k].przystanki[3] = "Dźiećmierowo - Polna";
+      przystanki2[k].przystanki[4] = "Dźiećmierowo - Słoneczna";
+      przystanki2[k].przystanki[5] = "Dźiećmierowo - Leśna";
+      przystanki2[k].przystanki[6] = "Szczodrzykowo - Kolejowa";
+      przystanki2[k].przystanki[7] = "Szczodrzykowo - Dworzec PKP";
+
+
+      przystanki2[k].uwagi = new String[5];
+      przystanki2[k].uwagi[0] = "D - kurs wydłużony do Dachowa";
+      przystanki2[k].uwagi[1] = "P - kurs do Szczodrzykowo Poznańska";
+      przystanki2[k].uwagi[2] = "t - kurs do SP Szczydrzykowo";
+      przystanki2[k].uwagi[3] = "X - bez wjazdu do Kórnik Szkoła";
+      przystanki2[k].uwagi[4] = "R - kurs do Kórnik Plac Niepodległości";
+
+
+    }
+    przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości";
+    przystanki2[0].odjazdy1[20][44] = "O";
+    przystanki2[0].odjazdy1[21][10] = "O";
+    przystanki2[0].odjazdy2[16][48] = "O";
+    przystanki2[0].odjazdy2[19][46] = "O";
+    przystanki2[0].odjazdy3[16][48] = "O";
+    przystanki2[0].odjazdy3[19][46] = "O";
+
+    przystanki2[1].nazwa = "Kórnik - Reja";
+    przystanki2[1].odjazdy1[20][46] = "O";
+    przystanki2[1].odjazdy1[21][12] = "O";
+    przystanki2[1].odjazdy2[16][50] = "O";
+    przystanki2[1].odjazdy2[19][48] = "O";
+    przystanki2[1].odjazdy3[16][50] = "O";
+    przystanki2[1].odjazdy3[19][48] = "O";
+
+    przystanki2[2].nazwa = "Dźiećmierowo - TFP";
+    przystanki2[2].odjazdy1[20][49] = "O";
+    przystanki2[2].odjazdy1[21][15] = "O";
+    przystanki2[2].odjazdy2[16][53] = "O";
+    przystanki2[2].odjazdy2[19][51] = "O";
+    przystanki2[2].odjazdy3[16][53] = "O";
+    przystanki2[2].odjazdy3[19][51] = "O";
+
+    przystanki2[3].nazwa = "Dźiećmierowo - Polna";
+    przystanki2[3].odjazdy1[20][51] = "O";
+    przystanki2[3].odjazdy1[21][17] = "O";
+    przystanki2[3].odjazdy2[16][55] = "O";
+    przystanki2[3].odjazdy2[19][53] = "O";
+    przystanki2[3].odjazdy3[16][55] = "O";
+    przystanki2[3].odjazdy3[19][53] = "O";
+
+    przystanki2[4].nazwa = "Dźiećmierowo - Słoneczna";
+    przystanki2[4].odjazdy1[20][52] = "O";
+    przystanki2[4].odjazdy1[21][18] = "O";
+    przystanki2[4].odjazdy2[16][56] = "O";
+    przystanki2[4].odjazdy2[19][54] = "O";
+    przystanki2[4].odjazdy3[16][56] = "O";
+    przystanki2[4].odjazdy3[19][54] = "O";
+
+    przystanki2[5].nazwa = "Dźiećmierowo - Leśna";
+    przystanki2[5].odjazdy1[20][53] = "O";
+    przystanki2[5].odjazdy1[21][19] = "O";
+    przystanki2[5].odjazdy2[16][57] = "O";
+    przystanki2[5].odjazdy2[19][55] = "O";
+    przystanki2[5].odjazdy3[16][57] = "O";
+    przystanki2[5].odjazdy3[19][55] = "O";
+
+    przystanki2[6].nazwa = "Szczodrzykowo - Kolejowa";
+    przystanki2[6].odjazdy1[20][55] = "O";
+    przystanki2[6].odjazdy1[21][21] = "O";
+    przystanki2[6].odjazdy2[16][59] = "O";
+    przystanki2[6].odjazdy2[19][57] = "O";
+    przystanki2[6].odjazdy3[16][59] = "O";
+    przystanki2[6].odjazdy3[19][57] = "O";
+
+    przystanki2[7].nazwa = "Szczodrzykowo - Dworzec PKP";
+    przystanki2[7].odjazdy1[20][56] = "O";
+    przystanki2[7].odjazdy1[21][22] = "O";
+    przystanki2[7].odjazdy2[17][00] = "O";
+    przystanki2[7].odjazdy2[19][58] = "O";
+    przystanki2[7].odjazdy3[17][00] = "O";
+    przystanki2[7].odjazdy3[19][58] = "O";
+
   }
   if ( number.equals("5") == true ){//582
     n = 9;
@@ -518,6 +899,95 @@ przystanki[12].odjazdy1[16][15] = "x";
   przystanki[8].odjazdy1[12][57] = "O";
   przystanki[8].odjazdy1[15][5] = "O";
   przystanki[8].odjazdy1[16][35] = "O";
+
+  if ( number.equals("5") == true ){//582
+    n = 9;
+    przystanki2 = new PrzystanekD[n];
+    for ( int k = 0 ; k < n ; k++ ){
+      przystanki2[k] = new PrzystanekD();
+      przystanki2[k].waznyod = "16-05-2023";
+      przystanki2[k].kierunek = "Kromolice Pętla";
+
+      przystanki2[k].przystanki[0] = "Szczodrzykowo - Szkoła";
+      przystanki2[k].przystanki[1] = "Runowo - Wieś";
+      przystanki2[k].przystanki[2] = "Runowo - Runowo";
+      przystanki2[k].przystanki[3] = "Pierzchno I";
+      przystanki2[k].przystanki[4] = "Pierzchno - Jagrol";
+      przystanki2[k].przystanki[5] = "Pierzchno - PKP";
+      przystanki2[k].przystanki[6] = "Trzebisławki - Skrzyżowanie";
+      przystanki2[k].przystanki[7] = "Kromolice - Kromolice";
+      przystanki2[k].przystanki[8] = "Kromolice - Pętla końcowy";
+
+      przystanki2[k].linia = "591";
+
+
+      przystanki2[k].uwagi = new String[1];
+      przystanki2[k].uwagi[0] = "S - kursuje w dni nauki szkolnej";
+
+    }
+
+  przystanki2[0].nazwa = "Szczodrzykowo - Szkoła";
+  przystanki2[0].odjazdy1[7][53] = "O";
+  przystanki2[0].odjazdy1[10][12] = "O";
+  przystanki2[0].odjazdy1[12][45] = "O";
+  przystanki2[0].odjazdy1[14][53] = "O";
+  przystanki2[0].odjazdy1[16][25] = "O";
+
+  przystanki2[1].nazwa = "Runowo - Wieś";
+  przystanki2[1].odjazdy1[7][54] = "O";
+  przystanki2[1].odjazdy1[10][13] = "O";
+  przystanki2[1].odjazdy1[12][48] = "O";
+  przystanki2[1].odjazdy1[14][56] = "O";
+  przystanki2[1].odjazdy1[16][26] = "O";
+
+  przystanki2[2].nazwa = "Runowo - Runowo";
+  przystanki2[2].odjazdy1[7][56] = "O";
+  przystanki2[2].odjazdy1[10][15] = "O";
+  przystanki2[2].odjazdy1[12][50] = "O";
+  przystanki2[2].odjazdy1[14][58] = "O";
+  przystanki2[2].odjazdy1[16][28] = "O";
+
+  przystanki2[3].nazwa = "Pierzchno I";
+  przystanki2[3].odjazdy1[7][57] = "O";
+  przystanki2[3].odjazdy1[10][16] = "O";
+  przystanki2[3].odjazdy1[12][51] = "O";
+  przystanki2[3].odjazdy1[14][59] = "O";
+  przystanki2[3].odjazdy1[16][29] = "O";
+
+  przystanki2[4].nazwa = "Pierzchno - Jagrol";
+  przystanki2[4].odjazdy1[7][58] = "O";
+  przystanki2[4].odjazdy1[10][17] = "O";
+  przystanki2[4].odjazdy1[12][52] = "O";
+  przystanki2[4].odjazdy1[15][00] = "O";
+  przystanki2[4].odjazdy1[16][30] = "O";
+
+  przystanki2[5].nazwa = "Pierzchno - PKP";
+  przystanki2[5].odjazdy1[8][0] = "O";
+  przystanki2[5].odjazdy1[10][19] = "O";
+  przystanki2[5].odjazdy1[12][54] = "O";
+  przystanki2[5].odjazdy1[15][2] = "O";
+  przystanki2[5].odjazdy1[16][32] = "O";
+
+  przystanki2[6].nazwa = "Trzebisławki - Skrzyżowanie";
+  przystanki2[6].odjazdy1[8][1] = "O";
+  przystanki2[6].odjazdy1[10][20] = "O";
+  przystanki2[6].odjazdy1[12][55] = "O";
+  przystanki2[6].odjazdy1[15][3] = "O";
+  przystanki2[6].odjazdy1[16][33] = "O";
+
+  przystanki2[7].nazwa = "Kromolice - Kromolice";
+  przystanki2[7].odjazdy1[8][2] = "O";
+  przystanki2[7].odjazdy1[10][21] = "O";
+  przystanki2[7].odjazdy1[12][56] = "O";
+  przystanki2[7].odjazdy1[15][4] = "O";
+  przystanki2[7].odjazdy1[16][34] = "O";
+
+  przystanki2[8].nazwa = "Kromolice - Pętla końcowy";
+  przystanki2[8].odjazdy1[8][3] = "O";
+  przystanki2[8].odjazdy1[10][22] = "O";
+  przystanki2[8].odjazdy1[12][57] = "O";
+  przystanki2[8].odjazdy1[15][5] = "O";
+  przystanki2[8].odjazdy1[16][35] = "O";
 }
 
         if ( number.equals("6") == true ){//582
@@ -603,6 +1073,89 @@ przystanki[12].odjazdy1[16][15] = "x";
 
         przystanki[16].nazwa = "Robakowo - Szkoła";
         przystanki[16].odjazdy1[9][59] = "O";
+
+        n = 17;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Robakowo Gimnazjum";
+
+          przystanki2[k].przystanki[0] = "Kórnik Pl. Niepodległości";
+          przystanki2[k].przystanki[1] = "Kórnik - Szkoła";
+          przystanki2[k].przystanki[2] = "Kórnik - Reja";
+          przystanki2[k].przystanki[3] = "Dziećmierowo - Polna";
+          przystanki2[k].przystanki[4] = "Dziećmierowo - Słoneczna";
+          przystanki2[k].przystanki[5] = "Dziećmierowo - Leśna";
+          przystanki2[k].przystanki[6] = "Szczodrzykowo - Kolejowa";
+          przystanki2[k].przystanki[7] = "Szczodrzykowo I";
+          przystanki2[k].przystanki[8] = "Szczodrzykowo - Szkoła";
+          przystanki2[k].przystanki[9] = "Szczodrzykowo - Poznańska";
+          przystanki2[k].przystanki[10] = "Dachowa - Klonowa";
+          przystanki2[k].przystanki[11] = "Dachowa Okrężna";
+          przystanki2[k].przystanki[12] = "Dachowa - Wiatrakowa";
+          przystanki2[k].przystanki[13] = "Dachowa - Kręta";
+          przystanki2[k].przystanki[14] = "Robakowo - Szeroka";
+          przystanki2[k].przystanki[15] = "Robakowo - Wiejska";
+          przystanki2[k].przystanki[16] = "Robakowo - Szkoła";
+
+          przystanki2[k].linia = "592";
+
+
+          przystanki2[k].uwagi = null;
+
+        }
+
+      przystanki2[0].nazwa = "Kórnik Pl. Niepodległości";
+      przystanki2[0].odjazdy1[9][30] = "O";
+
+      przystanki2[1].nazwa = "Kórnik - Szkoła";
+      przystanki2[1].odjazdy1[9][32] = "O";
+
+      przystanki2[2].nazwa = "Kórnik - Reja";
+      przystanki2[2].odjazdy1[9][35] = "O";
+
+      przystanki2[3].nazwa = "Dziećmierowo - Polna";
+      przystanki2[3].odjazdy1[9][40] = "O";
+
+      przystanki2[4].nazwa = "Dziećmierowo - Słoneczna";
+      przystanki2[4].odjazdy1[9][41] = "O";
+
+      przystanki2[5].nazwa = "Dziećmierowo - Leśna";
+      przystanki2[5].odjazdy1[9][42] = "O";
+
+      przystanki2[6].nazwa = "Szczodrzykowo - Kolejowa";
+      przystanki2[6].odjazdy1[9][44] = "O";
+
+      przystanki2[7].nazwa = "Szczodrzykowo I";
+      przystanki2[7].odjazdy1[9][45] = "O";
+
+      przystanki2[8].nazwa = "Szczodrzykowo - Szkoła";
+      przystanki2[8].odjazdy1[9][46] = "O";
+
+      przystanki2[9].nazwa = "Szczodrzykowo - Poznańska";
+      przystanki2[9].odjazdy1[9][50] = "O";
+
+      przystanki2[10].nazwa = "Dachowa - Klonowa";
+      przystanki2[10].odjazdy1[9][52] = "O";
+
+      przystanki2[11].nazwa = "Dachowa Okrężna";
+      przystanki2[11].odjazdy1[9][53] = "O";
+
+      przystanki2[12].nazwa = "Dachowa - Wiatrakowa";
+      przystanki2[12].odjazdy1[9][54] = "O";
+
+      przystanki2[13].nazwa = "Dachowa - Kręta";
+      przystanki2[13].odjazdy1[9][55] = "O";
+
+      przystanki2[14].nazwa = "Robakowo - Szeroka";
+      przystanki2[14].odjazdy1[9][56] = "O";
+
+      przystanki2[15].nazwa = "Robakowo - Wiejska";
+      przystanki2[15].odjazdy1[9][57] = "O";
+
+      przystanki2[16].nazwa = "Robakowo - Szkoła";
+      przystanki2[16].odjazdy1[9][59] = "O";
         }
         if ( number.equals("7") == true ){//582
           n = 12;
@@ -680,6 +1233,82 @@ przystanki[12].odjazdy1[16][15] = "x";
           przystanki[11].odjazdy1[7][0] = "O";
           przystanki[11].odjazdy1[7][50] = "O";
           przystanki[11].odjazdy1[8][25] = "O";
+
+          n = 12;
+          przystanki2 = new PrzystanekD[n];
+          for ( int k = 0 ; k < n ; k++ ){
+            przystanki2[k] = new PrzystanekD();
+            przystanki2[k].waznyod = "16-05-2023";
+            przystanki2[k].kierunek = "Kamionki Szkoła";
+
+            przystanki2[k].przystanki[0] = "Borówiec Dębowa";
+            przystanki2[k].przystanki[1] = "Borówiec Rekreacyjna";
+            przystanki2[k].przystanki[2] = "Borówiec Łąkowa";
+            przystanki2[k].przystanki[3] = "Borówiec,Szkoła";
+            przystanki2[k].przystanki[4] = "Borówiec Deszczowa";
+            przystanki2[k].przystanki[5] = "Borówiec Pod Borem";
+            przystanki2[k].przystanki[6] = "Borówiec Kurkowa";
+            przystanki2[k].przystanki[7] = "Borówiec Borówkowa";
+            przystanki2[k].przystanki[8] = "Kamionki Lisia";
+            przystanki2[k].przystanki[9] = "Kamionki Lotnicza";
+            przystanki2[k].przystanki[10] = "Kamionki Pętla";
+            przystanki2[k].przystanki[11] = "Kamionki Szkoła";
+
+            przystanki2[k].linia = "593";
+
+
+            przystanki2[k].uwagi = null;
+
+          }
+
+          przystanki2[0].nazwa = "Borówiec Dębowa";
+          przystanki2[0].odjazdy1[6][45] = "O";
+          przystanki2[0].odjazdy1[7][35] = "O";
+          przystanki2[0].odjazdy1[8][10] = "O";
+          przystanki2[1].nazwa = "Borówiec Rekreacyjna";
+          przystanki2[1].odjazdy1[6][46] = "O";
+          przystanki2[1].odjazdy1[7][36] = "O";
+          przystanki2[1].odjazdy1[8][11] = "O";
+          przystanki2[2].nazwa = "Borówiec Łąkowa";
+          przystanki2[2].odjazdy1[6][47] = "O";
+          przystanki2[2].odjazdy1[7][37] = "O";
+          przystanki2[2].odjazdy1[8][12] = "O";
+          przystanki2[3].nazwa = "Borówiec,Szkoła";
+          przystanki2[3].odjazdy1[6][49] = "O";
+          przystanki2[3].odjazdy1[7][39] = "O";
+          przystanki2[3].odjazdy1[8][14] = "O";
+          przystanki2[4].nazwa = "Borówiec Deszczowa";
+          przystanki2[4].odjazdy1[6][51] = "O";
+          przystanki2[4].odjazdy1[7][41] = "O";
+          przystanki2[4].odjazdy1[8][16] = "O";
+          przystanki2[5].nazwa = "Borówiec Pod Borem";
+          przystanki2[5].odjazdy1[6][52] = "O";
+          przystanki2[5].odjazdy1[7][42] = "O";
+          przystanki2[5].odjazdy1[8][17] = "O";
+          przystanki2[6].nazwa = "Borówiec Kurkowa";
+          przystanki2[6].odjazdy1[6][53] = "O";
+          przystanki2[6].odjazdy1[7][43] = "O";
+          przystanki2[6].odjazdy1[8][19] = "O";
+          przystanki2[7].nazwa = "Borówiec Borówkowa";
+          przystanki2[7].odjazdy1[6][54] = "O";
+          przystanki2[7].odjazdy1[7][44] = "O";
+          przystanki2[7].odjazdy1[8][19] = "O";
+          przystanki2[8].nazwa = "Kamionki Lisia";
+          przystanki2[8].odjazdy1[6][55] = "O";
+          przystanki2[8].odjazdy1[7][45] = "O";
+          przystanki2[8].odjazdy1[8][20] = "O";
+          przystanki2[9].nazwa = "Kamionki Lotnicza";
+          przystanki2[9].odjazdy1[6][56] = "O";
+          przystanki2[9].odjazdy1[7][46] = "O";
+          przystanki2[9].odjazdy1[8][21] = "O";
+          przystanki2[10].nazwa = "Kamionki Pętla";
+          przystanki2[10].odjazdy1[6][58] = "O";
+          przystanki2[10].odjazdy1[7][48] = "O";
+          przystanki2[10].odjazdy1[8][23] = "O";
+          przystanki2[11].nazwa = "Kamionki Szkoła";
+          przystanki2[11].odjazdy1[7][0] = "O";
+          przystanki2[11].odjazdy1[7][50] = "O";
+          przystanki2[11].odjazdy1[8][25] = "O";
 
         }
         if ( number.equals("8") == true ){//582
@@ -790,6 +1419,114 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[22].nazwa = "Kamionki Szkoła";
         przystanki[22].odjazdy1[7][3] = "O";
         przystanki[22].odjazdy1[11][28] = "O";
+
+        n = 23;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Kamionki Szkoła";
+
+          przystanki2[k].przystanki[0] = "Koninko Dziennikarska";
+          przystanki2[k].przystanki[1] = "Koninko Pisarska";
+          przystanki2[k].przystanki[2] = "Szczytniki Pętla";
+          przystanki2[k].przystanki[3] = "Kamionki nad Koplą";
+          przystanki2[k].przystanki[4] = "Szczytniki Szczelinka";
+          przystanki2[k].przystanki[5] = "Szczytniki Sarnia";
+          przystanki2[k].przystanki[6] = "Szczytniki Nad Wodą";
+          przystanki2[k].przystanki[7] = "Koninko Las";
+          przystanki2[k].przystanki[8] = "Borówiec Las";
+          przystanki2[k].przystanki[9] = "Borówiec Dębowa";
+          przystanki2[k].przystanki[10] = "Borówiec Rekreacyjna";
+          przystanki2[k].przystanki[11] = "Borówiec Łąkowa";
+          przystanki2[k].przystanki[12] = "Borówiec Deszczowa";
+          przystanki2[k].przystanki[13] = "Borówiec Pod Borem";
+          przystanki2[k].przystanki[14] = "Borówiec Kurkowa";
+          przystanki2[k].przystanki[15] = "Borówiec Borówkowa";
+          przystanki2[k].przystanki[16] = "Kamionki Lisia";
+          przystanki2[k].przystanki[17] = "Kamionki Lotnicza";
+          przystanki2[k].przystanki[18] = "Kamionki Pętla";
+          przystanki2[k].przystanki[19] = "Kamionki Klonowa";
+          przystanki2[k].przystanki[20] = "Kamionki Łąkowa";
+          przystanki2[k].przystanki[21] = "Kamionki Polna";
+          przystanki2[k].przystanki[22] = "Kamionki Szkoła";
+
+          przystanki2[k].linia = "594";
+
+
+          przystanki2[k].uwagi = null;
+
+        }
+
+      przystanki2[0].nazwa ="Koninko Dziennikarska";
+      przystanki2[0].odjazdy1[6][35] = "O";
+      przystanki2[0].odjazdy1[11][0] = "O";
+      przystanki2[1].nazwa ="Koninko Pisarska";
+      przystanki2[1].odjazdy1[6][36] = "O";
+      przystanki2[1].odjazdy1[11][1] = "O";
+      przystanki2[2].nazwa ="Szczytniki Pętla";
+      przystanki2[2].odjazdy1[6][37] = "O";
+      przystanki2[2].odjazdy1[11][2] = "O";
+      przystanki2[3].nazwa ="Kamionki nad Koplą";
+      przystanki2[3].odjazdy1[6][40] = "O";
+      przystanki2[3].odjazdy1[11][5] = "O";
+      przystanki2[4].nazwa ="Szczytniki Szczelinka";
+      przystanki2[4].odjazdy1[6][41] = "O";
+      przystanki2[4].odjazdy1[11][6] = "O";
+      przystanki2[5].nazwa ="Szczytniki Sarnia";
+      przystanki2[5].odjazdy1[6][42] = "O";
+      przystanki2[5].odjazdy1[11][7] = "O";
+      przystanki2[6].nazwa ="Szczytniki Nad Wodą";
+      przystanki2[6].odjazdy1[6][43] = "O";
+      przystanki2[6].odjazdy1[11][8] = "O";
+      przystanki2[7].nazwa ="Koninko Las";
+      przystanki2[7].odjazdy1[6][45] = "O";
+      przystanki2[7].odjazdy1[11][10] = "O";
+      przystanki2[8].nazwa ="Borówiec Las";
+      przystanki2[8].odjazdy1[6][47] = "O";
+      przystanki2[8].odjazdy1[11][12] = "O";
+      przystanki2[9].nazwa ="Borówiec Dębowa";
+      przystanki2[9].odjazdy1[6][48] = "O";
+      przystanki2[9].odjazdy1[11][13] = "O";
+      przystanki2[10].nazwa ="Borówiec Rekreacyjna";
+      przystanki2[10].odjazdy1[6][49] = "O";
+      przystanki2[10].odjazdy1[11][14] = "O";
+      przystanki2[11].nazwa ="Borówiec Łąkowa";
+      przystanki2[11].odjazdy1[6][50] = "O";
+      przystanki2[11].odjazdy1[11][15] = "O";
+      przystanki2[12].nazwa ="Borówiec Deszczowa";
+      przystanki2[12].odjazdy1[6][51] = "O";
+      przystanki2[12].odjazdy1[11][16] = "O";
+      przystanki2[13].nazwa ="Borówiec Pod Borem";
+      przystanki2[13].odjazdy1[6][52] = "O";
+      przystanki2[13].odjazdy1[11][17] = "O";
+      przystanki2[14].nazwa ="Borówiec Kurkowa";
+      przystanki2[14].odjazdy1[6][53] = "O";
+      przystanki2[14].odjazdy1[11][18] = "O";
+      przystanki2[15].nazwa ="Borówiec Borówkowa";
+      przystanki2[15].odjazdy1[6][54] = "O";
+      przystanki2[15].odjazdy1[11][19] = "O";
+      przystanki2[16].nazwa ="Kamionki Lisia";
+      przystanki2[16].odjazdy1[6][55] = "O";
+      przystanki2[16].odjazdy1[11][20] = "O";
+      przystanki2[17].nazwa ="Kamionki Lotnicza";
+      przystanki2[17].odjazdy1[6][56] = "O";
+      przystanki2[17].odjazdy1[11][21] = "O";
+      przystanki2[18].nazwa ="Kamionki Pętla";
+      przystanki2[18].odjazdy1[6][57] = "O";
+      przystanki2[18].odjazdy1[11][22] = "O";
+      przystanki2[19].nazwa ="Kamionki Klonowa";
+      przystanki2[19].odjazdy1[6][59] = "O";
+      przystanki2[19].odjazdy1[11][24] = "O";
+      przystanki2[20].nazwa ="Kamionki Łąkowa";
+      przystanki2[20].odjazdy1[7][0] = "O";
+      przystanki2[20].odjazdy1[11][25] = "O";
+      przystanki2[21].nazwa ="Kamionki Polna";
+      przystanki2[21].odjazdy1[7][1] = "O";
+      przystanki2[21].odjazdy1[11][26] = "O";
+      przystanki2[22].nazwa = "Kamionki Szkoła";
+      przystanki2[22].odjazdy1[7][3] = "O";
+      przystanki2[22].odjazdy1[11][28] = "O";
         }
 
         if ( number.equals("9") == true ){
@@ -957,6 +1694,169 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[36].odjazdy1[8][35] = "O";
         przystanki[36].odjazdy1[10][20] = "O";
 
+        n = 37;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Kórnik Plac Niepodległości"
+
+          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[1] = "Kórnik - Prowent";
+          przystanki2[k].przystanki[2] = "Kórnik Bnin A. Krajowej";
+          przystanki2[k].przystanki[3] = "Kórnik - Bnin Rynek";
+          przystanki2[k].przystanki[4] = "Kórnik Bnin Konarska";
+          przystanki2[k].przystanki[5] = "Konarskie Wieś";
+          przystanki2[k].przystanki[6] = "Konarskie Świetlica";
+          przystanki2[k].przystanki[7] = "Konarskie Pętla";
+          przystanki2[k].przystanki[8] = "Konarskie Skrzyżowanie";
+          przystanki2[k].przystanki[9] = "Radzewo Strażnica";
+          przystanki2[k].przystanki[10] = "Radzewo SP";
+          przystanki2[k].przystanki[11] = "Trzykolne Młyny Radzewska";
+          przystanki2[k].przystanki[12] = "Trzyklne Młyny Rogalińska";
+          przystanki2[k].przystanki[13] = "Czmoniec Rumiankowa";
+          przystanki2[k].przystanki[14] = "Czmoniec Miętowa";
+          przystanki2[k].przystanki[15] = "Czmoniec Piwoniowa";
+          przystanki2[k].przystanki[16] = "Czmoniec Stokrotkowa";
+          przystanki2[k].przystanki[17] = "Czmoniec Marzymięta";
+          przystanki2[k].przystanki[18] = "Czmoń Leśna";
+          przystanki2[k].przystanki[19] = "Czmoń Strażacka";
+          przystanki2[k].przystanki[20] = "Czmoń Lipowa";
+          przystanki2[k].przystanki[21] = "Czmoń Os Radosne";
+          przystanki2[k].przystanki[22] = "Radzewo Pomorska";
+          przystanki2[k].przystanki[23] = "Radzewo Strażnica";
+          przystanki2[k].przystanki[24] = "Radzewo SP";
+          przystanki2[k].przystanki[25] = "Dworzyska";
+          przystanki2[k].przystanki[26] = "Radzewo SP";
+          przystanki2[k].przystanki[27] = "Radzewo Strażnica";
+          przystanki2[k].przystanki[28] = "Konarskie Skrzyżowanie";
+          przystanki2[k].przystanki[29] = "Konarskie Wieś";
+          przystanki2[k].przystanki[30] = "Konarskie Świetlica";
+          przystanki2[k].przystanki[31] = "Konarskie Pętla";
+          przystanki2[k].przystanki[32] = "Czołowo Kórnicka";
+          przystanki2[k].przystanki[33] = "Kórnik - Bnin Rynek";
+          przystanki2[k].przystanki[34] = "Kórnik Bnin A.Krajowej";
+          przystanki2[k].przystanki[35] = "Kórnik Prowent";
+          przystanki2[k].przystanki[36] = "Kórnik - Pl. Niepodległ";
+
+          przystanki2[k].linia = "595";
+
+
+          przystanki2[k].uwagi = null;
+
+        }
+
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[0].odjazdy1[7][15] = "O";
+      przystanki2[0].odjazdy1[9][0] = "O";
+      przystanki2[1].nazwa = "Kórnik - Prowent";
+      przystanki2[1].odjazdy1[7][17] = "O";
+      przystanki2[1].odjazdy1[9][2] = "O";
+      przystanki2[2].nazwa = "Kórnik Bnin A. Krajowej";
+      przystanki2[2].odjazdy1[7][19] = "O";
+      przystanki2[2].odjazdy1[9][4] = "O";
+      przystanki2[3].nazwa = "Kórnik - Bnin Rynek";
+      przystanki2[3].odjazdy1[7][22] = "O";
+      przystanki2[3].odjazdy1[9][7] = "O";
+      przystanki2[4].nazwa = "Kórnik Bnin Konarska";
+      przystanki2[4].odjazdy1[7][24] = "O";
+      przystanki2[4].odjazdy1[9][9] = "O";
+      przystanki2[5].nazwa = "Konarskie Wieś";
+      przystanki2[5].odjazdy1[7][29] = "O";
+      przystanki2[5].odjazdy1[9][14] = "O";
+      przystanki2[6].nazwa = "Konarskie Świetlica";
+      przystanki2[6].odjazdy1[7][30] = "O";
+      przystanki2[6].odjazdy1[9][15] = "O";
+      przystanki2[7].nazwa = "Konarskie Pętla";
+      przystanki2[7].odjazdy1[7][31] = "O";
+      przystanki2[7].odjazdy1[9][16] = "O";
+      przystanki2[8].nazwa = "Konarskie Skrzyżowanie";
+      przystanki2[8].odjazdy1[7][33] = "O";
+      przystanki2[8].odjazdy1[9][18] = "O";
+      przystanki2[9].nazwa = "Radzewo Strażnica";
+      przystanki2[9].odjazdy1[7][36] = "O";
+      przystanki2[9].odjazdy1[9][21] = "O";
+      przystanki2[10].nazwa = "Radzewo SP";
+      przystanki2[10].odjazdy1[7][37] = "O";
+      przystanki2[10].odjazdy1[9][22] = "O";
+      przystanki2[11].nazwa = "Trzykolne Młyny Radzewska";
+      przystanki2[11].odjazdy1[7][42] = "O";
+      przystanki2[11].odjazdy1[9][27] = "O";
+      przystanki2[12].nazwa = "Trzyklne Młyny Rogalińska";
+      przystanki2[12].odjazdy1[7][44] = "O";
+      przystanki2[12].odjazdy1[9][29] = "O";
+      przystanki2[13].nazwa = "Czmoniec Rumiankowa";
+      przystanki2[13].odjazdy1[7][47] = "O";
+      przystanki2[13].odjazdy1[9][32] = "O";
+      przystanki2[14].nazwa = "Czmoniec Miętowa";
+      przystanki2[14].odjazdy1[7][50] = "O";
+      przystanki2[14].odjazdy1[9][35] = "O";
+      przystanki2[15].nazwa = "Czmoniec Piwoniowa";
+      przystanki2[15].odjazdy1[7][51] = "O";
+      przystanki2[15].odjazdy1[9][36] = "O";
+      przystanki2[16].nazwa = "Czmoniec Stokrotkowa";
+      przystanki2[16].odjazdy1[7][52] = "O";
+      przystanki2[16].odjazdy1[9][37] = "O";
+      przystanki2[17].nazwa = "Czmoniec Marzymięta";
+      przystanki2[17].odjazdy1[7][53] = "O";
+      przystanki2[17].odjazdy1[9][38] = "O";
+      przystanki2[18].nazwa = "Czmoń Leśna";
+      przystanki2[18].odjazdy1[7][55] = "O";
+      przystanki2[18].odjazdy1[9][40] = "O";
+      przystanki2[19].nazwa = "Czmoń Strażacka";
+      przystanki2[19].odjazdy1[7][57] = "O";
+      przystanki2[19].odjazdy1[9][42] = "O";
+      przystanki2[20].nazwa = "Czmoń Lipowa";
+      przystanki2[20].odjazdy1[8][1] = "O";
+      przystanki2[20].odjazdy1[9][46] = "O";
+      przystanki2[21].nazwa = "Czmoń Os Radosne";
+      przystanki2[21].odjazdy1[8][2] = "O";
+      przystanki2[21].odjazdy1[9][47] = "O";
+      przystanki2[22].nazwa = "Radzewo Pomorska";
+      przystanki2[22].odjazdy1[8][4] = "O";
+      przystanki2[22].odjazdy1[9][49] = "O";
+      przystanki2[23].nazwa = "Radzewo Strażnica";
+      przystanki2[23].odjazdy1[8][6] = "O";
+      przystanki2[23].odjazdy1[9][51] = "O";
+      przystanki2[24].nazwa = "Radzewo SP";
+      przystanki2[24].odjazdy1[8][7] = "O";
+      przystanki2[24].odjazdy1[9][52] = "O";
+      przystanki2[25].nazwa = "Dworzyska";
+      przystanki2[25].odjazdy1[8][11] = "O";
+      przystanki2[25].odjazdy1[9][56] = "O";
+      przystanki2[26].nazwa = "Radzewo SP";
+      przystanki2[26].odjazdy1[8][15] = "O";
+      przystanki2[26].odjazdy1[10][0] = "O";
+      przystanki2[27].nazwa = "Radzewo Strażnica";
+      przystanki2[27].odjazdy1[8][16] = "O";
+      przystanki2[27].odjazdy1[10][1] = "O";
+      przystanki2[28].nazwa = "Konarskie Skrzyżowanie";
+      przystanki2[28].odjazdy1[8][20] = "O";
+      przystanki2[28].odjazdy1[10][5] = "O";
+      przystanki2[29].nazwa = "Konarskie Wieś";
+      przystanki2[29].odjazdy1[8][21] = "O";
+      przystanki2[29].odjazdy1[10][6] = "O";
+      przystanki2[30].nazwa = "Konarskie Świetlica";
+      przystanki2[30].odjazdy1[8][22] = "O";
+      przystanki2[30].odjazdy1[10][7] = "O";
+      przystanki2[31].nazwa = "Konarskie Pętla";
+      przystanki2[31].odjazdy1[8][23] = "O";
+      przystanki2[31].odjazdy1[10][8] = "O";
+      przystanki2[32].nazwa = "Czołowo Kórnicka";
+      przystanki2[32].odjazdy1[8][24] = "O";
+      przystanki2[32].odjazdy1[10][9] = "O";
+      przystanki2[33].nazwa = "Kórnik - Bnin Rynek";
+      przystanki2[33].odjazdy1[8][30] = "O";
+      przystanki2[33].odjazdy1[10][15] = "O";
+      przystanki2[34].nazwa = "Kórnik Bnin A.Krajowej";
+      przystanki2[34].odjazdy1[8][31] = "O";
+      przystanki2[34].odjazdy1[10][16] = "O";
+      przystanki2[35].nazwa = "Kórnik Prowent";
+      przystanki2[35].odjazdy1[8][33] = "O";
+      przystanki2[35].odjazdy1[10][18] = "O";
+      przystanki2[36].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[36].odjazdy1[8][35] = "O";
+      przystanki2[36].odjazdy1[10][20] = "O";
         }
         if ( number.equals("10") == true ){//582
           n = 4;
@@ -986,6 +1886,34 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[2].odjazdy1[12][54] = "O";
         przystanki[3].nazwa = "Czołowo - Czołowo";
         przystanki[3].odjazdy1[13][1] = "O";
+
+        n = 4;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Czołowo - Czołowo"
+
+          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[1] = "Kórnik - Reja";
+          przystanki2[k].przystanki[2] = "Mościennica - Mościennica";
+          przystanki2[k].przystanki[3] = "Czołowo - Czołowo";
+
+          przystanki2[k].linia = "596";
+
+
+          przystanki2[k].uwagi = null;
+
+        }
+
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[0].odjazdy1[12][45] = "O";
+      przystanki2[1].nazwa = "Kórnik - Reja";
+      przystanki2[1].odjazdy1[12][47] = "O";
+      przystanki2[2].nazwa = "Mościennica - Mościennica";
+      przystanki2[2].odjazdy1[12][54] = "O";
+      przystanki2[3].nazwa = "Czołowo - Czołowo";
+      przystanki2[3].odjazdy1[13][1] = "O";
         }
         if ( number.equals("11") == true ){//582
           n = 10;
@@ -1033,6 +1961,52 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[8].odjazdy1[6][58] = "O";
         przystanki[9].nazwa = "Jaryszki Składowa";
         przystanki[9].odjazdy1[7][4] = "O";
+
+        n = 10;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Jaryszki - Składowa"
+
+          przystanki2[k].przystanki[0] = "Błażejewo - Przylesie";
+          przystanki2[k].przystanki[1] = "Kórnik - Bnin Osiedle";
+          przystanki2[k].przystanki[2] = "Kórnik - Bnin Rynek";
+          przystanki2[k].przystanki[3] = "Kórnik Bnin Armii Krajowej";
+          przystanki2[k].przystanki[4] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[5] = "Kórnik Reja";
+          przystanki2[k].przystanki[6] = "Skrzynki Jeziorna";
+          przystanki2[k].przystanki[7] = "Gądki - Gądki";
+          przystanki2[k].przystanki[8] = "Gądki - Węzeł";
+          przystanki2[k].przystanki[9] = "Jaryszki Składowa";
+
+          przystanki2[k].linia = "597";
+
+
+          przystanki2[k].uwagi = null;
+
+        }
+
+      przystanki2[0].nazwa = "Błażejewo - Przylesie";
+      przystanki2[0].odjazdy1[6][37] = "O";
+      przystanki2[1].nazwa = "Kórnik - Bnin Osiedle";
+      przystanki2[1].odjazdy1[6][40] = "O";
+      przystanki2[2].nazwa = "Kórnik - Bnin Rynek";
+      przystanki2[2].odjazdy1[6][42] = "O";
+      przystanki2[3].nazwa = "Kórnik Bnin Armii Krajowej";
+      przystanki2[3].odjazdy1[6][46] = "O";
+      przystanki2[4].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[4].odjazdy1[6][47] = "O";
+      przystanki2[5].nazwa = "Kórnik Reja";
+      przystanki2[5].odjazdy1[6][49] = "O";
+      przystanki2[6].nazwa = "Skrzynki Jeziorna";
+      przystanki2[6].odjazdy1[6][52] = "O";
+      przystanki2[7].nazwa = "Gądki - Gądki";
+      przystanki2[7].odjazdy1[6][55] = "O";
+      przystanki2[8].nazwa = "Gądki - Węzeł";
+      przystanki2[8].odjazdy1[6][58] = "O";
+      przystanki2[9].nazwa = "Jaryszki Składowa";
+      przystanki2[9].odjazdy1[7][4] = "O";
         }
 
         if ( number.equals("12") == true ){
@@ -1118,8 +2092,91 @@ przystanki[12].odjazdy1[16][15] = "x";
         przystanki[10].odjazdy1[6][41] = "O";
         przystanki[10].odjazdy1[9][33] = "O";
         przystanki[10].odjazdy1[11][20] = "O";
+
+        int n = 11;
+        przystanki2 = new PrzystanekD[n];
+        for ( int k = 0 ; k < n ; k++ ){
+          przystanki2[k] = new PrzystanekD();
+          przystanki2[k].waznyod = "16-05-2023";
+          przystanki2[k].kierunek = "Szczytniki - Pętla"
+
+          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[1] = "Kórnik Poprzeczna";
+          przystanki2[k].przystanki[2] = "Kórnik - Reja";
+          przystanki2[k].przystanki[3] = "Skrzynki Jeziorna";
+          przystanki2[k].przystanki[4] = "Gądki PKP";
+          przystanki2[k].przystanki[5] = "Borówiec Las";
+          przystanki2[k].przystanki[6] = "Koninko Las";
+          przystanki2[k].przystanki[7] = "Koninko Granatowa";
+          przystanki2[k].przystanki[8] = "Koninko Dziennikarska";
+          przystanki2[k].przystanki[9] = "Koninko Pisarska";
+          przystanki2[k].przystanki[10] = "Szczytniki Pętla";
+
+          przystanki2[k].linia = "599";
+
+
+          przystanki2[k].uwagi = null;
+
         }
-      return przystanki; 
+
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[0].odjazdy1[5][30] = "O";
+      przystanki2[0].odjazdy1[6][21] = "O";
+      przystanki2[0].odjazdy1[9][13] = "O";
+      przystanki2[0].odjazdy1[11][0] = "O";
+
+      przystanki2[1].nazwa = "Kórnik Poprzeczna";
+      przystanki2[1].odjazdy1[5][31] = "O";
+      przystanki2[1].odjazdy1[6][22] = "O";
+      przystanki2[1].odjazdy1[9][14] = "O";
+      przystanki2[1].odjazdy1[11][1] = "O";
+      przystanki2[2].nazwa = "Kórnik - Reja";
+      przystanki2[2].odjazdy1[5][32] = "O";
+      przystanki2[2].odjazdy1[6][23] = "O";
+      przystanki2[2].odjazdy1[9][15] = "O";
+      przystanki2[2].odjazdy1[11][2] = "O";
+      przystanki2[3].nazwa = "Skrzynki Jeziorna";
+      przystanki2[3].odjazdy1[5][35] = "O";
+      przystanki2[3].odjazdy1[6][26] = "O";
+      przystanki2[3].odjazdy1[9][18] = "O";
+      przystanki2[3].odjazdy1[11][5] = "O";
+      przystanki2[4].nazwa = "Gądki PKP";
+      przystanki2[4].odjazdy1[5][40] = "O";
+      przystanki2[4].odjazdy1[6][31] = "O";
+      przystanki2[4].odjazdy1[9][23] = "O";
+      przystanki2[4].odjazdy1[11][10] = "O";
+      przystanki2[5].nazwa = "Borówiec Las";
+      przystanki2[5].odjazdy1[5][43] = "O";
+      przystanki2[5].odjazdy1[6][34] = "O";
+      przystanki2[5].odjazdy1[9][26] = "O";
+      przystanki2[5].odjazdy1[11][13] = "O";
+      przystanki2[6].nazwa = "Koninko Las";
+      przystanki2[6].odjazdy1[5][45] = "O";
+      przystanki2[6].odjazdy1[6][36] = "O";
+      przystanki2[6].odjazdy1[9][28] = "O";
+      przystanki2[6].odjazdy1[11][15] = "O";
+      przystanki2[7].nazwa = "Koninko Granatowa";
+      przystanki2[7].odjazdy1[5][47] = "O";
+      przystanki2[7].odjazdy1[6][38] = "O";
+      przystanki2[7].odjazdy1[9][30] = "O";
+      przystanki2[7].odjazdy1[11][17] = "O";
+      przystanki2[8].nazwa = "Koninko Dziennikarska";
+      przystanki2[8].odjazdy1[5][48] = "O";
+      przystanki2[8].odjazdy1[6][39] = "O";
+      przystanki2[8].odjazdy1[9][31] = "O";
+      przystanki2[8].odjazdy1[11][18] = "O";
+      przystanki2[9].nazwa = "Koninko Pisarska";
+      przystanki2[9].odjazdy1[5][49] = "O";
+      przystanki2[9].odjazdy1[6][40] = "O";
+      przystanki2[9].odjazdy1[9][32] = "O";
+      przystanki2[9].odjazdy1[11][19] = "O";
+      przystanki2[10].nazwa = "Szczytniki Pętla";
+      przystanki2[10].odjazdy1[5][50] = "O";
+      przystanki2[10].odjazdy1[6][41] = "O";
+      przystanki2[10].odjazdy1[9][33] = "O";
+      przystanki2[10].odjazdy1[11][20] = "O";
+        }
+      return przystanki;
     }
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";

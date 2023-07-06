@@ -2,6 +2,33 @@ przystanki[przystanki[k].przystanki[przystanki[k].przystanki[package com.conveya
 
 import java.util.HashMap;
 public class PrzystanekD {
+
+  private PrzystanekD[] reverse(PrzystanekD[] p) {
+     int length = p.length;
+     PrzystanekD[] reversedArray = new PrzystanekD[length];
+
+     for (int i = 0; i < length; i++) {
+         reversedArray[length - i - 1] = p[i];
+     }
+
+     return reversedArray;
+ }
+
+ private PrzystanekD[] merge(PrzystanekD[] a, PrzystanekD[] b) {
+        int lengthA = a.length;
+        int lengthB = b.length;
+        PrzystanekD[] mergedArray = new PrzystanekD[lengthA + lengthB];
+
+        for (int i = 0; i < lengthA; i++) {
+            mergedArray[i] = a[i];
+        }
+
+        for (int i = 0; i < lengthB; i++) {
+            mergedArray[lengthA + i] = b[i];
+        }
+
+        return mergedArray;
+    }
   public PrzystanekD(){
   }
   /*  public PrzystanekD(String number, String databaseUrl){
@@ -2176,7 +2203,8 @@ przystanki2[12].odjazdy1[16][15] = "x";
       przystanki2[10].odjazdy1[9][33] = "O";
       przystanki2[10].odjazdy1[11][20] = "O";
         }
-      return przystanki;
+      PrzystanekD[] p2 = this.reverse(przystanki2);
+      return return this.merge(przystanki,p2);
     }
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";

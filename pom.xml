@@ -264,21 +264,21 @@
          - commons-io - generic utilities
          - AWS S3 SDK - putting/getting objects into/out of S3.
          -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.github.conveyal</groupId>
-            <artifactId>gtfs-lib</artifactId>
+            <artifactId>gtfs-lib</artifactId>-->
             <!-- Latest dev build on jitpack.io -->
-            <version>a3e5707</version>
+            <!--<version>a3e5707</version>-->
             <!-- Exclusions added in order to silence SLF4J warnings about multiple bindings:
                 http://www.slf4j.org/codes.html#multiple_bindings
             -->
-            <exclusions>
+            <!--<exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-simple</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
 
         <!-- Used for application database -->
         <dependency>

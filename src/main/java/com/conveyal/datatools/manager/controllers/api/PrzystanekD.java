@@ -1,4 +1,4 @@
-przystanki[przystanki[k].przystanki[przystanki[k].przystanki[package com.conveyal.datatools.manager.controllers.api;
+package com.conveyal.datatools.manager.controllers.api;
 
 import java.util.HashMap;
 public class PrzystanekD {
@@ -130,7 +130,7 @@ przystanki[12].odjazdy1[14][35] = "x";
 przystanki[12].odjazdy1[16][15] = "x";
 
 //od tylu wpisuemy rozklady
-n = 14
+n = 14;
 przystanki2 = new PrzystanekD[n];
 for ( int k = 0 ; k < n ; k++ ){
   przystanki2[k] = new PrzystanekD();
@@ -249,7 +249,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
       }
 
-      przystanki[0].nazwa = "Kórnik - Pl. Niepodległości"";
+      przystanki[0].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki[0].odjazdy1[7][21] = "O";
       przystanki[0].odjazdy1[8][25] = "O";
       przystanki[0].odjazdy1[9][00] = "O";
@@ -308,9 +308,9 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki[7].nazwa = "Biernatki - Folwark";
       przystanki[7].odjazdy1[7][29] = "O";
       przystanki[7].odjazdy1[8][33] = "O";
-      przystanki[7].odjazdy1[9][08] = "O";
+      przystanki[7].odjazdy1[9][8] = "O";
       przystanki[7].odjazdy1[10][53] = "O";
-      przystanki[7].odjazdy1[13][05] = "O";
+      przystanki[7].odjazdy1[13][5] = "O";
       przystanki[7].odjazdy1[13][53] = "O";
 
       przystanki[8].nazwa = "Prusinowo - Wieś";
@@ -326,7 +326,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki[9].odjazdy1[8][36] = "O";
       przystanki[9].odjazdy1[9][11] = "O";
       przystanki[9].odjazdy1[10][56] = "O";
-      przystanki[9].odjazdy1[13][08] = "O";
+      przystanki[9].odjazdy1[13][8] = "O";
       przystanki[9].odjazdy1[13][56] = "O";
 
 //
@@ -463,7 +463,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
       }
 
-      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości"";
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki2[0].odjazdy1[7][21] = "O";
       przystanki2[0].odjazdy1[8][25] = "O";
       przystanki2[0].odjazdy1[9][00] = "O";
@@ -522,7 +522,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[7].nazwa = "Biernatki - Folwark";
       przystanki2[7].odjazdy1[7][29] = "O";
       przystanki2[7].odjazdy1[8][33] = "O";
-      przystanki2[7].odjazdy1[9][08] = "O";
+      przystanki2[7].odjazdy1[9][8] = "O";
       przystanki2[7].odjazdy1[10][53] = "O";
       przystanki2[7].odjazdy1[13][05] = "O";
       przystanki2[7].odjazdy1[13][53] = "O";
@@ -540,7 +540,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[9].odjazdy1[8][36] = "O";
       przystanki2[9].odjazdy1[9][11] = "O";
       przystanki2[9].odjazdy1[10][56] = "O";
-      przystanki2[9].odjazdy1[13][08] = "O";
+      przystanki2[9].odjazdy1[13][8] = "O";
       przystanki2[9].odjazdy1[13][56] = "O";
 
     //
@@ -1521,7 +1521,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[20].odjazdy1[11][58] = "O";
       przystanki2[20].odjazdy1[13][48] = "O";
       przystanki2[21].nazwa ="Kamionki Polna";
-      przystanki2[21].odjazdy1[11]57] = "O";
+      przystanki2[21].odjazdy1[11][57] = "O";
       przystanki2[21].odjazdy1[13][47] = "O";
       przystanki2[22].nazwa = "Kamionki Szkoła";
       przystanki2[22].odjazdy1[11][55] = "O";
@@ -1534,7 +1534,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           for ( int k = 0 ; k < n ; k++ ){
             przystanki[k] = new PrzystanekD();
             przystanki[k].waznyod = "16-05-2023";
-            przystanki[k].kierunek = "Kórnik Plac Niepodległości"
+            przystanki[k].kierunek = "Kórnik Plac Niepodległości";
 
             przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
             przystanki[k].przystanki[1] = "Kórnik - Prowent";
@@ -1698,7 +1698,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
         for ( int k = 0 ; k < n ; k++ ){
           przystanki2[k] = new PrzystanekD();
           przystanki2[k].waznyod = "16-05-2023";
-          przystanki2[k].kierunek = "Kórnik Plac Niepodległości"
+          przystanki2[k].kierunek = "Kórnik Plac Niepodległości";
 //TODO zostawiamy
           przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
           przystanki2[k].przystanki[1] = "Kórnik - Prowent";
@@ -1863,7 +1863,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           for ( int k = 0 ; k < n ; k++ ){
             przystanki[k] = new PrzystanekD();
             przystanki[k].waznyod = "16-05-2023";
-            przystanki[k].kierunek = "Czołowo - Czołowo"
+            przystanki[k].kierunek = "Czołowo - Czołowo";
 
             przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
             przystanki[k].przystanki[1] = "Kórnik - Reja";
@@ -1891,7 +1891,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
         for ( int k = 0 ; k < n ; k++ ){
           przystanki2[k] = new PrzystanekD();
           przystanki2[k].waznyod = "16-05-2023";
-          przystanki2[k].kierunek = "Kórnik Rynek"
+          przystanki2[k].kierunek = "Kórnik Rynek";
 
           przystanki2[k].przystanki[0] = "Kórnik - Szkoła";
           przystanki2[k].przystanki[1] = "Kórnik - Reja";
@@ -1920,7 +1920,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           for ( int k = 0 ; k < n ; k++ ){
             przystanki[k] = new PrzystanekD();
             przystanki[k].waznyod = "16-05-2023";
-            przystanki[k].kierunek = "Jaryszki - Składowa"
+            przystanki[k].kierunek = "Jaryszki - Składowa";
 
             przystanki[k].przystanki[0] = "Błażejewo - Przylesie";
             przystanki[k].przystanki[1] = "Kórnik - Bnin Osiedle";
@@ -1966,7 +1966,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
         for ( int k = 0 ; k < n ; k++ ){
           przystanki2[k] = new PrzystanekD();
           przystanki2[k].waznyod = "16-05-2023";
-          przystanki2[k].kierunek = "Kórnik - Bnin Osiedle"
+          przystanki2[k].kierunek = "Kórnik - Bnin Osiedle";
 
           przystanki2[k].przystanki[1] = "Kórnik - Bnin Osiedle";
           przystanki2[k].przystanki[2] = "Kórnik - Bnin Rynek";
@@ -2014,12 +2014,12 @@ przystanki2[13].odjazdy1[16][20] = "x";
         }
 
         if ( number.equals("12") == true ){
-          int n = 11;
+          n = 11;
           przystanki = new PrzystanekD[n];
           for ( int k = 0 ; k < n ; k++ ){
             przystanki[k] = new PrzystanekD();
             przystanki[k].waznyod = "16-05-2023";
-            przystanki[k].kierunek = "Szczytniki - Pętla"
+            przystanki[k].kierunek = "Szczytniki - Pętla";
 
             przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
             przystanki[k].przystanki[1] = "Kórnik Poprzeczna";
@@ -2097,12 +2097,12 @@ przystanki2[13].odjazdy1[16][20] = "x";
         przystanki[10].odjazdy1[9][33] = "O";
         przystanki[10].odjazdy1[11][20] = "O";
 
-        int n = 11;
+        n = 11;
         przystanki2 = new PrzystanekD[n];
         for ( int k = 0 ; k < n ; k++ ){
           przystanki2[k] = new PrzystanekD();
           przystanki2[k].waznyod = "16-05-2023";
-          przystanki2[k].kierunek = "Kórnik Rynek"
+          przystanki2[k].kierunek = "Kórnik Rynek";
 
           przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
           przystanki2[k].przystanki[1] = "Kórnik Poprzeczna";
@@ -2186,7 +2186,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[10].odjazdy1[19][58] = "O";
         }
       PrzystanekD[] p2 = this.reverse(przystanki2);
-      return return this.merge(przystanki,p2);
+      return this.merge(przystanki,p2);
     }
   public PrzystanekD(String number){
     this.waznyod = "16-05-2023";
@@ -2563,7 +2563,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
     if ( kod == "s"){
       return new Integer(j).toString()+"s";
     }
- 
+
     return "E";
   }
 }

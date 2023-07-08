@@ -272,8 +272,8 @@
             <!-- Exclusions added in order to silence SLF4J warnings about multiple bindings:
                 http://www.slf4j.org/codes.html#multiple_bindings
             -->
-            <scope>system</scope>
-            <systemPath>/opt/gtfs-lib-a3e5707.jar</systemPath>
+          <!--  <scope>system</scope>
+            <systemPath>/opt/gtfs-lib-a3e5707.jar</systemPath>-->
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>

@@ -1536,7 +1536,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
             przystanki[k].waznyod = "16-05-2023";
             przystanki[k].kierunek = "Kórnik Plac Niepodległości";
 
-            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
             przystanki[k].przystanki[1] = "Kórnik - Prowent";
             przystanki[k].przystanki[2] = "Kórnik Bnin A. Krajowej";
             przystanki[k].przystanki[3] = "Kórnik - Bnin Rynek";
@@ -1572,7 +1572,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
             przystanki[k].przystanki[33] = "Kórnik - Bnin Rynek";
             przystanki[k].przystanki[34] = "Kórnik Bnin A.Krajowej";
             przystanki[k].przystanki[35] = "Kórnik Prowent";
-            przystanki[k].przystanki[36] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[36] = "Kórnik - Pl. Niepodległości";
 
             przystanki[k].linia = "595";
 
@@ -1581,7 +1581,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
           }
 
-        przystanki[0].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[0].nazwa = "Kórnik - Pl. Niepodległości";
         przystanki[0].odjazdy1[7][15] = "O";
         przystanki[0].odjazdy1[9][0] = "O";
         przystanki[1].nazwa = "Kórnik - Prowent";
@@ -1689,7 +1689,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
         przystanki[35].nazwa = "Kórnik Prowent";
         przystanki[35].odjazdy1[8][33] = "O";
         przystanki[35].odjazdy1[10][18] = "O";
-        przystanki[36].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[36].nazwa = "Kórnik - Pl. Niepodległości";
         przystanki[36].odjazdy1[8][35] = "O";
         przystanki[36].odjazdy1[10][20] = "O";
 
@@ -1700,7 +1700,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           przystanki2[k].waznyod = "16-05-2023";
           przystanki2[k].kierunek = "Kórnik Plac Niepodległości";
 //TODO zostawiamy
-          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
           przystanki2[k].przystanki[1] = "Kórnik - Prowent";
           przystanki2[k].przystanki[2] = "Kórnik Bnin A. Krajowej";
           przystanki2[k].przystanki[3] = "Kórnik - Bnin Rynek";
@@ -1736,7 +1736,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           przystanki2[k].przystanki[33] = "Kórnik - Bnin Rynek";
           przystanki2[k].przystanki[34] = "Kórnik Bnin A.Krajowej";
           przystanki2[k].przystanki[35] = "Kórnik Prowent";
-          przystanki2[k].przystanki[36] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[36] = "Kórnik - Pl. Niepodległości";
 
           przystanki2[k].linia = "595";
 
@@ -1745,7 +1745,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
         }
 
-      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki2[0].odjazdy1[7][15] = "O";
       przystanki2[0].odjazdy1[9][0] = "O";
       przystanki2[1].nazwa = "Kórnik - Prowent";
@@ -1853,7 +1853,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[35].nazwa = "Kórnik Prowent";
       przystanki2[35].odjazdy1[8][33] = "O";
       przystanki2[35].odjazdy1[10][18] = "O";
-      przystanki2[36].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[36].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki2[36].odjazdy1[8][35] = "O";
       przystanki2[36].odjazdy1[10][20] = "O";
         }
@@ -1865,7 +1865,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
             przystanki[k].waznyod = "16-05-2023";
             przystanki[k].kierunek = "Czołowo - Czołowo";
 
-            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
             przystanki[k].przystanki[1] = "Kórnik - Reja";
             przystanki[k].przystanki[2] = "Mościennica - Mościennica";
             przystanki[k].przystanki[3] = "Czołowo - Czołowo";
@@ -1877,7 +1877,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
           }
 
-        przystanki[0].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[0].nazwa = "Kórnik - Pl. Niepodległości";
         przystanki[0].odjazdy1[12][45] = "O";
         przystanki[1].nazwa = "Kórnik - Reja";
         przystanki[1].odjazdy1[12][47] = "O";
@@ -1926,7 +1926,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
             przystanki[k].przystanki[1] = "Kórnik - Bnin Osiedle";
             przystanki[k].przystanki[2] = "Kórnik - Bnin Rynek";
             przystanki[k].przystanki[3] = "Kórnik Bnin Armii Krajowej";
-            przystanki[k].przystanki[4] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[4] = "Kórnik - Pl. Niepodległości";
             przystanki[k].przystanki[5] = "Kórnik Reja";
             przystanki[k].przystanki[6] = "Skrzynki Jeziorna";
             przystanki[k].przystanki[7] = "Gądki - Gądki";
@@ -1948,7 +1948,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
         przystanki[2].odjazdy1[6][42] = "O";
         przystanki[3].nazwa = "Kórnik Bnin Armii Krajowej";
         przystanki[3].odjazdy1[6][46] = "O";
-        przystanki[4].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[4].nazwa = "Kórnik - Pl. Niepodległości";
         przystanki[4].odjazdy1[6][47] = "O";
         przystanki[5].nazwa = "Kórnik Reja";
         przystanki[5].odjazdy1[6][49] = "O";
@@ -1971,7 +1971,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           przystanki2[k].przystanki[1] = "Kórnik - Bnin Osiedle";
           przystanki2[k].przystanki[2] = "Kórnik - Bnin Rynek";
           przystanki2[k].przystanki[3] = "Kórnik Bnin Armii Krajowej";
-          przystanki2[k].przystanki[4] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[4] = "Kórnik - Pl. Niepodległości";
           przystanki2[k].przystanki[5] = "Kórnik Reja";
           przystanki2[k].przystanki[6] = "Skrzynki Jeziorna";
           przystanki2[k].przystanki[7] = "Gądki - Gądki";
@@ -1995,7 +1995,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
       przystanki2[2].odjazdy1[15][56] = "O";
       przystanki2[3].nazwa = "Kórnik Prowent";
       przystanki2[3].odjazdy1[15][54] = "O";
-      przystanki2[4].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[4].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki2[4].odjazdy1[15][52] = "O";
       przystanki2[5].nazwa = "Kórnik Reja";
       przystanki2[5].odjazdy1[15][50] = "O";
@@ -2021,7 +2021,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
             przystanki[k].waznyod = "16-05-2023";
             przystanki[k].kierunek = "Szczytniki - Pętla";
 
-            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+            przystanki[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
             przystanki[k].przystanki[1] = "Kórnik Poprzeczna";
             przystanki[k].przystanki[2] = "Kórnik - Reja";
             przystanki[k].przystanki[3] = "Skrzynki Jeziorna";
@@ -2040,7 +2040,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
           }
 
-        przystanki[0].nazwa = "Kórnik - Pl. Niepodległ";
+        przystanki[0].nazwa = "Kórnik - Pl. Niepodległości";
         przystanki[0].odjazdy1[5][30] = "O";
         przystanki[0].odjazdy1[6][21] = "O";
         przystanki[0].odjazdy1[9][13] = "O";
@@ -2104,7 +2104,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
           przystanki2[k].waznyod = "16-05-2023";
           przystanki2[k].kierunek = "Kórnik Rynek";
 
-          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległ";
+          przystanki2[k].przystanki[0] = "Kórnik - Pl. Niepodległości";
           przystanki2[k].przystanki[1] = "Kórnik Poprzeczna";
           przystanki2[k].przystanki[2] = "Kórnik - Reja";
           przystanki2[k].przystanki[3] = "Skrzynki Jeziorna";
@@ -2124,7 +2124,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
         }
 
-      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległ";
+      przystanki2[0].nazwa = "Kórnik - Pl. Niepodległości";
       przystanki2[0].odjazdy1[15][7] = "O";
       przystanki2[0].odjazdy1[16][10] = "O";
       przystanki2[0].odjazdy1[17][54] = "O";
@@ -2402,7 +2402,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
     this.uwagi = new String[0];
 
-    this.przystanki[0] = "Kórnik - Pl. Niepodległ";
+    this.przystanki[0] = "Kórnik - Pl. Niepodległości";
     this.przystanki[1] = "Kórnik - Prowent";
     this.przystanki[2] = "Kórnik Bnin A. Krajowej";
     this.przystanki[3] = "Kórnik - Bnin Rynek";
@@ -2438,7 +2438,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
     this.przystanki[33] = "Kórnik - Bnin Rynek";
     this.przystanki[34] = "Kórnik Bnin A.Krajowej";
     this.przystanki[35] = "Kórnik Prowent";
-    this.przystanki[36] = "Kórnik - Pl. Niepodległ";
+    this.przystanki[36] = "Kórnik - Pl. Niepodległości";
 
     }
     if ( number.equals("10") == true ){//582
@@ -2452,7 +2452,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
 
     this.uwagi = new String[0];
 
-    this.przystanki[0] = "Kórnik - Pl. Niepodległ";
+    this.przystanki[0] = "Kórnik - Pl. Niepodległości";
     this.przystanki[1] = "Kórnik - Reja";
     this.przystanki[2] = "Mościennica - Mościennica";
     this.przystanki[3] = "Czołowo - Czołowo";
@@ -2469,7 +2469,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
     this.przystanki[1] = "Kórnik - Bnin Osiedle";
     this.przystanki[2] = "Kórnik - Bnin Rynek";
     this.przystanki[3] = "Kórnik Bnin Armii Krajowej";
-    this.przystanki[4] = "Kórnik - Pl. Niepodległ";
+    this.przystanki[4] = "Kórnik - Pl. Niepodległości";
     this.przystanki[5] = "Kórnik Reja";
     this.przystanki[6] = "Skrzynki Jeziorna";
     this.przystanki[7] = "Gądki - Gądki";
@@ -2495,7 +2495,7 @@ przystanki2[13].odjazdy1[16][20] = "x";
     uwagi[1] = "z - kurs przez Dziećmierowo Owocowe Wzgórze i Kórnik Szkoła";
     uwagi[2] = "w - kursuje w dni nauki szkolnej";
 
-    this.przystanki[0] = "Kórnik - Pl. Niepodległ";
+    this.przystanki[0] = "Kórnik - Pl. Niepodległości";
     this.przystanki[1] = "Kórnik Poprzeczna";
     this.przystanki[2] = "Kórnik - Reja";
     this.przystanki[3] = "Skrzynki Jeziorna";

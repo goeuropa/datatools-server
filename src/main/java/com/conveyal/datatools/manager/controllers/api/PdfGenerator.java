@@ -282,7 +282,15 @@ public class PdfGenerator {
 
     for ( int i = 0 ; i < 19 ; i++ )
       {
-              cb.showTextAligned(Element.ALIGN_LEFT, przystanek.przystanki[i], sx, sy-(i)*odstepPrzystanki, 0);//
+              if ( przystanek.przystanki[i].toLowerCase().equals(przystanek.nazwa.toLowerCase()) ){
+                cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_BOLD, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+                cb.showTextAligned(Element.ALIGN_LEFT, przystanek.przystanki[i], sx, sy-(i)*odstepPrzystanki, 0);//
+                cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+              }
+              else {
+                cb.setFontAndSize(BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED), 22);
+                cb.showTextAligned(Element.ALIGN_LEFT, przystanek.przystanki[i], sx, sy-(i)*odstepPrzystanki, 0);//
+              }
       }
     } catch (Exception e) {
       e.printStackTrace();

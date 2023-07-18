@@ -248,9 +248,9 @@ public class DataManager {
             URL gtfsplus = DataManager.class.getResource("/gtfs/gtfsplus.yml");
             gtfsPlusConfig = yamlMapper.readTree(Resources.toString(gtfsplus, Charsets.UTF_8));
         }
-        if (isModuleEnabled("user_admin")) {
+      //  if (isModuleEnabled("user_admin")) {
             UserController.register(API_PREFIX);
-        }
+      //  }TODO: modul nie dziala
         if (isModuleEnabled("dump")) {
             DumpController.register("/");
         }

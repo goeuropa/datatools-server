@@ -60,7 +60,7 @@ import static spark.Spark.after;
 import static spark.Spark.before;
 import static spark.Spark.exception;
 import static spark.Spark.get;
-import static spark.Spark.port;
+import static spark.Spark.*;
 
 /**
  * This is the singleton where the application is initialized. It currently stores a number of static fields which are
@@ -102,6 +102,12 @@ public class DataManager {
     public static final Map<String, RequestSummary> lastRequestForUser = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
+      before((request, response) -> {
+            response.header("Access-Control-Allow-Origin", "*");
+            response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            response.header("Access-Control-Allow-Credentials", "true");
+        });
         long serverStartTime = System.currentTimeMillis();
         initializeApplication(args);
 
@@ -111,7 +117,7 @@ public class DataManager {
         double startupSeconds = (System.currentTimeMillis() - serverStartTime) / 1000D;
         LOG.info("Data Tools server start up completed in {} seconds.", startupSeconds);
     }
-
+    DatatoolsTest
     static void initializeApplication(String[] args) throws IOException {
         // Load configuration files (env.yml and server.yml).
         loadConfig(args);

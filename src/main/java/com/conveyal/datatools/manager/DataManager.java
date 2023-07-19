@@ -125,9 +125,9 @@ public class DataManager {
         }
     public static void main(String[] args) throws IOException {
 
-        enableCORS("https://goeuropa.ml:8089", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
         long serverStartTime = System.currentTimeMillis();
         initializeApplication(args);
+        enableCORS("https://goeuropa.ml:8089", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
 
         registerRoutes();
 

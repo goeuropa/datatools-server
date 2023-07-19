@@ -102,6 +102,9 @@ public class DataManager {
     public static final Map<String, RequestSummary> lastRequestForUser = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
+
+      port(4000);
+
       before((request, response) -> {
             response.header("Access-Control-Allow-Origin", "*");
             response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -117,7 +120,7 @@ public class DataManager {
         double startupSeconds = (System.currentTimeMillis() - serverStartTime) / 1000D;
         LOG.info("Data Tools server start up completed in {} seconds.", startupSeconds);
     }
-    
+
     static void initializeApplication(String[] args) throws IOException {
         // Load configuration files (env.yml and server.yml).
         loadConfig(args);

@@ -148,7 +148,7 @@ public class DataManager {
 
         // Optionally set port for server. Otherwise, Spark defaults to 4567.
         if (hasConfigProperty("application.port")) {
-            PORT = Integer.parseInt(getConfigPropertyAsText("application.port"));
+            PORT = 4000;//Integer.parseInt(getConfigPropertyAsText("application.port"));
             port(PORT);
         }
         useS3 = "true".equals(getConfigPropertyAsText("application.data.use_s3_storage"));

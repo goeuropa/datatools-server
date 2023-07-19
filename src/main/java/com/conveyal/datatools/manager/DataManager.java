@@ -101,8 +101,8 @@ public class DataManager {
     public static DataSource GTFS_DATA_SOURCE;
     public static final Map<String, RequestSummary> lastRequestForUser = new HashMap<>();
 
-    public static void enableCORS(final String origin, final String methods, final String headers) {
-          /* options("/*", (request, response) -> {
+    /*public static void enableCORS(final String origin, final String methods, final String headers) {
+           options("/*", (request, response) -> {
                String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
                if (accessControlRequestHeaders != null) {
                    response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);

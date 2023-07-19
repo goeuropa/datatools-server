@@ -101,32 +101,31 @@ public class DataManager {
     public static DataSource GTFS_DATA_SOURCE;
     public static final Map<String, RequestSummary> lastRequestForUser = new HashMap<>();
 
-    /*public static void enableCORS(final String origin, final String methods, final String headers) {
-           options("/*", (request, response) -> {
-               String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
-               if (accessControlRequestHeaders != null) {
-                   response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
-               }
+    public static void enableCORS(final String origin, final String methods, final String headers) {
+            options("/*", (request, response) -> {
+                String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
+                if (accessControlRequestHeaders != null) {
+                    response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
+                }
 
-               String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
-               if (accessControlRequestMethod != null) {
-                   response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
-               }
+                String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
+                if (accessControlRequestMethod != null) {
+                    response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
+                }
 
-               return "OK";
-           });
+                return "OK";
+            });
 
-           before((request, response) -> {
-               response.header("Access-Control-Allow-Origin", origin);
-               response.header("Access-Control-Request-Method", methods);
-               response.header("Access-Control-Allow-Headers", headers);
-               response.type("application/json");
-           });
-       }*/
-
+            before((request, response) -> {
+                response.header("Access-Control-Allow-Origin", origin);
+                response.header("Access-Control-Request-Method", methods);
+                response.header("Access-Control-Allow-Headers", headers);
+                response.type("application/json");
+            });
+        }
     public static void main(String[] args) throws IOException {
 
-        //enableCORS("*", "GET, POST, PUT, DELETE, OPTIONS", "*");
+        enableCORS("https://goeuropa.ml:8089", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
         long serverStartTime = System.currentTimeMillis();
         initializeApplication(args);
 

@@ -101,16 +101,32 @@ public class DataManager {
     public static DataSource GTFS_DATA_SOURCE;
     public static final Map<String, RequestSummary> lastRequestForUser = new HashMap<>();
 
+    public static void enableCORS(final String origin, final String methods, final String headers) {
+           options("/*", (request, response) -> {
+               String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
+               if (accessControlRequestHeaders != null) {
+                   response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
+               }
+
+               String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
+               if (accessControlRequestMethod != null) {
+                   response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
+               }
+
+               return "OK";
+           });
+
+           before((request, response) -> {
+               response.header("Access-Control-Allow-Origin", origin);
+               response.header("Access-Control-Request-Method", methods);
+               response.header("Access-Control-Allow-Headers", headers);
+               response.type("application/json");
+           });
+       }
+
     public static void main(String[] args) throws IOException {
 
-      port(4000);
-
-      before((request, response) -> {
-            response.header("Access-Control-Allow-Origin", "*");
-            response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-            response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-            response.header("Access-Control-Allow-Credentials", "true");
-        });
+        enableCORS("*", "GET, POST, PUT, DELETE, OPTIONS", "*");
         long serverStartTime = System.currentTimeMillis();
         initializeApplication(args);
 

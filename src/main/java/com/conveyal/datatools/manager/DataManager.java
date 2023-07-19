@@ -117,7 +117,7 @@ public class DataManager {
         double startupSeconds = (System.currentTimeMillis() - serverStartTime) / 1000D;
         LOG.info("Data Tools server start up completed in {} seconds.", startupSeconds);
     }
-    DatatoolsTest
+    
     static void initializeApplication(String[] args) throws IOException {
         // Load configuration files (env.yml and server.yml).
         loadConfig(args);

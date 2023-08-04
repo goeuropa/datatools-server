@@ -32,6 +32,10 @@ import spark.Response;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.file.Files;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
@@ -409,6 +413,21 @@ public class FeedVersionController  {
         // Remove token so that it cannot be used again for feed download
         Persistence.tokens.removeById(tokenValue);
         File file = version.retrieveGtfsFile();
+        // Specify the destination file path
+   String destinationFilePath = "/tmp/abc";
+try {
+   FileOutputStream outputStream = new FileOutputStream(destinationFilePath);
+   // Read the content from the source File object (gtfsFile)
+   byte[] fileContent = Files.readAllBytes(file.toPath());
+//TODO: check this
+   // Write the content to the destination file
+   outputStream.write(fileContent);
+
+   System.out.println("File written successfully to " + destinationFilePath);
+}
+catch ( Exception e ){
+  System.out.println("IOEXC: " + e);
+}
         return downloadFile(file, version.id, req, res);
     }
 

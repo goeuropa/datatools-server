@@ -85,7 +85,7 @@ public class ExportSnapshotToGTFSJob extends MonitorableJob {
             try {
           File gtfsFile = FeedVersion.feedStore.newFeed(filename, new FileInputStream(tempFile), null);
                 // Specify the destination file path
-           String destinationFilePath = "/tmp/abc";
+           /*String destinationFilePath = "/tmp/abc";
 
            FileOutputStream outputStream = new FileOutputStream(destinationFilePath);
            // Read the content from the source File object (gtfsFile)
@@ -95,7 +95,7 @@ public class ExportSnapshotToGTFSJob extends MonitorableJob {
            outputStream.write(fileContent);
 
            System.out.println("File written successfully to " + destinationFilePath);
-
+*/
           if (isNewVersion) feedVersion.assignGtfsFileAttributes(gtfsFile);
             } catch (IOException e) {
                 status.fail(String.format("Could not save file or store feed for snapshot %s", snapshot.id), e);

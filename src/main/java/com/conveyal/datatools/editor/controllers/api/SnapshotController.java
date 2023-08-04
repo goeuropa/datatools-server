@@ -255,7 +255,7 @@ public class SnapshotController {
         post(apiPrefix + "secure/snapshot/import", SnapshotController::importFeedVersionAsSnapshot, json::write);
         put(apiPrefix + "secure/snapshot/:id", SnapshotController::updateSnapshot, json::write);
         post(apiPrefix + "secure/snapshot/:id/restore", SnapshotController::restoreSnapshot, json::write);
-        get(apiPrefix + "secure/snapshot/:id/download", SnapshotController::downloadSnapshotAsGTFS, json::write);
+        get(apiPrefix + "secure/snapshot/:id/download", SnapshotController::downloadSnapshotAsGTFS, json::write);//TODO: add param with path
         get(apiPrefix + "secure/snapshot/:id/downloadtoken", SnapshotController::getSnapshotToken, json::write);
         delete(apiPrefix + "secure/snapshot/:id", SnapshotController::deleteSnapshot, json::write);
 

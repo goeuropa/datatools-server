@@ -127,13 +127,14 @@ public class DataManager {
 
         long serverStartTime = System.currentTimeMillis();
         initializeApplication(args);
+        enableCORS("*", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
 
         registerRoutes();
 
         registerExternalResources();
         double startupSeconds = (System.currentTimeMillis() - serverStartTime) / 1000D;
         LOG.info("Data Tools server start up completed in {} seconds.", startupSeconds);
-        enableCORS("https://goeuropa.ml:8089", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
+        //enableCORS("https://goeuropa.ml:8089", "GET, POST, PUT, DELETE, OPTIONS", "Origin, X-Requested-With, Content-Type, Accept");
 
     }
 

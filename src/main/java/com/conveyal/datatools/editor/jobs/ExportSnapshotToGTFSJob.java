@@ -16,7 +16,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 
 /**
  * This job will export a database snapshot (i.e., namespace) to a GTFS file. If a feed version is supplied in the
@@ -81,11 +83,23 @@ public class ExportSnapshotToGTFSJob extends MonitorableJob {
             LOG.info("Storing snapshot GTFS at {}", S3Utils.getDefaultBucketUriForKey(s3Key));
         } else {
             try {
-                File gtfsFile = FeedVersion.feedStore.newFeed(filename, new FileInputStream(tempFile), null);
-                if (isNewVersion) feedVersion.assignGtfsFileAttributes(gtfsFile);
+          File gtfsFile = FeedVersion.feedStore.newFeed(filename, new FileInputStream(tempFile), null);
+                // Specify the destination file path
+           String destinationFilePath = "/tmp/abc";
+
+           FileOutputStream outputStream = new FileOutputStream(destinationFilePath);
+           // Read the content from the source File object (gtfsFile)
+           byte[] fileContent = Files.readAllBytes(gtfsFile.toPath());
+//TODO: check this
+           // Write the content to the destination file
+           outputStream.write(fileContent);
+
+           System.out.println("File written successfully to " + destinationFilePath);
+
+          if (isNewVersion) feedVersion.assignGtfsFileAttributes(gtfsFile);
             } catch (IOException e) {
-                status.fail(String.format("Could not store feed for snapshot %s", snapshot.id), e);
-            }
+                status.fail(String.format("Could not save file or store feed for snapshot %s", snapshot.id), e);
+            }//TODO save in specified folder
         }
     }
 

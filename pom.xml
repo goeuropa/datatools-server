@@ -55,7 +55,22 @@
                     <include>**/*.properties</include>
                     <include>logback.xml</include>
                     <include>gtfs/*</include>
-                    <include>public/*</include>
+                    <include>public/**</include>
+                </includes>
+                <excludes>
+                    <!-- Исключаем бинарники, чтобы Maven их НЕ фильтровал -->
+                    <exclude>public/*.jar</exclude>
+                    <exclude>public/**/*.jar</exclude>
+                </excludes>
+            </resource>
+
+            <!-- Нефильтруемые бинарники -->
+            <resource>
+                <directory>src/main/resources/public</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>*.jar</include>
+                    <include>**/*.jar</include>
                 </includes>
             </resource>
         </resources>
